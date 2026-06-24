@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9824700822AF9B7D0037B409"
-               BuildableName = "Rectangle.app"
-               BlueprintName = "Rectangle"
+               BuildableName = "rawm.app"
+               BlueprintName = "rawm"
                ReferencedContainer = "container:Rectangle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,8 +31,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9824700822AF9B7D0037B409"
-            BuildableName = "Rectangle.app"
-            BlueprintName = "Rectangle"
+            BuildableName = "rawm.app"
+            BlueprintName = "rawm"
             ReferencedContainer = "container:Rectangle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -42,8 +42,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9824701A22AF9B7E0037B409"
-               BuildableName = "RectangleTests.xctest"
-               BlueprintName = "RectangleTests"
+               BuildableName = "rawm-tests.xctest"
+               BlueprintName = "rawm-tests"
                ReferencedContainer = "container:Rectangle.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9824700822AF9B7D0037B409"
-            BuildableName = "Rectangle.app"
-            BlueprintName = "Rectangle"
+            BuildableName = "rawm.app"
+            BlueprintName = "rawm"
             ReferencedContainer = "container:Rectangle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,8 +81,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9824700822AF9B7D0037B409"
-            BuildableName = "Rectangle.app"
-            BlueprintName = "Rectangle"
+            BuildableName = "rawm.app"
+            BlueprintName = "rawm"
             ReferencedContainer = "container:Rectangle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

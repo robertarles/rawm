@@ -25,7 +25,7 @@ class SpecificDisplayCalculation: WindowCalculation {
             if let lastAction = params.lastAction,
                let calculation = WindowCalculationFactory.calculationsByAction[lastAction.action] {
 
-                AppDelegate.windowHistory.lastRectangleActions.removeValue(forKey: params.window.id)
+                AppDelegate.windowHistory.lastRawmActions.removeValue(forKey: params.window.id)
 
                 let newCalculationParams = RectCalculationParameters(
                     window: rectParams.window,

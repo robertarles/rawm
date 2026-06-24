@@ -1,10 +1,10 @@
-/// RectangleTests.swift
+/// RawmTests.swift
 
 import MASShortcut
 import XCTest
-@testable import Rectangle
+@testable import rawm
 
-class RectangleTests: XCTestCase {
+class RawmTests: XCTestCase {
 
     override func setUp() {
     }
@@ -386,7 +386,7 @@ class HalfSplitCornerCalculationTests: XCTestCase {
         RectCalculationParameters(window: Window(id: 1, rect: currentRect ?? visibleFrame),
                                   visibleFrameOfScreen: visibleFrame,
                                   action: action,
-                                  lastAction: RectangleAction(action: action,
+                                  lastAction: RawmAction(action: action,
                                                               subAction: nil,
                                                               rect: currentRect ?? visibleFrame,
                                                               count: count))
@@ -783,7 +783,7 @@ class ShortcutCycleTests: XCTestCase {
 
     func testStaleWindowHistoryIsIgnoredForCycleSelection() {
         let group = ShortcutCycle.Group(shortcut: shortcut(1, [.option, .command]), actions: [.centerHalf, .centerThird])
-        let lastAction = RectangleAction(
+        let lastAction = RawmAction(
             action: .centerHalf,
             subAction: nil,
             rect: CGRect(x: 0, y: 0, width: 500, height: 500),

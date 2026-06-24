@@ -2,7 +2,7 @@
 
 import MASShortcut
 import XCTest
-@testable import Rectangle
+@testable import rawm
 
 class ShortcutRecordingObserverTests: XCTestCase {
 

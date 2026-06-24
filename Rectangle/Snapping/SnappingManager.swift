@@ -258,7 +258,7 @@ class SnappingManager {
                     }
                 }
                 else {
-                    AppDelegate.windowHistory.lastRectangleActions.removeValue(forKey: windowId)
+                    AppDelegate.windowHistory.lastRawmActions.removeValue(forKey: windowId)
                 }
             }
             if windowMoving {
@@ -318,7 +318,7 @@ class SnappingManager {
     func unsnapRestore(windowId: CGWindowID, currentRect: CGRect, cursorLoc: CGPoint?) {
         if Defaults.unsnapRestore.enabled != false {
             // if window was put there by rectangle, restore size
-            if let lastRect = AppDelegate.windowHistory.lastRectangleActions[windowId]?.rect,
+            if let lastRect = AppDelegate.windowHistory.lastRawmActions[windowId]?.rect,
                 lastRect == initialWindowRect,
                 let restoreRect = AppDelegate.windowHistory.restoreRects[windowId] {
                 
@@ -341,7 +341,7 @@ class SnappingManager {
                     }
                 }
                 
-                AppDelegate.windowHistory.lastRectangleActions.removeValue(forKey: windowId)
+                AppDelegate.windowHistory.lastRawmActions.removeValue(forKey: windowId)
             } else {
                 AppDelegate.windowHistory.restoreRects[windowId] = initialWindowRect
             }

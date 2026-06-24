@@ -122,7 +122,7 @@ class ShortcutManager {
                 if let screen = ScreenDetection().detectScreens(using: windowElement)?.adjacentScreens?.next{
                     parameters = ExecutionParameters(parameters.action, updateRestoreRect: parameters.updateRestoreRect, screen: screen, windowElement: windowElement, windowId: windowId)
                     // Bypass any other subsequent action by removing the last action
-                    AppDelegate.windowHistory.lastRectangleActions.removeValue(forKey: windowId)
+                    AppDelegate.windowHistory.lastRawmActions.removeValue(forKey: windowId)
                 }
             }
         }
@@ -138,14 +138,14 @@ class ShortcutManager {
             return
         }
 
-        let lastAction = AppDelegate.windowHistory.lastRectangleActions[windowId]
+        let lastAction = AppDelegate.windowHistory.lastRawmActions[windowId]
         if ShortcutCycle.isStale(lastAction: lastAction, currentWindowRect: windowElement.frame) {
-            AppDelegate.windowHistory.lastRectangleActions.removeValue(forKey: windowId)
+            AppDelegate.windowHistory.lastRawmActions.removeValue(forKey: windowId)
         }
 
         let selectedAction = ShortcutCycle.action(
             in: group,
-            lastAction: AppDelegate.windowHistory.lastRectangleActions[windowId],
+            lastAction: AppDelegate.windowHistory.lastRawmActions[windowId],
             currentWindowRect: windowElement.frame
         )
         execute(ExecutionParameters(selectedAction, windowElement: windowElement, windowId: windowId))
@@ -202,7 +202,7 @@ class ShortcutManager {
                 return true
             }
         }
-        if parameters.action == AppDelegate.windowHistory.lastRectangleActions[windowId]?.action {
+        if parameters.action == AppDelegate.windowHistory.lastRawmActions[windowId]?.action {
             return true
         }
         return false
@@ -305,7 +305,7 @@ struct ShortcutCycle {
         return groups
     }
 
-    static func action(in group: Group, lastAction: RectangleAction?, currentWindowRect: CGRect?) -> WindowAction {
+    static func action(in group: Group, lastAction: RawmAction?, currentWindowRect: CGRect?) -> WindowAction {
         guard !isStale(lastAction: lastAction, currentWindowRect: currentWindowRect) else {
             return group.representativeAction
         }
@@ -313,7 +313,7 @@ struct ShortcutCycle {
         return group.action(after: lastAction?.action)
     }
 
-    static func isStale(lastAction: RectangleAction?, currentWindowRect: CGRect?) -> Bool {
+    static func isStale(lastAction: RawmAction?, currentWindowRect: CGRect?) -> Bool {
         guard let lastAction, let currentWindowRect else { return false }
         return currentWindowRect != lastAction.rect
     }

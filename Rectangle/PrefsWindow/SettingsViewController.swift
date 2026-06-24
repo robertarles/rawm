@@ -65,7 +65,7 @@ class SettingsViewController: NSViewController {
     @IBAction func toggleHideMenuBarIcon(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
         Defaults.hideMenuBarIcon.enabled = newSetting
-        RectangleStatusItem.instance.refreshVisibility()
+        RawmStatusItem.instance.refreshVisibility()
     }
 
     @IBAction func setSubsequentExecutionBehavior(_ sender: NSPopUpButton) {
@@ -148,7 +148,7 @@ class SettingsViewController: NSViewController {
             let conflictTitleText = NSLocalizedString(
                 "Conflict with system setting", tableName: "Main", value: "", comment: "")
             let conflictDescriptionText = NSLocalizedString(
-                "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting.", tableName: "Main", value: "", comment: "")
+                "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting.", tableName: "Main", value: "", comment: "")
 
             
             let closeText = NSLocalizedString("DVo-aG-piG.title", tableName: "Main", value: "Close", comment: "")
@@ -228,12 +228,12 @@ class SettingsViewController: NSViewController {
     }
     
     @IBAction func restoreDefaults(_ sender: Any) {
-        // Ask user if they want to restore to Rectangle or Spectacle defaults
-        let currentDefaults = Defaults.alternateDefaultShortcuts.enabled ? "Rectangle" : "Spectacle"
+        // Ask user if they want to restore to rawm or Spectacle defaults
+        let currentDefaults = Defaults.alternateDefaultShortcuts.enabled ? "rawm" : "Spectacle"
         let defaultShortcutsTitle = NSLocalizedString("Default Shortcuts", tableName: "Main", value: "", comment: "")
         let currentlyUsingText = NSLocalizedString("Currently using: ", tableName: "Main", value: "", comment: "")
         let cancelText = NSLocalizedString("Cancel", tableName: "Main", value: "", comment: "")
-        let response = AlertUtil.threeButtonAlert(question: defaultShortcutsTitle, text: currentlyUsingText + currentDefaults, buttonOneText: "Rectangle", buttonTwoText: "Spectacle", buttonThreeText: cancelText)
+        let response = AlertUtil.threeButtonAlert(question: defaultShortcutsTitle, text: currentlyUsingText + currentDefaults, buttonOneText: "rawm", buttonTwoText: "Spectacle", buttonThreeText: cancelText)
         if response == .alertThirdButtonReturn { return }
 
         //  Restore default shortcuts
@@ -254,7 +254,7 @@ class SettingsViewController: NSViewController {
         Notification.Name.windowSnapping.post(object: false)
         let savePanel = NSSavePanel()
         savePanel.allowedFileTypes = ["json"]
-        savePanel.nameFieldStringValue = "RectangleConfig"
+        savePanel.nameFieldStringValue = "RawmConfig"
         let response = savePanel.runModal()
         if response == .OK, let url = savePanel.url {
             do {

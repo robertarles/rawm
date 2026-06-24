@@ -1208,7 +1208,7 @@
       }
     },
     "1Xt-HY-uBw.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Rectangle\"; ObjectID = \"1Xt-HY-uBw\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"rawm\"; ObjectID = \"1Xt-HY-uBw\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -1220,175 +1220,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         }
       }
@@ -3782,7 +3782,7 @@
       }
     },
     "4sb-4s-VLi.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Quit Rectangle\"; ObjectID = \"4sb-4s-VLi\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"Quit rawm\"; ObjectID = \"4sb-4s-VLi\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -3794,181 +3794,181 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sortir de Rectangle"
+            "value" : "Sortir de rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sortir de Rectangle"
+            "value" : "Sortir de rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukončit Rectangle"
+            "value" : "Ukončit rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle beenden"
+            "value" : "rawm beenden"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Quit Rectangle"
+            "value" : "Quit rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salir de Rectangle"
+            "value" : "Salir de rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salir de Rectangle"
+            "value" : "Salir de rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quitter Rectangle"
+            "value" : "Quitter rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Keluar Rectangle"
+            "value" : "Keluar rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esci da Rectangle"
+            "value" : "Esci da rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleを終了"
+            "value" : "rawmを終了"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 종료"
+            "value" : "rawm 종료"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Išeiti iš Rectangle"
+            "value" : "Išeiti iš rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avslutt Rectangle"
+            "value" : "Avslutt rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle stoppen"
+            "value" : "rawm stoppen"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avslutt Rectangle"
+            "value" : "Avslutt rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wyjdź z Rectangle"
+            "value" : "Wyjdź z rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fechar Rectangle"
+            "value" : "Fechar rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sair do Rectangle"
+            "value" : "Sair do rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Închide Rectangle"
+            "value" : "Închide rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Выход из Rectangle"
+            "value" : "Выход из rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukončiť Rectangle"
+            "value" : "Ukončiť rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avsluta Rectangle"
+            "value" : "Avsluta rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'dan Çık"
+            "value" : "rawm'dan Çık"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вийти з Rectangle"
+            "value" : "Вийти з rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thoát Rectangle"
+            "value" : "Thoát rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "退出 Rectangle"
+            "value" : "退出 rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "結束 Rectangle"
+            "value" : "結束 rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "結束Rectangle"
+            "value" : "結束rawm"
           }
         }
       }
     },
     "5kV-Vb-QxS.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"About Rectangle\"; ObjectID = \"5kV-Vb-QxS\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"About rawm\"; ObjectID = \"5kV-Vb-QxS\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -3980,175 +3980,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quant a Rectangle"
+            "value" : "Quant a rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quant a Rectangle"
+            "value" : "Quant a rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O aplikaci Rectangle"
+            "value" : "O aplikaci rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Über Rectangle"
+            "value" : "Über rawm"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "About Rectangle"
+            "value" : "About rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Acerca de Rectangle"
+            "value" : "Acerca de rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Acerca de Rectangle"
+            "value" : "Acerca de rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "À propos de Rectangle"
+            "value" : "À propos de rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tentang Rectangle"
+            "value" : "Tentang rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Informazioni su Rectangle"
+            "value" : "Informazioni su rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleについて"
+            "value" : "rawmについて"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 정보"
+            "value" : "rawm 정보"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apie Rectangle"
+            "value" : "Apie rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om Rectangle"
+            "value" : "Om rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Over Rectangle"
+            "value" : "Over rawm"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om Rectangle"
+            "value" : "Om rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O Rectangle"
+            "value" : "O rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sobre o Rectangle"
+            "value" : "Sobre o rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sobre o Rectangle"
+            "value" : "Sobre o rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Despre Rectangle"
+            "value" : "Despre rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "О Rectangle"
+            "value" : "О rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O aplikácii Rectangle"
+            "value" : "O aplikácii rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Om Rectangle"
+            "value" : "Om rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle Hakkında"
+            "value" : "rawm Hakkında"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Про Rectangle"
+            "value" : "Про rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Giới thiệu Rectangle"
+            "value" : "Giới thiệu rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "关于 Rectangle"
+            "value" : "关于 rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "關於 Rectangle"
+            "value" : "關於 rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "關於Rectangle"
+            "value" : "關於rawm"
           }
         }
       }
@@ -6200,187 +6200,187 @@
       }
     },
     "8dv-v2-SPu.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"3. In the Rectangle menu, enable Todo Mode.\"; ObjectID = \"8dv-v2-SPu\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"3. In the rawm menu, enable Todo Mode.\"; ObjectID = \"8dv-v2-SPu\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. في قائمة Rectangle ، قم بتمكين Todo Mode"
+            "value" : "3. في قائمة rawm ، قم بتمكين Todo Mode"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Al menú Rectangle, habilita el mode Todo."
+            "value" : "3. Al menú rawm, habilita el mode Todo."
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Al menú Rectangle, habilita el mode Todo."
+            "value" : "3. Al menú rawm, habilita el mode Todo."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Zapněte Todo mód v Rectangle menu."
+            "value" : "3. Zapněte Todo mód v rawm menu."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Aktiviere den To-do-Modus im Rectangle-Menü."
+            "value" : "3. Aktiviere den To-do-Modus im rawm-Menü."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "3. In the Rectangle menu, enable Todo Mode."
+            "value" : "3. In the rawm menu, enable Todo Mode."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. En el menú de Rectangle, activa el modo Todo."
+            "value" : "3. En el menú de rawm, activa el modo Todo."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. En el menú de Rectangle, activa el modo Todo."
+            "value" : "3. En el menú de rawm, activa el modo Todo."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Dans le menu de Rectangle, activer le mode Todo."
+            "value" : "3. Dans le menu de rawm, activer le mode Todo."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Di Menu Rectangle, Aktifkan mode Todo."
+            "value" : "3. Di Menu rawm, Aktifkan mode Todo."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Nel menu di Rectangle, attiva modalità In evidenza"
+            "value" : "3. Nel menu di rawm, attiva modalità In evidenza"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. RectangleのメニューからToDoモードを有効にします。"
+            "value" : "3. rawmのメニューからToDoモードを有効にします。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Rectangle 메뉴에서, Todo 모드를 켭니다"
+            "value" : "3. rawm 메뉴에서, Todo 모드를 켭니다"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. „Rectangle“ meniu įjunkite Todo režimą."
+            "value" : "3. „rawm“ meniu įjunkite Todo režimą."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. I Rectangle-menyen: aktiver Gjøreliste-modus."
+            "value" : "3. I rawm-menyen: aktiver Gjøreliste-modus."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. In the Rectangle menu, enable Todo Mode."
+            "value" : "3. In the rawm menu, enable Todo Mode."
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. I Rectangle-menyen: aktiver Gjereliste-modus."
+            "value" : "3. I rawm-menyen: aktiver Gjereliste-modus."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. In the Rectangle menu, enable Todo Mode."
+            "value" : "3. In the rawm menu, enable Todo Mode."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. No menu do Rectangle, habilite o Todo Mode."
+            "value" : "3. No menu do rawm, habilite o Todo Mode."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. In the Rectangle menu, enable Todo Mode."
+            "value" : "3. In the rawm menu, enable Todo Mode."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Activează modul Todo în meniul Rectangle."
+            "value" : "3. Activează modul Todo în meniul rawm."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3.  В меню Rectangle включите Todo режим."
+            "value" : "3.  В меню rawm включите Todo режим."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Zapni Todo režim v Rectangle menu."
+            "value" : "3. Zapni Todo režim v rawm menu."
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. I Rectangle-menyn, aktivera Att göra-läge."
+            "value" : "3. I rawm-menyn, aktivera Att göra-läge."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Rectangle menüsünde,  Todo Modunu aktif edin."
+            "value" : "3. rawm menüsünde,  Todo Modunu aktif edin."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. В меню Rectangle увімкніть режим Завдань."
+            "value" : "3. В меню rawm увімкніть режим Завдань."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3. Trên menu của Rectangle, bật chế độ Todo."
+            "value" : "3. Trên menu của rawm, bật chế độ Todo."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⒊在 Rectangle 菜单中，启用待办模式"
+            "value" : "⒊在 rawm 菜单中，启用待办模式"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⒊ 在 Rectangle 選單中，啟用待辦模式。"
+            "value" : "⒊ 在 rawm 選單中，啟用待辦模式。"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⒊在Rectangle選單中，啟用待辦模式。"
+            "value" : "⒊在rawm選單中，啟用待辦模式。"
           }
         }
       }
@@ -7040,7 +7040,7 @@
       }
     },
     "9JD-tZ-7jf.title" : {
-      "comment" : "Class = \"NSWindow\"; title = \"Authorize Rectangle\"; ObjectID = \"9JD-tZ-7jf\";",
+      "comment" : "Class = \"NSWindow\"; title = \"Authorize rawm\"; ObjectID = \"9JD-tZ-7jf\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -7052,181 +7052,181 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoritzar el Rectangle"
+            "value" : "Autoritzar el rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoritzar el Rectangle"
+            "value" : "Autoritzar el rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizovat Rectangle"
+            "value" : "Autorizovat rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle autorisieren"
+            "value" : "rawm autorisieren"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Authorize Rectangle"
+            "value" : "Authorize rawm"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Authorise Rectangle"
+            "value" : "Authorise rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser Rectangle"
+            "value" : "Autoriser rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Izinkan Rectangle"
+            "value" : "Izinkan rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizza Rectangle"
+            "value" : "Autorizza rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleを許可"
+            "value" : "rawmを許可"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 승인"
+            "value" : "rawm 승인"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Leisti Rectangle"
+            "value" : "Leisti rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser Rectangle"
+            "value" : "Autoriser rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle toestemming geven"
+            "value" : "rawm toestemming geven"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser Rectangle"
+            "value" : "Autoriser rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoryzuj Rectangle"
+            "value" : "Autoryzuj rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizează Rectangle"
+            "value" : "Autorizează rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Разрешить Rectangle"
+            "value" : "Разрешить rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Povoliť Rectangle"
+            "value" : "Povoliť rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auktorisera Rectangle"
+            "value" : "Auktorisera rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'ı Yetkilendir"
+            "value" : "rawm'ı Yetkilendir"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Авторизувати Rectangle"
+            "value" : "Авторизувати rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cấp phép cho Rectangle"
+            "value" : "Cấp phép cho rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "授权 Rectangle"
+            "value" : "授权 rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "授權 Rectangle"
+            "value" : "授權 rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "授權Rectangle"
+            "value" : "授權rawm"
           }
         }
       }
@@ -8000,7 +8000,7 @@
       }
     },
     "A66-A4-cGD.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Quit Rectangle\"; ObjectID = \"A66-A4-cGD\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"Quit rawm\"; ObjectID = \"A66-A4-cGD\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -8012,175 +8012,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sortir de Rectangle"
+            "value" : "Sortir de rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sortir de Rectangle"
+            "value" : "Sortir de rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukončit Rectangle"
+            "value" : "Ukončit rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle beenden"
+            "value" : "rawm beenden"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Quit Rectangle"
+            "value" : "Quit rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salir de Rectangle"
+            "value" : "Salir de rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salir de Rectangle"
+            "value" : "Salir de rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quitter Rectangle"
+            "value" : "Quitter rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Keluar Rectangle"
+            "value" : "Keluar rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esci da Rectangle"
+            "value" : "Esci da rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleを終了"
+            "value" : "rawmを終了"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 종료"
+            "value" : "rawm 종료"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Išeiti iš Rectangle"
+            "value" : "Išeiti iš rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avslutt Rectangle"
+            "value" : "Avslutt rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle stoppen"
+            "value" : "rawm stoppen"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avslutt Rectangle"
+            "value" : "Avslutt rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wyjdź z Rectangle"
+            "value" : "Wyjdź z rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fechar Rectangle"
+            "value" : "Fechar rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sair do Rectangle"
+            "value" : "Sair do rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Închide Rectangle"
+            "value" : "Închide rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Выход из Rectangle"
+            "value" : "Выход из rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukončiť Rectangle"
+            "value" : "Ukončiť rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avsluta Rectangle"
+            "value" : "Avsluta rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'dan Çık"
+            "value" : "rawm'dan Çık"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вийти з Rectangle"
+            "value" : "Вийти з rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thoát Rectangle"
+            "value" : "Thoát rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "退出 Rectangle"
+            "value" : "退出 rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "結束 Rectangle"
+            "value" : "結束 rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "結束Rectangle"
+            "value" : "結束rawm"
           }
         }
       }
@@ -14241,43 +14241,43 @@
         }
       }
     },
-    "Disable in Rectangle" : {
+    "Disable in rawm" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "In Rectangle deaktivieren"
+            "value" : "In rawm deaktivieren"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 側を無効化"
+            "value" : "rawm 側を無効化"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle의 기능 끄기"
+            "value" : "rawm의 기능 끄기"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vypnúť v Rectangle"
+            "value" : "Vypnúť v rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vô hiệu hóa trong Rectangle"
+            "value" : "Vô hiệu hóa trong rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在 Rectangle 里禁用"
+            "value" : "在 rawm 里禁用"
           }
         }
       }
@@ -14681,13 +14681,13 @@
         }
       }
     },
-    "Drag to screen edge tiling is enabled in both Rectangle and macOS." : {
+    "Drag to screen edge tiling is enabled in both rawm and macOS." : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Das Ziehen zum Bildschirmrand für das Anordnen von Fenstern ist sowohl in Rectangle als auch in den macOS Systemeinstellungen aktiviert."
+            "value" : "Das Ziehen zum Bildschirmrand für das Anordnen von Fenstern ist sowohl in rawm als auch in den macOS Systemeinstellungen aktiviert."
           }
         },
         "ja" : {
@@ -14699,25 +14699,25 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "화면 가장자리로 드래그해 타일을 정렬하는 기능이 Rectangle과 macOS 설정에서 모두 켜져 있습니다."
+            "value" : "화면 가장자리로 드래그해 타일을 정렬하는 기능이 rawm과 macOS 설정에서 모두 켜져 있습니다."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Potiahnutie na okraj obrazovky je zapnuté v Rectangle aj macOS."
+            "value" : "Potiahnutie na okraj obrazovky je zapnuté v rawm aj macOS."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tính năng kéo để ghép cạnh màn hình được bật trong cả Rectangle và macOS."
+            "value" : "Tính năng kéo để ghép cạnh màn hình được bật trong cả rawm và macOS."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在 Rectangle 和 macOS 中都启用了拖移窗口至屏幕边缘实现平铺"
+            "value" : "在 rawm 和 macOS 中都启用了拖移窗口至屏幕边缘实现平铺"
           }
         }
       }
@@ -17730,7 +17730,7 @@
       }
     },
     "FKE-Sm-Kum.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Rectangle Help\"; ObjectID = \"FKE-Sm-Kum\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"rawm Help\"; ObjectID = \"FKE-Sm-Kum\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -17742,175 +17742,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajuda de Rectangle"
+            "value" : "Ajuda de rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajuda de Rectangle"
+            "value" : "Ajuda de rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle nápověda"
+            "value" : "rawm nápověda"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle-Hilfe"
+            "value" : "rawm-Hilfe"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Rectangle Help"
+            "value" : "rawm Help"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ayuda de Rectangle"
+            "value" : "Ayuda de rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ayuda de Rectangle"
+            "value" : "Ayuda de rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aide Rectangle"
+            "value" : "Aide rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bantuan Rectangle"
+            "value" : "Bantuan rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aiuto su Rectangle"
+            "value" : "Aiuto su rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleヘルプ"
+            "value" : "rawmヘルプ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 도움말"
+            "value" : "rawm 도움말"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle Pagalba"
+            "value" : "rawm Pagalba"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle-hjelp"
+            "value" : "rawm-hjelp"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle hulp"
+            "value" : "rawm hulp"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle-hjelp"
+            "value" : "rawm-hjelp"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pomoc Rectangle"
+            "value" : "Pomoc rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajuda do Rectangle"
+            "value" : "Ajuda do rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajuda do Rectangle"
+            "value" : "Ajuda do rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajutor Rectangle"
+            "value" : "Ajutor rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle Справка"
+            "value" : "rawm Справка"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pomocník pre Rectangle"
+            "value" : "Pomocník pre rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle-hjälp"
+            "value" : "rawm-hjälp"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle Yardım"
+            "value" : "rawm Yardım"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Довідка по Rectangle"
+            "value" : "Довідка по rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trợ giúp của Rectangle"
+            "value" : "Trợ giúp của rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 帮助"
+            "value" : "rawm 帮助"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 輔助說明"
+            "value" : "rawm 輔助說明"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle輔助說明"
+            "value" : "rawm輔助說明"
           }
         }
       }
@@ -19568,7 +19568,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleについて"
+            "value" : "rawmについて"
           }
         },
         "ko" : {
@@ -19604,7 +19604,7 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O Rectangle"
+            "value" : "O rawm"
           }
         },
         "pt-BR" : {
@@ -20695,7 +20695,7 @@
       }
     },
     "gyg-xl-dPn.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Rectangle needs your permission to control your window positions.\"; ObjectID = \"gyg-xl-dPn\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"rawm needs your permission to control your window positions.\"; ObjectID = \"gyg-xl-dPn\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -20707,175 +20707,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle necessita el vostre permís per controlar les posicions de les finestres."
+            "value" : "rawm necessita el vostre permís per controlar les posicions de les finestres."
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle necessita el vostre permís per controlar les posicions de les finestres."
+            "value" : "rawm necessita el vostre permís per controlar les posicions de les finestres."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle potřebuje vaše povolení, aby mohl ovládat pozice oken."
+            "value" : "rawm potřebuje vaše povolení, aby mohl ovládat pozice oken."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle benötigt deine Erlaubnis, um Fensterpositionen zu steuern."
+            "value" : "rawm benötigt deine Erlaubnis, um Fensterpositionen zu steuern."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Rectangle needs your permission to control your window positions."
+            "value" : "rawm needs your permission to control your window positions."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle necesita su permiso para controlar la posición de las ventanas."
+            "value" : "rawm necesita su permiso para controlar la posición de las ventanas."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle necesita su permiso para controlar la posición de las ventanas."
+            "value" : "rawm necesita su permiso para controlar la posición de las ventanas."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle requiert votre permission pour contrôler la position de vos fenêtres."
+            "value" : "rawm requiert votre permission pour contrôler la position de vos fenêtres."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle memerlukan izin anda untuk mengatur posisi jendela."
+            "value" : "rawm memerlukan izin anda untuk mengatur posisi jendela."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle ha bisogno del tuo permesso per controllare le posizioni delle tue finestre."
+            "value" : "rawm ha bisogno del tuo permesso per controllare le posizioni delle tue finestre."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleがウインドウの位置を制御するには許可が必要です。"
+            "value" : "rawmがウインドウの位置を制御するには許可が必要です。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle은 창 위치를 제어하기 위해 권한이 필요합니다."
+            "value" : "rawm은 창 위치를 제어하기 위해 권한이 필요합니다."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle reikia jūsų leidimo valdyti langų padėtį"
+            "value" : "rawm reikia jūsų leidimo valdyti langų padėtį"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle trenger lov av deg for å kontrollere vindusposisjonene."
+            "value" : "rawm trenger lov av deg for å kontrollere vindusposisjonene."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle heeft uw toestemming nodig om uw vensterposities te kunnen aanpassen."
+            "value" : "rawm heeft uw toestemming nodig om uw vensterposities te kunnen aanpassen."
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle treng lov av deg for å kontrollera vindaugsposisjonane."
+            "value" : "rawm treng lov av deg for å kontrollera vindaugsposisjonane."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle potrzebuje twojego pozwolenia, aby móc sterować pozycjami okna."
+            "value" : "rawm potrzebuje twojego pozwolenia, aby móc sterować pozycjami okna."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O Rectangle precisa de sua permissão para controlar a posição das janelas."
+            "value" : "O rawm precisa de sua permissão para controlar a posição das janelas."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O Rectangle precisa da sua permissão para controlar as posições das janelas."
+            "value" : "O rawm precisa da sua permissão para controlar as posições das janelas."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle are nevoie de permisiunea ta pentru a controla poziția ferestrelor tale."
+            "value" : "rawm are nevoie de permisiunea ta pentru a controla poziția ferestrelor tale."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle необходимо ваше разрешение для управления положением окон"
+            "value" : "rawm необходимо ваше разрешение для управления положением окон"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle potrebuje povolenie na ovládanie umiestnenia tvojich okien."
+            "value" : "rawm potrebuje povolenie na ovládanie umiestnenia tvojich okien."
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle behöver ditt tillstånd för att kontrollera dina fönsterpositioner."
+            "value" : "rawm behöver ditt tillstånd för att kontrollera dina fönsterpositioner."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'ın pencere konumlarını değiştirebilmek için izninize ihtiyacı var."
+            "value" : "rawm'ın pencere konumlarını değiştirebilmek için izninize ihtiyacı var."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle потребує вашого дозволу для керування позиціями ваших вікон."
+            "value" : "rawm потребує вашого дозволу для керування позиціями ваших вікон."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle cần sự cho phép của bạn để điều khỉển vị trí cửa sổ."
+            "value" : "rawm cần sự cho phép của bạn để điều khỉển vị trí cửa sổ."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 需要您的允许以控制窗口位置。"
+            "value" : "rawm 需要您的允许以控制窗口位置。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 需要您的許可來控制視窗位置。"
+            "value" : "rawm 需要您的許可來控制視窗位置。"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle需要你的允許以控制視窗位置。"
+            "value" : "rawm需要你的允許以控制視窗位置。"
           }
         }
       }
@@ -24622,7 +24622,7 @@
       }
     },
     "iXo-XL-T6q.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Authorize Rectangle\"; ObjectID = \"iXo-XL-T6q\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Authorize rawm\"; ObjectID = \"iXo-XL-T6q\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -24634,181 +24634,181 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoritza Rectangle"
+            "value" : "Autoritza rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoritza Rectangle"
+            "value" : "Autoritza rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizovat Rectangle"
+            "value" : "Autorizovat rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle autorisieren"
+            "value" : "rawm autorisieren"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Authorize Rectangle"
+            "value" : "Authorize rawm"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Authorise Rectangle"
+            "value" : "Authorise rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser Rectangle"
+            "value" : "Autoriser rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Izinkan Rectangle"
+            "value" : "Izinkan rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizza Rectangle"
+            "value" : "Autorizza rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleを許可"
+            "value" : "rawmを許可"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 승인"
+            "value" : "rawm 승인"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Suteikti Rectangle prieigą"
+            "value" : "Suteikti rawm prieigą"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser Rectangle"
+            "value" : "Autoriser rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle toestemming geven"
+            "value" : "rawm toestemming geven"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser Rectangle"
+            "value" : "Autoriser rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoryzacja Rectangle"
+            "value" : "Autoryzacja rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizar Rectangle"
+            "value" : "Autorizar rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorizare Rectangle"
+            "value" : "Autorizare rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Дать Rectangle доступ"
+            "value" : "Дать rawm доступ"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Povoliť Rectangle"
+            "value" : "Povoliť rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auktorisera Rectangle"
+            "value" : "Auktorisera rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'ı Yetkilendir"
+            "value" : "rawm'ı Yetkilendir"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Авторизувати Rectangle"
+            "value" : "Авторизувати rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cấp phép cho Rectangle"
+            "value" : "Cấp phép cho rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "授权Rectangle"
+            "value" : "授权rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "授權 Rectangle"
+            "value" : "授權 rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "授權Rectangle"
+            "value" : "授權rawm"
           }
         }
       }
@@ -26182,7 +26182,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleについて"
+            "value" : "rawmについて"
           }
         },
         "ko" : {
@@ -26194,7 +26194,7 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apie Rectangle"
+            "value" : "Apie rawm"
           }
         },
         "nb" : {
@@ -26218,7 +26218,7 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O Rectangle"
+            "value" : "O rawm"
           }
         },
         "pt-BR" : {
@@ -26242,7 +26242,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "О Rectangle"
+            "value" : "О rawm"
           }
         },
         "sk" : {
@@ -27454,7 +27454,7 @@
       }
     },
     "kYm-Ye-gOR.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Welcome to Rectangle!\"; ObjectID = \"kYm-Ye-gOR\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Welcome to rawm!\"; ObjectID = \"kYm-Ye-gOR\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -27466,175 +27466,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Benvingut a Rectangle!"
+            "value" : "Benvingut a rawm!"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Benvingut a Rectangle!"
+            "value" : "Benvingut a rawm!"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vítejte do Rectangle!"
+            "value" : "Vítejte do rawm!"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Willkommen bei Rectangle!"
+            "value" : "Willkommen bei rawm!"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Welcome to Rectangle!"
+            "value" : "Welcome to rawm!"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¡Bienvenido a Rectangle!"
+            "value" : "¡Bienvenido a rawm!"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¡Bienvenido a Rectangle!"
+            "value" : "¡Bienvenido a rawm!"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bienvenue dans Rectangle !"
+            "value" : "Bienvenue dans rawm !"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Selamat Datang di Rectangle!"
+            "value" : "Selamat Datang di rawm!"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle ti dà il benvenuto!"
+            "value" : "rawm ti dà il benvenuto!"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleへようこそ!"
+            "value" : "rawmへようこそ!"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle에 오신 것을 환영합니다!"
+            "value" : "rawm에 오신 것을 환영합니다!"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sveiki atvykę į Rectangle!"
+            "value" : "Sveiki atvykę į rawm!"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velkommen til Rectangle!"
+            "value" : "Velkommen til rawm!"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welcome to Rectangle!"
+            "value" : "Welcome to rawm!"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velkomen til Rectangle!"
+            "value" : "Velkomen til rawm!"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Witaj w Rectangle!"
+            "value" : "Witaj w rawm!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bem vindo ao Rectangle!"
+            "value" : "Bem vindo ao rawm!"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bem-vindo ao Rectangle!"
+            "value" : "Bem-vindo ao rawm!"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bine ai venit în Rectangle!"
+            "value" : "Bine ai venit în rawm!"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Добро пожаловать в Rectangle!"
+            "value" : "Добро пожаловать в rawm!"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Víta Ťa Rectangle!"
+            "value" : "Víta Ťa rawm!"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Välkommen till Rectangle!"
+            "value" : "Välkommen till rawm!"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'a Hoşgeldiniz!"
+            "value" : "rawm'a Hoşgeldiniz!"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ласкаво просимо до Rectangle!"
+            "value" : "Ласкаво просимо до rawm!"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chào mừng đến với Rectangle!"
+            "value" : "Chào mừng đến với rawm!"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "欢迎使用 Rectangle！"
+            "value" : "欢迎使用 rawm！"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "歡迎使用 Rectangle！"
+            "value" : "歡迎使用 rawm！"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "歡迎使用Rectangle！"
+            "value" : "歡迎使用rawm！"
           }
         }
       }
@@ -28682,7 +28682,7 @@
       }
     },
     "ltc-mf-BHr.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"When the menu bar icon is hidden, relaunch Rectangle from Finder to open\"; ObjectID = \"ltc-mf-BHr\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"When the menu bar icon is hidden, relaunch rawm from Finder to open\"; ObjectID = \"ltc-mf-BHr\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -28694,175 +28694,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quan la icona de la barra de menús estigui amagada, torneu a iniciar Rectangle des del Finder per obrir el menú."
+            "value" : "Quan la icona de la barra de menús estigui amagada, torneu a iniciar rawm des del Finder per obrir el menú."
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quan la icona de la barra de menús estigui amagada, torneu a iniciar Rectangle des del Finder per obrir el menú."
+            "value" : "Quan la icona de la barra de menús estigui amagada, torneu a iniciar rawm des del Finder per obrir el menú."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pokud je ikona skrytá v řádku nabídek, tak znovu spusťte Rectangle přes Finder"
+            "value" : "Pokud je ikona skrytá v řádku nabídek, tak znovu spusťte rawm přes Finder"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wenn das Menüleistensymbol ausgeblendet ist, starte Rectangle im Finder neu, um die Rectangle-Einstellungen zu öffnen."
+            "value" : "Wenn das Menüleistensymbol ausgeblendet ist, starte rawm im Finder neu, um die rawm-Einstellungen zu öffnen."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "When the menu bar icon is hidden, relaunch Rectangle from Finder to open"
+            "value" : "When the menu bar icon is hidden, relaunch rawm from Finder to open"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cuando el icono de la barra de menús esté oculto, vuelva a iniciar Rectangle desde el Finder para abrir el menú."
+            "value" : "Cuando el icono de la barra de menús esté oculto, vuelva a iniciar rawm desde el Finder para abrir el menú."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cuando el icono de la barra de menús esté oculto, vuelva a iniciar Rectangle desde el Finder para abrir el menú."
+            "value" : "Cuando el icono de la barra de menús esté oculto, vuelva a iniciar rawm desde el Finder para abrir el menú."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lorsque l'icône de la barre des menus est masquée, relancez Rectangle depuis le Finder pour ouvrir le menu."
+            "value" : "Lorsque l'icône de la barre des menus est masquée, relancez rawm depuis le Finder pour ouvrir le menu."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saat ikon bilah menu disembunyikan, luncurkan kembali Rectangle dari Finder untuk membuka menu."
+            "value" : "Saat ikon bilah menu disembunyikan, luncurkan kembali rawm dari Finder untuk membuka menu."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quando l'icona dalla barra dei menu è nascosta, rilancia Rectangle dal Finder per aprire il menu."
+            "value" : "Quando l'icona dalla barra dei menu è nascosta, rilancia rawm dal Finder per aprire il menu."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "メニューバーのアイコンが非表示の場合にメニューを開くには、FinderからRectangleを再起動してください。"
+            "value" : "メニューバーのアイコンが非表示の場合にメニューを開くには、Finderからrawmを再起動してください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "메뉴 막대 아이콘이 숨겨져 있을 경우, Finder에서 Rectangle를 다시 시작하여 메뉴를 여십시오."
+            "value" : "메뉴 막대 아이콘이 숨겨져 있을 경우, Finder에서 rawm를 다시 시작하여 메뉴를 여십시오."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jei meniu juostos piktograma yra paslėpta, paleiskite Rectangle programą iš Finder, kad atidarytumėte meniu."
+            "value" : "Jei meniu juostos piktograma yra paslėpta, paleiskite rawm programą iš Finder, kad atidarytumėte meniu."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når menyradikonet er skjult kan du starte Rectangle fra Finder for å åpne menyen."
+            "value" : "Når menyradikonet er skjult kan du starte rawm fra Finder for å åpne menyen."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Als het menubalk-pictogram verborgen is, start u Rectangle opnieuw vanuit Finder om het menu te openen."
+            "value" : "Als het menubalk-pictogram verborgen is, start u rawm opnieuw vanuit Finder om het menu te openen."
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når menyradikonet er gøymd kan du starta Rectangle frå Finder for å opna menyen."
+            "value" : "Når menyradikonet er gøymd kan du starta rawm frå Finder for å opna menyen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gdy ikona paska menu jest ukryta, ponownie uruchom Rectangle z Findera, aby otworzyć menu."
+            "value" : "Gdy ikona paska menu jest ukryta, ponownie uruchom rawm z Findera, aby otworzyć menu."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quando o ícone da barra de menus estiver oculto, reinicie o Rectangle pelo Finder para abrir o menu."
+            "value" : "Quando o ícone da barra de menus estiver oculto, reinicie o rawm pelo Finder para abrir o menu."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quando o ícone da barra de menus estiver oculto, reinicie o Rectangle do Finder para abrir o menu."
+            "value" : "Quando o ícone da barra de menus estiver oculto, reinicie o rawm do Finder para abrir o menu."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dacă iconița din bara de meniu este ascunsă, repornește Rectangle din Finder"
+            "value" : "Dacă iconița din bara de meniu este ascunsă, repornește rawm din Finder"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Если значок строки меню скрыт, перезапустите программу Rectangle из Finder, чтобы открыть меню."
+            "value" : "Если значок строки меню скрыт, перезапустите программу rawm из Finder, чтобы открыть меню."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ak je ikona v lište skrytá, znovu spusti Rectangle z Findera"
+            "value" : "Ak je ikona v lište skrytá, znovu spusti rawm z Findera"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "När menyradens ikon är dold, starta då Rectangle från Finder för att öppna menyn."
+            "value" : "När menyradens ikon är dold, starta då rawm från Finder för att öppna menyn."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Menü simgesi gizlendiğinde, menüyü açmak için Rectangle'ı Finder ile yeniden açın."
+            "value" : "Menü simgesi gizlendiğinde, menüyü açmak için rawm'ı Finder ile yeniden açın."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Коли піктограма у рядку меню прихована, перезапустіть Rectangle з Finder для відкриття"
+            "value" : "Коли піктограма у рядку меню прихована, перезапустіть rawm з Finder для відкриття"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Khi biểu tượng trên thanh menu bị ẩn, khởi chạy Rectangle từ Finder để mở lại"
+            "value" : "Khi biểu tượng trên thanh menu bị ẩn, khởi chạy rawm từ Finder để mở lại"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "当菜单栏图标被隐藏时，从访达重新开启Rectangle以打开。"
+            "value" : "当菜单栏图标被隐藏时，从访达重新开启rawm以打开。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "選單列圖示被隱藏時，從 Finder 重新啟動 Rectangle 來打開。"
+            "value" : "選單列圖示被隱藏時，從 Finder 重新啟動 rawm 來打開。"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "選單列圖像被隱藏時，從Finder重新啟動Rectangle以開啟。"
+            "value" : "選單列圖像被隱藏時，從Finder重新啟動rawm以開啟。"
           }
         }
       }
@@ -33157,7 +33157,7 @@
       }
     },
     "Olw-nP-bQN.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Hide Rectangle\"; ObjectID = \"Olw-nP-bQN\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"Hide rawm\"; ObjectID = \"Olw-nP-bQN\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -33169,175 +33169,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Amaga Rectangle"
+            "value" : "Amaga rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Amaga Rectangle"
+            "value" : "Amaga rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skrýt Rectangle"
+            "value" : "Skrýt rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle ausblenden"
+            "value" : "rawm ausblenden"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Hide Rectangle"
+            "value" : "Hide rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ocultar Rectangle"
+            "value" : "Ocultar rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ocultar Rectangle"
+            "value" : "Ocultar rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Masquer Rectangle"
+            "value" : "Masquer rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sembunyikan Rectangle"
+            "value" : "Sembunyikan rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nascondi Rectangle"
+            "value" : "Nascondi rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleを非表示"
+            "value" : "rawmを非表示"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 가리기"
+            "value" : "rawm 가리기"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Slėpti Rectangle"
+            "value" : "Slėpti rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skjul Rectangle"
+            "value" : "Skjul rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Verberg Rectangle"
+            "value" : "Verberg rawm"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gøym Rectangle"
+            "value" : "Gøym rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukryj Rectangle"
+            "value" : "Ukryj rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ocultar Rectangle"
+            "value" : "Ocultar rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ocultar Rectangle"
+            "value" : "Ocultar rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ascunde Rectangle"
+            "value" : "Ascunde rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Скрыть Rectangle"
+            "value" : "Скрыть rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skryť Rectangle"
+            "value" : "Skryť rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dölj Rectangle"
+            "value" : "Dölj rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'ı Gizle"
+            "value" : "rawm'ı Gizle"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сховати Rectangle"
+            "value" : "Сховати rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ẩn Rectangle"
+            "value" : "Ẩn rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "隐藏 Rectangle"
+            "value" : "隐藏 rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "隱藏 Rectangle"
+            "value" : "隱藏 rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "隱藏Rectangle"
+            "value" : "隱藏rawm"
           }
         }
       }
@@ -35784,187 +35784,187 @@
       }
     },
     "q9C-qZ-xw5.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"While in Todo Mode, you can refresh the Todo Mode layout by selecting \\\"Reflow Todo\\\" in the Rectangle menu or executing the associated keyboard shortcut.\"; ObjectID = \"q9C-qZ-xw5\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"While in Todo Mode, you can refresh the Todo Mode layout by selecting \\\"Reflow Todo\\\" in the rawm menu or executing the associated keyboard shortcut.\"; ObjectID = \"q9C-qZ-xw5\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "أثناء وجودك في Todo Mode ، يمكنك تحديث تخطيط Todo Mode عن طريق تحديد  'Reflow Todo ' في قائمة Rectangle أو تنفيذ اختصار لوحة المفاتيح المرتبط"
+            "value" : "أثناء وجودك في Todo Mode ، يمكنك تحديث تخطيط Todo Mode عن طريق تحديد  'Reflow Todo ' في قائمة rawm أو تنفيذ اختصار لوحة المفاتيح المرتبط"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mentre esteu al mode Todo, podeu actualitzar el disseny del mode TodoO seleccionant \"Redistribuir Todo\" al menú Rectangle o executant la drecera de teclat associada."
+            "value" : "Mentre esteu al mode Todo, podeu actualitzar el disseny del mode TodoO seleccionant \"Redistribuir Todo\" al menú rawm o executant la drecera de teclat associada."
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mentre esteu al mode Todo, podeu actualitzar el disseny del mode TodoO seleccionant \"Redistribuir Todo\" al menú Rectangle o executant la drecera de teclat associada."
+            "value" : "Mentre esteu al mode Todo, podeu actualitzar el disseny del mode TodoO seleccionant \"Redistribuir Todo\" al menú rawm o executant la drecera de teclat associada."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rozložení Todo módu můžete obnovit vybráním \"Zobrazit Todo\" v Rectangle menu nebo exekucí nastavené zkratky."
+            "value" : "Rozložení Todo módu můžete obnovit vybráním \"Zobrazit Todo\" v rawm menu nebo exekucí nastavené zkratky."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Du kannst im To-do-Modus die To-do-Anwendung neu ausrichten indem du \"To-do neu ausrichten\" im Rectangle-Menü auswählst oder die zugewiesene Tastenkombination ausführst."
+            "value" : "Du kannst im To-do-Modus die To-do-Anwendung neu ausrichten indem du \"To-do neu ausrichten\" im rawm-Menü auswählst oder die zugewiesene Tastenkombination ausführst."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the Rectangle menu or executing the associated keyboard shortcut."
+            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the rawm menu or executing the associated keyboard shortcut."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mientras esté en modo 'Todo', puede refrescar la disposición del modo 'Todo' seleccionando \"Reflujo en 'Todo'\" en el menú de Rectangle o usando el atajo de teclado asociado."
+            "value" : "Mientras esté en modo 'Todo', puede refrescar la disposición del modo 'Todo' seleccionando \"Reflujo en 'Todo'\" en el menú de rawm o usando el atajo de teclado asociado."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mientras esté en modo 'Todo', puede refrescar la disposición del modo 'Todo' seleccionando \"Reflujo en 'Todo'\" en el menú de Rectangle o usando el atajo de teclado asociado."
+            "value" : "Mientras esté en modo 'Todo', puede refrescar la disposición del modo 'Todo' seleccionando \"Reflujo en 'Todo'\" en el menú de rawm o usando el atajo de teclado asociado."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lorsque vous êtes en mode Todo, vous pouvez rafraîchir la vue en sélectionnant « Rafraîchir Todo » dans le menu de Rectangle ou en utilisant le raccourci clavier associé."
+            "value" : "Lorsque vous êtes en mode Todo, vous pouvez rafraîchir la vue en sélectionnant « Rafraîchir Todo » dans le menu de rawm ou en utilisant le raccourci clavier associé."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saat dalam Mode Todo, Anda dapat menyegarkan tata letak Mode Todo dengan memilih \"Alur Ulang Todo » di menu Rectangle menu atau menjalankan pintasan keyboard terkait."
+            "value" : "Saat dalam Mode Todo, Anda dapat menyegarkan tata letak Mode Todo dengan memilih \"Alur Ulang Todo » di menu rawm menu atau menjalankan pintasan keyboard terkait."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Durante la modalità In evidenza, puoi reimpostarla selezionando \"Reimposta In Evidenza\" nel menu di Rectangle o con l'abbreviazione da tastiera impostata."
+            "value" : "Durante la modalità In evidenza, puoi reimpostarla selezionando \"Reimposta In Evidenza\" nel menu di rawm o con l'abbreviazione da tastiera impostata."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ToDoモードのウインドウ配置を復元するには、ToDoモードのときに、Rectangleのメニューにある\"ToDoモードを再設定\"を選択するか、指定されたキーボードショートカットを押します。"
+            "value" : "ToDoモードのウインドウ配置を復元するには、ToDoモードのときに、rawmのメニューにある\"ToDoモードを再設定\"を選択するか、指定されたキーボードショートカットを押します。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Todo 모드를 사용하는 동안, Rectangle 메뉴에서 \"Todo 재배치\"를 클릭하거나 키보드 단축키를 사용해 Todo 모드 레이아웃을 새로고칠 수 있습니다."
+            "value" : "Todo 모드를 사용하는 동안, rawm 메뉴에서 \"Todo 재배치\"를 클릭하거나 키보드 단축키를 사용해 Todo 모드 레이아웃을 새로고칠 수 있습니다."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kai įjungtas Todo režimas, galite atnaujinti Todo režimo išdėstymą pasirinkdami „Atnaujinti Todo“ Rectangle meniu arba įvykdę susietą klaviatūros trumpinį."
+            "value" : "Kai įjungtas Todo režimas, galite atnaujinti Todo režimo išdėstymą pasirinkdami „Atnaujinti Todo“ rawm meniu arba įvykdę susietą klaviatūros trumpinį."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når du er i Gjøreliste-modus kan du oppdatere Gjøreliste-oppsettet ved å velge \"Flytt om på Gjøreliste\" i Rectangle-menyen eller ved å benytte definerte tastatursnarveger."
+            "value" : "Når du er i Gjøreliste-modus kan du oppdatere Gjøreliste-oppsettet ved å velge \"Flytt om på Gjøreliste\" i rawm-menyen eller ved å benytte definerte tastatursnarveger."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the Rectangle menu or executing the associated keyboard shortcut."
+            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the rawm menu or executing the associated keyboard shortcut."
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når du er i Gjereliste-modus kan du oppdatera Gjereliste-oppsettet ved å velja \"Flytt om på Gjereliste\" i Rectangle-menyen eller ved å nytta definerte tastatursnarvegar."
+            "value" : "Når du er i Gjereliste-modus kan du oppdatera Gjereliste-oppsettet ved å velja \"Flytt om på Gjereliste\" i rawm-menyen eller ved å nytta definerte tastatursnarvegar."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the Rectangle menu or executing the associated keyboard shortcut."
+            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the rawm menu or executing the associated keyboard shortcut."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the Rectangle menu or executing the associated keyboard shortcut."
+            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the rawm menu or executing the associated keyboard shortcut."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the Rectangle menu or executing the associated keyboard shortcut."
+            "value" : "While in Todo Mode, you can refresh the Todo Mode layout by selecting \"Reflow Todo\" in the rawm menu or executing the associated keyboard shortcut."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Din Modul Todo, poți reactualiza aspectul Modului Todo selectând \"Reflow Todo\" în meniul Rectangle sau folosind scurtătura asociată acestuia."
+            "value" : "Din Modul Todo, poți reactualiza aspectul Modului Todo selectând \"Reflow Todo\" în meniul rawm sau folosind scurtătura asociată acestuia."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "При включенном Todo режиме вы можете обновить положение окна Todo приложения выбрав \"Обновить положение Todo окна\" в меню Rectangle или при помощи соответствующей горячей клавиши."
+            "value" : "При включенном Todo режиме вы можете обновить положение окна Todo приложения выбрав \"Обновить положение Todo окна\" в меню rawm или при помощи соответствующей горячей клавиши."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "V Todo režime môžeš obnoviť rozloženie Todo režimu vyberom \"Preusporiadať Todo\" v Rectangle menu alebo pomocou príslušnej skratky."
+            "value" : "V Todo režime môžeš obnoviť rozloženie Todo režimu vyberom \"Preusporiadať Todo\" v rawm menu alebo pomocou príslušnej skratky."
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "När du är i Att göra-läget kan du uppdatera Att göra-layouten genom att välja \"Ordna om Att göra\" i Rectangle-menyn eller genom att använda tilldelat tangentbordsgenväg."
+            "value" : "När du är i Att göra-läget kan du uppdatera Att göra-layouten genom att välja \"Ordna om Att göra\" i rawm-menyn eller genom att använda tilldelat tangentbordsgenväg."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Todo Modu aktifken Rectangle menüsündeki  \"Todo'yu Yeniden Ayarla\" seçeneği ile veya tanımladığınız klavye kısayolu ile ekran düzenini tazeleyebilirsiniz."
+            "value" : "Todo Modu aktifken rawm menüsündeki  \"Todo'yu Yeniden Ayarla\" seçeneği ile veya tanımladığınız klavye kısayolu ile ekran düzenini tazeleyebilirsiniz."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Під час роботи в режимі Завдань ви можете оновити макет режиму Завдань, вибравши «Переформатувати вікна Завдань» у меню Rectangle або виконавши пов’язану комбінацію клавіш."
+            "value" : "Під час роботи в режимі Завдань ви можете оновити макет режиму Завдань, вибравши «Переформатувати вікна Завдань» у меню rawm або виконавши пов’язану комбінацію клавіш."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Khi ở chế độ Todo, bạn có thể làm mới bố cục của chế độ Todo bằng cách chọn \"Làm mới Todo\" trong menu của Rectangle hoặc ấn phím tắt tương ứng."
+            "value" : "Khi ở chế độ Todo, bạn có thể làm mới bố cục của chế độ Todo bằng cách chọn \"Làm mới Todo\" trong menu của rawm hoặc ấn phím tắt tương ứng."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在“待办模式”下，若要刷新待办模式布局，您可以从 Rectangle 菜单中选择“重新排列待办”，或使用对应的键盘快捷键。"
+            "value" : "在“待办模式”下，若要刷新待办模式布局，您可以从 rawm 菜单中选择“重新排列待办”，或使用对应的键盘快捷键。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在待辦模式下，若要重新整理待辦模式佈局，您可以從 Rectangle 選單中選擇「重新排列待辦」，或使用相應的鍵盤快速鍵"
+            "value" : "在待辦模式下，若要重新整理待辦模式佈局，您可以從 rawm 選單中選擇「重新排列待辦」，或使用相應的鍵盤快速鍵"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在待辦模式下，若要重新整理待辦模式佈局，你可以從Rectangle選單中選擇「重新排列待辦」，或使用相應的鍵盤快捷鍵"
+            "value" : "在待辦模式下，若要重新整理待辦模式佈局，你可以從rawm選單中選擇「重新排列待辦」，或使用相應的鍵盤快捷鍵"
           }
         }
       }
@@ -39621,7 +39621,7 @@
       }
     },
     "STb-JK-oB1.title" : {
-      "comment" : "Class = \"NSWindow\"; title = \"Rectangle Settings\"; ObjectID = \"STb-JK-oB1\";",
+      "comment" : "Class = \"NSWindow\"; title = \"rawm Settings\"; ObjectID = \"STb-JK-oB1\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -39633,175 +39633,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferències de Rectangle"
+            "value" : "Preferències de rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferències de Rectangle"
+            "value" : "Preferències de rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle předvolby"
+            "value" : "rawm předvolby"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle-Einstellungen"
+            "value" : "rawm-Einstellungen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Rectangle Settings"
+            "value" : "rawm Settings"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferencias de Rectangle"
+            "value" : "Preferencias de rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferencias de Rectangle"
+            "value" : "Preferencias de rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Préférences Rectangle"
+            "value" : "Préférences rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferensi Rectangle"
+            "value" : "Preferensi rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferenze Rectangle"
+            "value" : "Preferenze rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle環境設定"
+            "value" : "rawm環境設定"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 설정"
+            "value" : "rawm 설정"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle nustatymai"
+            "value" : "rawm nustatymai"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle-innstillinger"
+            "value" : "rawm-innstillinger"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Voorkeuren Rectangle"
+            "value" : "Voorkeuren rawm"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle-innstillingar"
+            "value" : "rawm-innstillingar"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferencje Rectangle"
+            "value" : "Preferencje rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferências do Rectangle"
+            "value" : "Preferências do rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferências do Rectangle"
+            "value" : "Preferências do rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Preferințe Rectangle"
+            "value" : "Preferințe rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Настройки Rectangle"
+            "value" : "Настройки rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle predvoľby"
+            "value" : "rawm predvoľby"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle-inställningar"
+            "value" : "rawm-inställningar"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle Tercihleri"
+            "value" : "rawm Tercihleri"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Налаштування Rectangle"
+            "value" : "Налаштування rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cài đặt của Rectangle"
+            "value" : "Cài đặt của rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle 偏好设置"
+            "value" : "rawm 偏好设置"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle 偏好設定"
+            "value" : "rawm 偏好設定"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Rectangle偏好設定"
+            "value" : "rawm偏好設定"
           }
         }
       }
@@ -39945,187 +39945,187 @@
       }
     },
     "t7n-mU-75I.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"Enable Rectangle.app\"; ObjectID = \"t7n-mU-75I\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Enable rawm.app\"; ObjectID = \"t7n-mU-75I\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تحقق من Rectangle.app"
+            "value" : "تحقق من rawm.app"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Comprova Rectangle.app"
+            "value" : "Comprova rawm.app"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Comprova Rectangle.app"
+            "value" : "Comprova rawm.app"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zkontrolovat Rectangle.app"
+            "value" : "Zkontrolovat rawm.app"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle.app prüfen"
+            "value" : "rawm.app prüfen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Enable Rectangle.app"
+            "value" : "Enable rawm.app"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Compruebe Rectangle.app"
+            "value" : "Compruebe rawm.app"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Compruebe Rectangle.app"
+            "value" : "Compruebe rawm.app"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vérifier Rectangle.app"
+            "value" : "Vérifier rawm.app"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Periksa Rectangle.app"
+            "value" : "Periksa rawm.app"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Controlla Rectangle.app"
+            "value" : "Controlla rawm.app"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle.appを確認してください"
+            "value" : "rawm.appを確認してください"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle.app 확인하기"
+            "value" : "rawm.app 확인하기"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Patikrinkite failą Rectangle.app."
+            "value" : "Patikrinkite failą rawm.app."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sjekk Rectangle.app"
+            "value" : "Sjekk rawm.app"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Controleer Rectangle.app"
+            "value" : "Controleer rawm.app"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sjekk Rectangle.app"
+            "value" : "Sjekk rawm.app"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sprawdź Rectangle.app."
+            "value" : "Sprawdź rawm.app."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Verificar Rectangle.app"
+            "value" : "Verificar rawm.app"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Verificar Rectangle.app"
+            "value" : "Verificar rawm.app"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Verifică Rectangle.app"
+            "value" : "Verifică rawm.app"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Проверьте файл Rectangle.app."
+            "value" : "Проверьте файл rawm.app."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skontrolovať Rectangle.app"
+            "value" : "Skontrolovať rawm.app"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kontrollera Rectangle.app"
+            "value" : "Kontrollera rawm.app"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle.app'ı işaretleyerek izin verin"
+            "value" : "rawm.app'ı işaretleyerek izin verin"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Увімкнути Rectangle.app"
+            "value" : "Увімкнути rawm.app"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bật Rectangle.app"
+            "value" : "Bật rawm.app"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "启用 Rectangle.app"
+            "value" : "启用 rawm.app"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "啟用 Rectangle.app"
+            "value" : "啟用 rawm.app"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "啟用Rectangle.app"
+            "value" : "啟用rawm.app"
           }
         }
       }
@@ -41077,13 +41077,13 @@
         }
       }
     },
-    "Tiling in Rectangle has been disabled" : {
+    "Tiling in rawm has been disabled" : {
       "extractionState" : "manual",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle의 타일 정리 기능이 비활성화됨"
+            "value" : "rawm의 타일 정리 기능이 비활성화됨"
           }
         },
         "vi" : {
@@ -41249,180 +41249,180 @@
         }
       }
     },
-    "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting." : {
+    "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting." : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pour permettre à Rectangle de gérer la fonctionnalité de double-clic sur la barre de titre d'une fenêtre, vous devez désactiver le paramètre macOS correspondant."
+            "value" : "Pour permettre à rawm de gérer la fonctionnalité de double-clic sur la barre de titre d'une fenêtre, vous devez désactiver le paramètre macOS correspondant."
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Damit Rectangle die Doppelklickfunktion der Titelleiste verwalten kann, muss die entsprechende macOS Systemeinstellung deaktiviert werden."
+            "value" : "Damit rawm die Doppelklickfunktion der Titelleiste verwalten kann, muss die entsprechende macOS Systemeinstellung deaktiviert werden."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Para permitir que Rectangle administre la funcionalidad de doble click en la barra de título, debes deshabilitar los ajustes correspondientes de macOS."
+            "value" : "Para permitir que rawm administre la funcionalidad de doble click en la barra de título, debes deshabilitar los ajustes correspondientes de macOS."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Para permitir que Rectangle administre la funcionalidad de doble click en la barra de título, debes deshabilitar los ajustes correspondientes de macOS."
+            "value" : "Para permitir que rawm administre la funcionalidad de doble click en la barra de título, debes deshabilitar los ajustes correspondientes de macOS."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pour permettre à Rectangle de gérer la fonctionnalité de double-clic sur la barre de titre d'une fenêtre, vous devez désactiver le paramètre macOS correspondant."
+            "value" : "Pour permettre à rawm de gérer la fonctionnalité de double-clic sur la barre de titre d'une fenêtre, vous devez désactiver le paramètre macOS correspondant."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Per permettere a Rectangle di gestire la funzione di doppio clic sulla barra del titolo, devi disabilitare l'impostazione di macOS corrispondente."
+            "value" : "Per permettere a rawm di gestire la funzione di doppio clic sulla barra del titolo, devi disabilitare l'impostazione di macOS corrispondente."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleがタイトルバーのダブルクリック機能を管理するには、該当するmacOSの設定を無効にする必要があります。"
+            "value" : "rawmがタイトルバーのダブルクリック機能を管理するには、該当するmacOSの設定を無効にする必要があります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle이 제목 막대 두 번 클릭 기능을 제어하려면, 해당하는 macOS 설정을 꺼야 합니다."
+            "value" : "rawm이 제목 막대 두 번 클릭 기능을 제어하려면, 해당하는 macOS 설정을 꺼야 합니다."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Norėdami leisti „Rectangle“ valdyti antraštės juostos dvigubą spustelėjimą, turite išjungti atitinkamą „macOS“ nustatymą."
+            "value" : "Norėdami leisti „rawm“ valdyti antraštės juostos dvigubą spustelėjimą, turite išjungti atitinkamą „macOS“ nustatymą."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "For å la Rectangle styre dobbeltklikking i vindustittelen må du slå av den tilsvarende innstillinga i macOS."
+            "value" : "For å la rawm styre dobbeltklikking i vindustittelen må du slå av den tilsvarende innstillinga i macOS."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "For å la Rectangle styra dobbeltklikking i vindaugstittelen må du slå av den tilsvarande innstillinga i macOS."
+            "value" : "For å la rawm styra dobbeltklikking i vindaugstittelen må du slå av den tilsvarande innstillinga i macOS."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Чтобы позволить Rectangle управлять функцией двойного щелчка в заголовке, необходимо отключить соответствующую настройку macOS."
+            "value" : "Чтобы позволить rawm управлять функцией двойного щелчка в заголовке, необходимо отключить соответствующую настройку macOS."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aby Rectangle mohol spravovať funkciu dvojitého kliknutia v lište s názvom, musíš vypnúť príslušné nastavenie v macOS."
+            "value" : "Aby rawm mohol spravovať funkciu dvojitého kliknutia v lište s názvom, musíš vypnúť príslušné nastavenie v macOS."
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Để cho phép Rectangle quản lý chức năng nhấp đúp vào thanh tiêu đề, bạn cần phải tắt cài đặt macOS tương ứng."
+            "value" : "Để cho phép rawm quản lý chức năng nhấp đúp vào thanh tiêu đề, bạn cần phải tắt cài đặt macOS tương ứng."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你需要禁用 macOS 中对应的设置以使用 Rectangle 管理连按窗口标题功能。"
+            "value" : "你需要禁用 macOS 中对应的设置以使用 rawm 管理连按窗口标题功能。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "若要讓 Rectangle 管理標題列連點功能，您需要停用對應的 macOS 設定。"
+            "value" : "若要讓 rawm 管理標題列連點功能，您需要停用對應的 macOS 設定。"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To let Rectangle manage the title bar double click functionality, you need to disable the corresponding macOS setting."
+            "value" : "To let rawm manage the title bar double click functionality, you need to disable the corresponding macOS setting."
           }
         }
       }
@@ -42843,7 +42843,7 @@
       }
     },
     "uQy-DD-JDr.title" : {
-      "comment" : "Class = \"NSMenu\"; title = \"Rectangle\"; ObjectID = \"uQy-DD-JDr\";",
+      "comment" : "Class = \"NSMenu\"; title = \"rawm\"; ObjectID = \"uQy-DD-JDr\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -42855,175 +42855,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle"
+            "value" : "rawm"
           }
         }
       }
@@ -48179,7 +48179,7 @@
       }
     },
     "xNi-9K-fnJ.title" : {
-      "comment" : "Class = \"NSTextFieldCell\"; title = \"2. In the Rectangle menu, select\\n\\\"Use [Application] as Todo App\\\"\"; ObjectID = \"xNi-9K-fnJ\";",
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"2. In the rawm menu, select\\n\\\"Use [Application] as Todo App\\\"\"; ObjectID = \"xNi-9K-fnJ\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
@@ -48191,175 +48191,175 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Al menú Rectangle, selecciona\n\"Utilitza [Application] com a app Todo\""
+            "value" : "2. Al menú rawm, selecciona\n\"Utilitza [Application] com a app Todo\""
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Al menú Rectangle, selecciona\n\"Utilitza [Application] com a app Todo\""
+            "value" : "2. Al menú rawm, selecciona\n\"Utilitza [Application] com a app Todo\""
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. V Rectangle menu, zvolte\n\"Vybrat [Application] jako Todo aplikaci\""
+            "value" : "2. V rawm menu, zvolte\n\"Vybrat [Application] jako Todo aplikaci\""
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Wähle \n\"Verwende [Application] als To-do-Anwendung\" im Rectangle-Menü."
+            "value" : "2. Wähle \n\"Verwende [Application] als To-do-Anwendung\" im rawm-Menü."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "2. In the Rectangle menu, select\n\"Use [Application] as Todo App\""
+            "value" : "2. In the rawm menu, select\n\"Use [Application] as Todo App\""
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. En el menú de Rectangle, selecciona\n\"Usar [Aplicación] como aplicación 'Todo'\""
+            "value" : "2. En el menú de rawm, selecciona\n\"Usar [Aplicación] como aplicación 'Todo'\""
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. En el menú de Rectangle, selecciona\n\"Usar [Aplicación] como aplicación 'Todo'\""
+            "value" : "2. En el menú de rawm, selecciona\n\"Usar [Aplicación] como aplicación 'Todo'\""
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Dans le menu de Rectangle, sélectionner\n« Utiliser [Application] comme App Todo »"
+            "value" : "2. Dans le menu de rawm, sélectionner\n« Utiliser [Application] comme App Todo »"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Di Menu Rectangle, pilih\n\"Gunakan [Application] sebagai Aplikasi Todo\""
+            "value" : "2. Di Menu rawm, pilih\n\"Gunakan [Application] sebagai Aplikasi Todo\""
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Nel menu di Rectangle, seleziona \n\"Usa [Applicazione] come applicazione in evidenza\""
+            "value" : "2. Nel menu di rawm, seleziona \n\"Usa [Applicazione] come applicazione in evidenza\""
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Rectangleのメニューにある\n\"[アプリケーション名]をToDoアプリとして使う\"を選択します"
+            "value" : "2. rawmのメニューにある\n\"[アプリケーション名]をToDoアプリとして使う\"を選択します"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Rectangle 메뉴에서, \n\"[Application]을 Todo 앱으로 사용\" 메뉴를 클릭합니다"
+            "value" : "2. rawm 메뉴에서, \n\"[Application]을 Todo 앱으로 사용\" 메뉴를 클릭합니다"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "„Rectangle“ meniu pasirinkite „Naudoti [Programą] kaip Todo programą“"
+            "value" : "„rawm“ meniu pasirinkite „Naudoti [Programą] kaip Todo programą“"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. I Rectangle-menyen: velg\n\"Bruk [Program] som Gjøreliste-program\""
+            "value" : "2. I rawm-menyen: velg\n\"Bruk [Program] som Gjøreliste-program\""
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. In the Rectangle menu, select\n\"Use [Application] as Todo App\""
+            "value" : "2. In the rawm menu, select\n\"Use [Application] as Todo App\""
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. I Rectangle-menyen: vel\n\"Bruk [Program] som Gjereliste-program\""
+            "value" : "2. I rawm-menyen: vel\n\"Bruk [Program] som Gjereliste-program\""
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. In the Rectangle menu, select\n\"Use [Application] as Todo App\""
+            "value" : "2. In the rawm menu, select\n\"Use [Application] as Todo App\""
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. No menu do Rectangle, selecione\n\"Use [Aplicativo] como Todo App\""
+            "value" : "2. No menu do rawm, selecione\n\"Use [Aplicativo] como Todo App\""
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. In the Rectangle menu, select\n\"Use [Application] as Todo App\""
+            "value" : "2. In the rawm menu, select\n\"Use [Application] as Todo App\""
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. În meniul Rectangle, selectează\n\"Folosește [Application] ca și Todo App\""
+            "value" : "2. În meniul rawm, selectează\n\"Folosește [Application] ca și Todo App\""
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. В меню Rectangle выберите \"Использовать [Приложение] в качестве приложения Todo\""
+            "value" : "2. В меню rawm выберите \"Использовать [Приложение] в качестве приложения Todo\""
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. V Rectangle menu, zvoľ\n\"Použiť [Aplikácia] ako Todo aplikáciu\""
+            "value" : "2. V rawm menu, zvoľ\n\"Použiť [Aplikácia] ako Todo aplikáciu\""
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. I Rectangle-menyn, välj\n\"Använd [Applikation] som Att göra-app\""
+            "value" : "2. I rawm-menyn, välj\n\"Använd [Applikation] som Att göra-app\""
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Rectangle menüsünde \n\"[Uygulama Adı]nı Todo App olarak kullan\" seçeneğini seçin"
+            "value" : "2. rawm menüsünde \n\"[Uygulama Adı]nı Todo App olarak kullan\" seçeneğini seçin"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. У меню Rectangle виберіть\n\"Використовувати [Застосунок] як застосунок Завдань\""
+            "value" : "2. У меню rawm виберіть\n\"Використовувати [Застосунок] як застосунок Завдань\""
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. Trên menu của Rectangle, chọn\n\"Sử dụng [Ứng dụng] làm ứng dụng Todo\""
+            "value" : "2. Trên menu của rawm, chọn\n\"Sử dụng [Ứng dụng] làm ứng dụng Todo\""
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⒉在 Rectangle 菜单中，选择\n“使用［应用程序］作为待办应用”"
+            "value" : "⒉在 rawm 菜单中，选择\n“使用［应用程序］作为待办应用”"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⒉ 在 Rectangle 選單中，選擇\n「使用［應用程式］作為待辦應用程式」"
+            "value" : "⒉ 在 rawm 選單中，選擇\n「使用［應用程式］作為待辦應用程式」"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⒉在Rectangle選單中，選擇\n「使用［應用程式］作為待辦應用」"
+            "value" : "⒉在rawm選單中，選擇\n「使用［應用程式］作為待辦應用」"
           }
         }
       }
@@ -49469,181 +49469,181 @@
       }
     },
     "yvN-PE-bxn.title" : {
-      "comment" : "Class = \"NSMenuItem\"; title = \"Quit Rectangle\"; ObjectID = \"yvN-PE-bxn\";",
+      "comment" : "Class = \"NSMenuItem\"; title = \"Quit rawm\"; ObjectID = \"yvN-PE-bxn\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sortir de Rectangle"
+            "value" : "Sortir de rawm"
           }
         },
         "ca-ES" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sortir de Rectangle"
+            "value" : "Sortir de rawm"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukončit Rectangle"
+            "value" : "Ukončit rawm"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle beenden"
+            "value" : "rawm beenden"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Quit Rectangle"
+            "value" : "Quit rawm"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salir de Rectangle"
+            "value" : "Salir de rawm"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salir de Rectangle"
+            "value" : "Salir de rawm"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quitter Rectangle"
+            "value" : "Quitter rawm"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Keluar Rectangle"
+            "value" : "Keluar rawm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esci da Rectangle"
+            "value" : "Esci da rawm"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangleを終了"
+            "value" : "rawmを終了"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle 종료"
+            "value" : "rawm 종료"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Išeiti iš Rectangle"
+            "value" : "Išeiti iš rawm"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avslutt Rectangle"
+            "value" : "Avslutt rawm"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle stoppen"
+            "value" : "rawm stoppen"
           }
         },
         "nn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avslutt Rectangle"
+            "value" : "Avslutt rawm"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wyjdź z Rectangle."
+            "value" : "Wyjdź z rawm."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fechar Rectangle"
+            "value" : "Fechar rawm"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sair do Rectangle"
+            "value" : "Sair do rawm"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Închide Rectangle"
+            "value" : "Închide rawm"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Выход из Rectangle"
+            "value" : "Выход из rawm"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukončiť Rectangle"
+            "value" : "Ukončiť rawm"
           }
         },
         "sv-SE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avsluta Rectangle"
+            "value" : "Avsluta rawm"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rectangle'dan Çık"
+            "value" : "rawm'dan Çık"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вийти з Rectangle"
+            "value" : "Вийти з rawm"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thoát Rectangle"
+            "value" : "Thoát rawm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "退出 Rectangle"
+            "value" : "退出 rawm"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "結束 Rectangle"
+            "value" : "結束 rawm"
           }
         },
         "zh-Hant-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "結束Rectangle"
+            "value" : "結束rawm"
           }
         }
       }

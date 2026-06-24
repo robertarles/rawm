@@ -69,7 +69,7 @@ class GreenButtonManager {
         if let windowId = windowElement.getWindowId(),
            case let windowFrame = windowElement.frame,
            windowFrame != .null,
-           let historyAction = AppDelegate.windowHistory.lastRectangleActions[windowId],
+           let historyAction = AppDelegate.windowHistory.lastRawmActions[windowId],
            historyAction.action == .maximize,
            historyAction.rect == windowFrame {
             WindowAction.restore.postTitleBar(windowElement: windowElement)

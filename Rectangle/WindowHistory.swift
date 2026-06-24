@@ -6,6 +6,6 @@ class WindowHistory {
     
     var restoreRects = [CGWindowID: CGRect]() // the last window frame that the user positioned
     
-    var lastRectangleActions = [CGWindowID: RectangleAction]() // the last window frame that this app positioned
+    var lastRawmActions = [CGWindowID: RawmAction]() // the last window frame that this app positioned
     
 }

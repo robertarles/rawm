@@ -23,13 +23,13 @@ class WindowManager {
     
     private func recordAction(windowId: CGWindowID, resultingRect: CGRect, action: WindowAction, subAction: SubWindowAction?) {
         let newCount: Int
-        if let lastRectangleAction = AppDelegate.windowHistory.lastRectangleActions[windowId], lastRectangleAction.action == action {
-            newCount = lastRectangleAction.count + 1
+        if let lastRawmAction = AppDelegate.windowHistory.lastRawmActions[windowId], lastRawmAction.action == action {
+            newCount = lastRawmAction.count + 1
         } else {
             newCount = 1
         }
         
-        AppDelegate.windowHistory.lastRectangleActions[windowId] = RectangleAction(
+        AppDelegate.windowHistory.lastRawmActions[windowId] = RawmAction(
             action: action,
             subAction: subAction,
             rect: resultingRect,
@@ -51,7 +51,7 @@ class WindowManager {
             if let restoreRect = AppDelegate.windowHistory.restoreRects[windowId] {
                 frontmostWindowElement.setFrame(restoreRect)
             }
-            AppDelegate.windowHistory.lastRectangleActions.removeValue(forKey: windowId)
+            AppDelegate.windowHistory.lastRawmActions.removeValue(forKey: windowId)
             return
         }
         
@@ -72,13 +72,13 @@ class WindowManager {
         
         let currentWindowRect: CGRect = frontmostWindowElement.frame
         
-        var lastRectangleAction = AppDelegate.windowHistory.lastRectangleActions[windowId]
+        var lastRawmAction = AppDelegate.windowHistory.lastRawmActions[windowId]
         
-        let windowMovedExternally = currentWindowRect != lastRectangleAction?.rect
+        let windowMovedExternally = currentWindowRect != lastRawmAction?.rect
         
         if windowMovedExternally {
-            lastRectangleAction = nil
-            AppDelegate.windowHistory.lastRectangleActions.removeValue(forKey: windowId)
+            lastRawmAction = nil
+            AppDelegate.windowHistory.lastRawmActions.removeValue(forKey: windowId)
         }
         
         if parameters.updateRestoreRect {
@@ -104,7 +104,7 @@ class WindowManager {
         
         let windowCalculation = WindowCalculationFactory.calculationsByAction[action]
         
-        let calculationParams = WindowCalculationParameters(window: currentWindow, usableScreens: usableScreens, action: action, lastAction: lastRectangleAction, ignoreTodo: ignoreTodo)
+        let calculationParams = WindowCalculationParameters(window: currentWindow, usableScreens: usableScreens, action: action, lastAction: lastRawmAction, ignoreTodo: ignoreTodo)
         guard var calcResult = windowCalculation?.calculate(calculationParams) else {
             NSSound.beep()
             Logger.log("Nil calculation result")
@@ -287,7 +287,7 @@ struct ResultParameters {
     let isFixedSize: Bool
 }
 
-struct RectangleAction {
+struct RawmAction {
     let action: WindowAction
     let subAction: SubWindowAction?
     let rect: CGRect

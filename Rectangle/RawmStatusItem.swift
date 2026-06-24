@@ -1,9 +1,9 @@
-/// RectangleStatusItem.swift
+/// RawmStatusItem.swift
 
 import Cocoa
 
-class RectangleStatusItem {
-    static let instance = RectangleStatusItem()
+class RawmStatusItem {
+    static let instance = RawmStatusItem()
     
     private var nsStatusItem: NSStatusItem?
     private var added: Bool = false

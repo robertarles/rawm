@@ -11,7 +11,7 @@ protocol WindowMover {
 /// Per axis: if the zone touches exactly one screen edge on that axis, anchor the window
 /// to that edge; if it spans the full axis (both edges) or floats inside (neither), center.
 /// `window` and `zone` must be in the same (screen-flipped) coordinate space, where the
-/// `.top` edge corresponds to maxY and `.bottom` to minY (matching the rest of Rectangle).
+/// `.top` edge corresponds to maxY and `.bottom` to minY `(matching the rest of rawm).
 enum ClampedWindowAligner {
 
     static func aligned(window: CGRect, inZone zone: CGRect, sharedEdges: Edge) -> CGRect {

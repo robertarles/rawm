@@ -70,7 +70,7 @@ class TitleBarManager {
            let windowId = windowElement.windowId,
            case let windowFrame = windowElement.frame,
            windowFrame != .null,
-           let historyAction = AppDelegate.windowHistory.lastRectangleActions[windowId],
+           let historyAction = AppDelegate.windowHistory.lastRawmActions[windowId],
            historyAction.action == action,
            historyAction.rect == windowFrame {
             WindowAction.restore.postTitleBar(windowElement: windowElement)

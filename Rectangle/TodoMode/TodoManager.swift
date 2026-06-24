@@ -331,7 +331,7 @@ class TodoShortcutValidator: MASShortcutValidator {
     override func isShortcutValid(_ shortcut: MASShortcut!) -> Bool {
         guard super.isShortcutValid(shortcut) else { return false }
 
-        // Preserve previous behavior by rejecting Rectangle-internal conflicts quietly,
+        // Preserve previous behavior by rejecting rawm-internal conflicts quietly,
         // without routing them through MASShortcut's "already used" alert.
         return TodoShortcutConflict.conflict(for: shortcut,
                                              ignoringTodoDefaultsKey: defaultsKey,
