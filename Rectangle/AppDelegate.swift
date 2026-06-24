@@ -158,6 +158,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.initializeTodo()
         checkForProblematicApps()
         MacTilingDefaults.checkForBuiltInTiling(skipIfAlreadyNotified: true)
+        // Enable HotkeyEngine for non-window actions (ClipboardAction, ShellAction)
+        HotkeyEngine.shared.enable()
     }
     
     func checkForConflictingApps() {

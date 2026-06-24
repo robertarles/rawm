@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3F5A0B112345678902BCDEF /* ShortcutMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E4F9A012345678901ABCDE /* ShortcutMigration.swift */; };
 		E461ACA02EEE4FCA81788872 /* HotkeyEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF75CBFA57A64705A86D8B85 /* HotkeyEngine.swift */; };
 		494D9981ABF14BDCBE7A1124 /* RawmActionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493FCB044E5465785A6A978 /* RawmActionTypes.swift */; };
 		52A16E15879C4E64A7FA34DE /* RawmShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD409DC68FF1440F805BC8E3 /* RawmShortcutsViewController.swift */; };
@@ -230,6 +231,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B2E4F9A012345678901ABCDE /* ShortcutMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMigration.swift; sourceTree = "<group>"; };
 		BF75CBFA57A64705A86D8B85 /* HotkeyEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyEngine.swift; sourceTree = "<group>"; };
 		0493FCB044E5465785A6A978 /* RawmActionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawmActionTypes.swift; sourceTree = "<group>"; };
 		AD409DC68FF1440F805BC8E3 /* RawmShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawmShortcutsViewController.swift; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 				9824703622B0F3200037B409 /* WindowAction.swift */,
 				98A6EDEB2528FFC100F74B10 /* WindowActionCategory.swift */,
 				9824703822B0F37C0037B409 /* ShortcutManager.swift */,
+				B2E4F9A012345678901ABCDE /* ShortcutMigration.swift */,
 				3D432EE8380E4E47820C93CE /* HotkeyEngine.swift */,
 				A9EA569A526542CEA8EC8F4E /* RawmActionTypes.swift */,
 				9824703C22B13C7E0037B409 /* AccessibilityElement.swift */,
@@ -1346,6 +1349,7 @@
 				9824704F22B189250037B409 /* BestEffortWindowMover.swift in Sources */,
 				30166BD024F27D6A00A38608 /* SpecifiedCalculation.swift in Sources */,
 				9824703922B0F37C0037B409 /* ShortcutManager.swift in Sources */,
+				C3F5A0B112345678902BCDEF /* ShortcutMigration.swift in Sources */,
 				091E926578F6487494328339 /* HotkeyEngine.swift in Sources */,
 				CA755CF28911446797A2C6DC /* RawmActionTypes.swift in Sources */,
 				98D16A492592B460005228CB /* NotificationExtension.swift in Sources */,
