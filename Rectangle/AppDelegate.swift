@@ -260,9 +260,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func openPreferences(_ sender: Any) {
         if prefsWindowController == nil {
             prefsWindowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "PrefsWindowController") as? NSWindowController
+            injectRawmShortcutsTab()
         }
         NSApp.activate(ignoringOtherApps: true)
         prefsWindowController?.showWindow(self)
+    }
+    
+    private func injectRawmShortcutsTab() {
+        guard let wc = prefsWindowController,
+              let tabVC = wc.contentViewController as? NSTabViewController else { return }
+        
+        let rawmShortcutsVC = RawmShortcutsViewController.freshController()
+        let tabItem = NSTabViewItem(viewController: rawmShortcutsVC)
+        tabItem.label = "rawm Shortcuts"
+        tabItem.image = NSImage(systemSymbolName: "command.square", accessibilityDescription: nil)
+        tabVC.addTabViewItem(tabItem)
     }
     
     @IBAction func showAbout(_ sender: Any) {
