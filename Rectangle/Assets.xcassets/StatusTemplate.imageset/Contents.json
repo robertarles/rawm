@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "RectangleStatusTemplate22.png",
+      "filename" : "RawmStatusTemplate22.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "RectangleStatusTemplate44.png",
+      "filename" : "RawmStatusTemplate44.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "RectangleStatusTemplate.png",
+      "filename" : "RawmStatusTemplate.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
