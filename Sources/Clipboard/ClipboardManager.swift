@@ -5,7 +5,7 @@
 
 import AppKit
 
-/// ClipboardManager bridges the Maccy clipboard subsystem into rawm.
+/// ClipboardManager bridges the clipboard subsystem into rawm.
 /// Call start() from AppDelegate.applicationDidFinishLaunching on the main thread.
 final class ClipboardManager {
     static let shared = ClipboardManager()
