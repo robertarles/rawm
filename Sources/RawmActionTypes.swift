@@ -167,6 +167,13 @@ class HotkeyRegistry {
     func load() {
         guard let data = UserDefaults.standard.data(forKey: Self.persistenceKey),
               let stored = try? JSONDecoder().decode([StoredAction].self, from: data) else { return }
+        // Old format used dotted keys (e.g. "rawm.clipboard.showHistory") which crash
+        // MASShortcutBinder (it asserts no dots allowed). Detect stale data and wipe it
+        // so migration re-runs with the current dot-free key format.
+        if stored.contains(where: { $0.defaultsKey.contains(".") || $0.defaultsKey.contains(" ") }) {
+            UserDefaults.standard.removeObject(forKey: Self.persistenceKey)
+            return
+        }
         for s in stored {
             guard let action = s.toAction() else { continue }
             // register without re-persisting to avoid churn

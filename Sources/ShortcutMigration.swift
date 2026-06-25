@@ -17,8 +17,8 @@ import Carbon
 enum ShortcutMigration {
 
     /// The UserDefaults key that tracks whether migration has already run.
-    /// v3: fixes persistent-domain check so shortcut defaults actually survive relaunches.
-    private static let migrationDoneKey = "rawm.shortcutMigration.v3.done"
+    /// v4: re-runs migration after dot-free defaultsKey format change (rawmShell_/rawmClipboard prefix).
+    private static let migrationDoneKey = "rawm.shortcutMigration.v4.done"
 
     /// Run migration if it has not already been performed.
     /// Call this from AppDelegate.applicationDidFinishLaunching, after ShortcutManager is initialized.
@@ -29,9 +29,24 @@ enum ShortcutMigration {
     }
 
     private static func performMigration() {
+        removeStaleOldFormatKeys()
         migrateWindowShortcuts()
         migrateShellActionShortcuts()
         migrateClipboardShortcuts()
+    }
+
+    /// Remove UserDefaults keys from old formats that used dots or hash-based names.
+    /// These caused MASShortcutBinder to crash (it forbids dots in binding keys).
+    private static func removeStaleOldFormatKeys() {
+        let defaults = UserDefaults.standard
+        let bundleID = Bundle.main.bundleIdentifier ?? ""
+        guard let domain = defaults.persistentDomain(forName: bundleID) else { return }
+        let staleKeys = domain.keys.filter { key in
+            (key.hasPrefix("rawm.shell.") || key.hasPrefix("rawm.clipboard."))
+        }
+        if !staleKeys.isEmpty {
+            for key in staleKeys { defaults.removeObject(forKey: key) }
+        }
     }
 
     // MARK: - Window Shortcuts
