@@ -15,9 +15,16 @@ class Storage {
     return ByteCountFormatter().string(fromByteCount: size)
   }
 
-  private let url = URL.applicationSupportDirectory.appending(path: "Maccy/Storage.sqlite")
+  private let url = URL.applicationSupportDirectory.appending(path: "rawm/Storage.sqlite")
 
   init() {
+    // One-time migration: move storage from old Maccy path to rawm path.
+    let oldURL = URL.applicationSupportDirectory.appending(path: "Maccy/Storage.sqlite")
+    if FileManager.default.fileExists(atPath: oldURL.path) &&
+       !FileManager.default.fileExists(atPath: url.path) {
+      try? FileManager.default.moveItem(at: oldURL, to: url)
+    }
+
     var config = ModelConfiguration(url: url)
 
     #if DEBUG
