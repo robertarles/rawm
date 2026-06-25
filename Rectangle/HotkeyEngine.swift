@@ -27,6 +27,7 @@ class HotkeyEngine {
     private var bindings: [String: HotkeyBinding] = [:]
     private var isEnabled: Bool = false
     private var isSuspendedForRecording: Bool = false
+    private var isDeactivatedForShortcutsDisabled: Bool = false
 
     private init() {
         // Observe shortcut recording state so we can suspend during recording
@@ -141,9 +142,18 @@ class HotkeyEngine {
 
     @objc private func appShortcutsDisabledChanged(_ notification: Notification) {
         if ApplicationToggle.shortcutsDisabled {
-            deactivateAllBindings()
-        } else if isEnabled && !isSuspendedForRecording {
-            activateAllBindings()
+            if !isDeactivatedForShortcutsDisabled {
+                deactivateAllBindings()
+                isDeactivatedForShortcutsDisabled = true
+            }
+        } else if isDeactivatedForShortcutsDisabled {
+            // Only re-activate when recovering from a disabled state — not on every front-app change.
+            // Calling activateAllBindings() redundantly causes MASShortcutBinder to crash when
+            // it tries to re-bind an already-bound key.
+            isDeactivatedForShortcutsDisabled = false
+            if isEnabled && !isSuspendedForRecording {
+                activateAllBindings()
+            }
         }
     }
 }

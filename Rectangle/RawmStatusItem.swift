@@ -9,6 +9,7 @@ class RawmStatusItem {
     private var added: Bool = false
     public var statusMenu: NSMenu? {
         didSet {
+            NSLog("rawm: statusMenu didSet to %@, nsStatusItem=%@", statusMenu ?? "nil", nsStatusItem ?? "nil")
             nsStatusItem?.menu = statusMenu
         }
     }
@@ -33,6 +34,7 @@ class RawmStatusItem {
     }
     
     private func add() {
+        NSLog("rawm: RawmStatusItem.add() called, statusMenu=%@", self.statusMenu ?? "nil")
         added = true
         nsStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         nsStatusItem?.menu = self.statusMenu

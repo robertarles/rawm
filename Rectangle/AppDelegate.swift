@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         mainStatusMenu.delegate = self
         statusItem.refreshVisibility()
         checkLaunchOnLogin()
-        
+
         let alreadyTrusted = accessibilityAuthorization.checkAccessibility {
             self.showWelcomeWindow()
             self.checkForConflictingApps()
@@ -62,14 +62,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.statusItem.statusMenu = self.mainStatusMenu
             self.accessibilityTrusted()
         }
-        
+
+        NSLog("rawm: alreadyTrusted=%d mainStatusMenu=%@ unauthorizedMenu=%@", alreadyTrusted ? 1 : 0, mainStatusMenu ?? "nil", unauthorizedMenu ?? "nil")
+
         if alreadyTrusted {
             accessibilityTrusted()
         }
-        
+
         statusItem.statusMenu = alreadyTrusted
             ? mainStatusMenu
             : unauthorizedMenu
+        NSLog("rawm: statusMenu set to %@", statusItem.statusMenu ?? "nil")
         
         mainStatusMenu.autoenablesItems = false
         addMenuIcons()
@@ -153,18 +156,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func accessibilityTrusted() {
+        NSLog("rawm: accessibilityTrusted() start")
         self.windowCalculationFactory = WindowCalculationFactory()
         self.windowManager = WindowManager()
+        NSLog("rawm: creating ShortcutManager")
         self.shortcutManager = ShortcutManager(windowManager: windowManager)
+        NSLog("rawm: creating ApplicationToggle")
         self.applicationToggle = ApplicationToggle(shortcutManager: shortcutManager)
         self.snappingManager = SnappingManager()
         self.titleBarManager = TitleBarManager()
         self.greenButtonManager = GreenButtonManager()
+        NSLog("rawm: initializeTodo")
         self.initializeTodo()
+        NSLog("rawm: checkForProblematicApps")
         checkForProblematicApps()
+        NSLog("rawm: MacTilingDefaults.checkForBuiltInTiling")
         MacTilingDefaults.checkForBuiltInTiling(skipIfAlreadyNotified: true)
-        // Enable HotkeyEngine for non-window actions (ClipboardAction, ShellAction)
+        NSLog("rawm: HotkeyEngine.enable")
         HotkeyEngine.shared.enable()
+        NSLog("rawm: HotkeyRegistry.load")
+        HotkeyRegistry.shared.load()
+        NSLog("rawm: ShortcutMigration.migrateIfNeeded")
+        ShortcutMigration.migrateIfNeeded()
+        NSLog("rawm: accessibilityTrusted() done")
     }
     
     func checkForConflictingApps() {
