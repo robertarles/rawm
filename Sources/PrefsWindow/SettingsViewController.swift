@@ -238,9 +238,9 @@ class SettingsViewController: NSViewController {
 
         //  Restore default shortcuts
         WindowAction.active.forEach { UserDefaults.standard.removeObject(forKey: $0.name) }
-        let rectangleDefaults = response == .alertFirstButtonReturn
-        if rectangleDefaults != RawmDefaults.alternateDefaultShortcuts.enabled {
-            RawmDefaults.alternateDefaultShortcuts.enabled = rectangleDefaults
+        let useAlternateDefaults = response == .alertFirstButtonReturn
+        if useAlternateDefaults != RawmDefaults.alternateDefaultShortcuts.enabled {
+            RawmDefaults.alternateDefaultShortcuts.enabled = useAlternateDefaults
             Notification.Name.changeDefaults.post()
         }
         
