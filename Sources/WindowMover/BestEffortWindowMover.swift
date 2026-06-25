@@ -23,7 +23,7 @@ class BestEffortWindowMover: WindowMover {
             
         } else if adjustedWindowRect.minX + adjustedWindowRect.width > visibleFrameOfScreen.minX + visibleFrameOfScreen.width {
             
-            adjustedWindowRect.origin.x = visibleFrameOfScreen.minX + visibleFrameOfScreen.width - (adjustedWindowRect.width) - CGFloat(RectangleDefaults.gapSize.value)
+            adjustedWindowRect.origin.x = visibleFrameOfScreen.minX + visibleFrameOfScreen.width - (adjustedWindowRect.width) - CGFloat(RawmDefaults.gapSize.value)
         }
         
         adjustedWindowRect = adjustedWindowRect.screenFlipped
@@ -33,7 +33,7 @@ class BestEffortWindowMover: WindowMover {
             
         } else if adjustedWindowRect.minY + adjustedWindowRect.height > visibleFrameOfScreen.minY + visibleFrameOfScreen.height {
             
-            adjustedWindowRect.origin.y = visibleFrameOfScreen.minY + visibleFrameOfScreen.height - (adjustedWindowRect.height) - CGFloat(RectangleDefaults.gapSize.value)
+            adjustedWindowRect.origin.y = visibleFrameOfScreen.minY + visibleFrameOfScreen.height - (adjustedWindowRect.height) - CGFloat(RawmDefaults.gapSize.value)
         }
         
         adjustedWindowRect = adjustedWindowRect.screenFlipped

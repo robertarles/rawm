@@ -48,7 +48,7 @@ enum ClampedWindowAligner {
 class EdgeAlignmentWindowMover: WindowMover {
 
     func moveWindow(toRect rect: CGRect, resultParameters: ResultParameters) {
-        guard RectangleDefaults.moveFixedSizeToEdge.value != .centered, resultParameters.action.resizes else { return }
+        guard RawmDefaults.moveFixedSizeToEdge.value != .centered, resultParameters.action.resizes else { return }
 
         let windowElement = resultParameters.windowElement
         let currentWindowRect: CGRect = windowElement.frame

@@ -4,14 +4,14 @@ import Foundation
 
 struct LeftTopBottomHalfCalculation: CompoundSnapAreaCalculation {
     
-    private let marginTop = RectangleDefaults.snapEdgeMarginTop.cgFloat
-    private let marginBottom = RectangleDefaults.snapEdgeMarginBottom.cgFloat
+    private let marginTop = RawmDefaults.snapEdgeMarginTop.cgFloat
+    private let marginBottom = RawmDefaults.snapEdgeMarginBottom.cgFloat
     
-    private let ignoredSnapAreas = SnapAreaOption(rawValue: RectangleDefaults.ignoredSnapAreas.value)
+    private let ignoredSnapAreas = SnapAreaOption(rawValue: RawmDefaults.ignoredSnapAreas.value)
     
     func snapArea(cursorLocation loc: NSPoint, screen: NSScreen, directional: Directional, priorSnapArea: SnapArea?) -> SnapArea? {
         let frame = screen.frame
-        let shortEdgeSize = CGFloat(RectangleDefaults.shortEdgeSnapAreaSize.value)
+        let shortEdgeSize = CGFloat(RawmDefaults.shortEdgeSnapAreaSize.value)
 
         if loc.y <= frame.minY + marginBottom + shortEdgeSize {
             if !ignoredSnapAreas.contains(.bottomLeftShort) {
@@ -30,14 +30,14 @@ struct LeftTopBottomHalfCalculation: CompoundSnapAreaCalculation {
 
 struct RightTopBottomHalfCalculation: CompoundSnapAreaCalculation {
     
-    private let marginTop = RectangleDefaults.snapEdgeMarginTop.cgFloat
-    private let marginBottom = RectangleDefaults.snapEdgeMarginBottom.cgFloat
+    private let marginTop = RawmDefaults.snapEdgeMarginTop.cgFloat
+    private let marginBottom = RawmDefaults.snapEdgeMarginBottom.cgFloat
     
-    private let ignoredSnapAreas = SnapAreaOption(rawValue: RectangleDefaults.ignoredSnapAreas.value)
+    private let ignoredSnapAreas = SnapAreaOption(rawValue: RawmDefaults.ignoredSnapAreas.value)
     
     func snapArea(cursorLocation loc: NSPoint, screen: NSScreen, directional: Directional, priorSnapArea: SnapArea?) -> SnapArea? {
         let frame = screen.frame
-        let shortEdgeSize = CGFloat(RectangleDefaults.shortEdgeSnapAreaSize.value)
+        let shortEdgeSize = CGFloat(RawmDefaults.shortEdgeSnapAreaSize.value)
 
         if loc.y <= frame.minY + marginBottom + shortEdgeSize {
             if !ignoredSnapAreas.contains(.bottomRightShort) {
@@ -65,14 +65,14 @@ struct LeftRightHalvesCompoundCalculation: CompoundSnapAreaCalculation {
 }
 
 struct TopBottomHalvesCalculation: CompoundSnapAreaCalculation {
-    private let marginTop = RectangleDefaults.snapEdgeMarginTop.cgFloat
-    private let marginBottom = RectangleDefaults.snapEdgeMarginBottom.cgFloat
-    private let ignoredSnapAreas = SnapAreaOption(rawValue: RectangleDefaults.ignoredSnapAreas.value)
+    private let marginTop = RawmDefaults.snapEdgeMarginTop.cgFloat
+    private let marginBottom = RawmDefaults.snapEdgeMarginBottom.cgFloat
+    private let ignoredSnapAreas = SnapAreaOption(rawValue: RawmDefaults.ignoredSnapAreas.value)
     
     func snapArea(cursorLocation loc: NSPoint, screen: NSScreen, directional: Directional, priorSnapArea: SnapArea?) -> SnapArea? {
         let frame = screen.frame
         let halfHeight = floor(frame.height / 2)
-        let shortEdgeSize = RectangleDefaults.shortEdgeSnapAreaSize.cgFloat
+        let shortEdgeSize = RawmDefaults.shortEdgeSnapAreaSize.cgFloat
         
         if loc.y <= frame.minY + marginBottom + shortEdgeSize {
             let snapAreaOption: SnapAreaOption = loc.x < frame.midX ? .bottomLeftShort : .bottomRightShort

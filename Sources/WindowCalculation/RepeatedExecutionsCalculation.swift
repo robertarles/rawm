@@ -13,8 +13,8 @@ protocol RepeatedExecutionsCalculation {
 extension RepeatedExecutionsCalculation {
     
     func sortedCycleSizes() -> [CycleSize] {
-        let useDefaultPositions = !RectangleDefaults.cycleSizesIsChanged.enabled
-        let positions = useDefaultPositions ? CycleSize.defaultSizes : RectangleDefaults.selectedCycleSizes.value
+        let useDefaultPositions = !RawmDefaults.cycleSizesIsChanged.enabled
+        let positions = useDefaultPositions ? CycleSize.defaultSizes : RawmDefaults.selectedCycleSizes.value
         
         return CycleSize.sortedSizes
             .filter { positions.contains($0) }
@@ -96,7 +96,7 @@ extension CornerCycleExpansionCalculation {
     func calculateFractionalRect(_ params: RectCalculationParameters, fraction: Float) -> RectResult {
         let normalRect = calculateFirstRect(params).rect
 
-        switch RectangleDefaults.cornerCycleExpansionAxis.value {
+        switch RawmDefaults.cornerCycleExpansionAxis.value {
         case .horizontal:
             let cycledRect = cornerRect(params.visibleFrameOfScreen,
                                         horizontalFraction: fraction,

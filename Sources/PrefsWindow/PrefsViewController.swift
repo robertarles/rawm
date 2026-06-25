@@ -116,7 +116,7 @@ class PrefsViewController: NSViewController {
         }
         shortcutRecordingObserver.observe(Array(actionsToViews.values))
         
-        if RectangleDefaults.allowAnyShortcut.enabled {
+        if RawmDefaults.allowAnyShortcut.enabled {
             let passThroughValidator = PassthroughShortcutValidator()
             actionsToViews.values.forEach { $0.shortcutValidator = passThroughValidator }
         }

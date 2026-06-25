@@ -19,7 +19,7 @@ class GreenButtonManager {
     }
 
     private func toggleListening() {
-        if RectangleDefaults.greenButtonOverride.enabled {
+        if RawmDefaults.greenButtonOverride.enabled {
             if !eventMonitor.running {
                 eventMonitor.start()
             }

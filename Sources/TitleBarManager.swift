@@ -18,7 +18,7 @@ class TitleBarManager {
     }
     
     private func toggleListening() {
-        if WindowAction(rawValue: RectangleDefaults.doubleClickTitleBar.value - 1) != nil {
+        if WindowAction(rawValue: RawmDefaults.doubleClickTitleBar.value - 1) != nil {
             eventMonitor.start()
         } else {
             eventMonitor.stop()
@@ -31,7 +31,7 @@ class TitleBarManager {
             event.clickCount == 2,
             event.eventNumber != lastEventNumber,
             TitleBarManager.systemSettingDisabled,
-            let action = WindowAction(rawValue: RectangleDefaults.doubleClickTitleBar.value - 1),
+            let action = WindowAction(rawValue: RawmDefaults.doubleClickTitleBar.value - 1),
             case let location = NSEvent.mouseLocation.screenFlipped,
             let element = AccessibilityElement(location)?.getSelfOrChildElementRecursively(location),
             let windowElement = element.windowElement,
@@ -48,7 +48,7 @@ class TitleBarManager {
         
         if let toolbarFrame = windowElement.getChildElement(.toolbar)?.frame, toolbarFrame != .null {
             if let bundleIdentifier,
-               let toolbarIgnoredIds = RectangleDefaults.doubleClickToolBarIgnoredApps.typedValue,
+               let toolbarIgnoredIds = RawmDefaults.doubleClickToolBarIgnoredApps.typedValue,
                toolbarIgnoredIds.contains(bundleIdentifier) {
                // don't add the toolbar frame to the title bar
             } else {
@@ -62,11 +62,11 @@ class TitleBarManager {
             return
         }
         if let bundleIdentifier,
-            let ignoredApps = RectangleDefaults.doubleClickTitleBarIgnoredApps.typedValue,
+            let ignoredApps = RawmDefaults.doubleClickTitleBarIgnoredApps.typedValue,
             ignoredApps.contains(bundleIdentifier) {
             return
         }
-        if RectangleDefaults.doubleClickTitleBarRestore.enabled != false,
+        if RawmDefaults.doubleClickTitleBarRestore.enabled != false,
            let windowId = windowElement.windowId,
            case let windowFrame = windowElement.frame,
            windowFrame != .null,

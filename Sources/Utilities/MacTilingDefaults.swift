@@ -37,27 +37,27 @@ enum MacTilingDefaults: String {
     }
     
     static func checkForBuiltInTiling(skipIfAlreadyNotified: Bool) {
-        guard #available(macOS 15, *), !RectangleDefaults.windowSnapping.userDisabled
+        guard #available(macOS 15, *), !RawmDefaults.windowSnapping.userDisabled
         else { return }
 
         let isStandardTilingConflicting = (tilingByEdgeDrag.enabled || tilingOptionAccelerator.enabled)
         
-        let shouldSkipStandardCheck = skipIfAlreadyNotified && RectangleDefaults.internalTilingNotified.enabled
+        let shouldSkipStandardCheck = skipIfAlreadyNotified && RawmDefaults.internalTilingNotified.enabled
         
         if isStandardTilingConflicting && !shouldSkipStandardCheck {
             resolveStandardTilingConflict()
         } else if isTopTilingConflicting {
             resolveTopTilingConflict()
         }
-        RectangleDefaults.internalTilingNotified.enabled = true
+        RawmDefaults.internalTilingNotified.enabled = true
     }
     
     private static func resolveTopTilingConflict() {
-        RectangleLogger.log("Automatically disabling macOS top edge tiling to resolve conflict with macOS.")
+        RawmLogger.log("Automatically disabling macOS top edge tiling to resolve conflict with macOS.")
         
         topTilingByEdgeDrag.disable()
         
-        if !RectangleDefaults.internalTilingNotified.enabled {
+        if !RawmDefaults.internalTilingNotified.enabled {
             // First time running rawm & only has drag to top enabled in macOS
             let result = AlertUtil.twoButtonAlert(
                 question: "Top screen edge tiling in macOS is now disabled".localized,
@@ -93,7 +93,7 @@ enum MacTilingDefaults: String {
                 openSystemSettings()
             }
         case .alertSecondButtonReturn:
-            RectangleDefaults.windowSnapping.enabled = false
+            RawmDefaults.windowSnapping.enabled = false
             Notification.Name.windowSnapping.post(object: false)
 
             let result = AlertUtil.twoButtonAlert(

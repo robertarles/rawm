@@ -11,7 +11,7 @@ class StandardWindowMover: WindowMover {
     }
     
     private func shouldAdjustSizeFirst(_ action: WindowAction) -> Bool {
-        switch (action, RectangleDefaults.cornerCycleExpansionAxis.value) {
+        switch (action, RawmDefaults.cornerCycleExpansionAxis.value) {
         case (.topRight, .horizontal),
              (.bottomRight, .horizontal),
              (.bottomLeft, .vertical),

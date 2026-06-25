@@ -32,7 +32,7 @@ class SnapAreaViewController: NSViewController {
     
     @IBAction func toggleWindowSnapping(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.windowSnapping.enabled = newSetting
+        RawmDefaults.windowSnapping.enabled = newSetting
         Notification.Name.windowSnapping.post(object: newSetting)
         if newSetting {
             MacTilingDefaults.checkForBuiltInTiling(skipIfAlreadyNotified: false)
@@ -41,22 +41,22 @@ class SnapAreaViewController: NSViewController {
     
     @IBAction func toggleUnsnapRestore(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.unsnapRestore.enabled = newSetting
+        RawmDefaults.unsnapRestore.enabled = newSetting
     }
     
     @IBAction func toggleAnimateFootprint(_ sender: NSButton) {
         let newSetting: Float = sender.state == .on ? 0.75 : 0
-        RectangleDefaults.footprintAnimationDurationMultiplier.value = newSetting
+        RawmDefaults.footprintAnimationDurationMultiplier.value = newSetting
     }
     
     @IBAction func toggleHapticFeedback(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.hapticFeedbackOnSnap.enabled = newSetting
+        RawmDefaults.hapticFeedbackOnSnap.enabled = newSetting
     }
     
     @IBAction func toggleMissionControlDragging(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .off
-        RectangleDefaults.missionControlDragging.enabled = newSetting
+        RawmDefaults.missionControlDragging.enabled = newSetting
         Notification.Name.missionControlDragging.post(object: newSetting)
     }
     
@@ -81,12 +81,12 @@ class SnapAreaViewController: NSViewController {
     }
     
     override func viewDidLoad() {
-        windowSnappingCheckbox.state = RectangleDefaults.windowSnapping.userDisabled ? .off : .on
-        unsnapRestoreButton.state = RectangleDefaults.unsnapRestore.userDisabled ? .off : .on
-        animateFootprintCheckbox.state = RectangleDefaults.footprintAnimationDurationMultiplier.value > 0 ? .on : .off
-        hapticFeedbackCheckbox.state = RectangleDefaults.hapticFeedbackOnSnap.userEnabled ? .on : .off
-        missionControlDraggingCheckbox.state = RectangleDefaults.missionControlDragging.userDisabled ? .on : .off
-        missionControlDraggingCheckbox.isHidden = !RectangleDefaults.missionControlDragging.userDisabled
+        windowSnappingCheckbox.state = RawmDefaults.windowSnapping.userDisabled ? .off : .on
+        unsnapRestoreButton.state = RawmDefaults.unsnapRestore.userDisabled ? .off : .on
+        animateFootprintCheckbox.state = RawmDefaults.footprintAnimationDurationMultiplier.value > 0 ? .on : .off
+        hapticFeedbackCheckbox.state = RawmDefaults.hapticFeedbackOnSnap.userEnabled ? .on : .off
+        missionControlDraggingCheckbox.state = RawmDefaults.missionControlDragging.userDisabled ? .on : .off
+        missionControlDraggingCheckbox.isHidden = !RawmDefaults.missionControlDragging.userDisabled
         loadSnapAreas()
         showHidePortrait()
         
@@ -100,7 +100,7 @@ class SnapAreaViewController: NSViewController {
             self?.showHidePortrait()
         }
         Notification.Name.windowSnapping.onPost { [weak self] _ in
-            self?.windowSnappingCheckbox.state = RectangleDefaults.windowSnapping.userDisabled ? .off : .on
+            self?.windowSnappingCheckbox.state = RawmDefaults.windowSnapping.userDisabled ? .off : .on
         }
         NotificationCenter.default.addObserver(forName: NSApplication.didChangeScreenParametersNotification, object: nil, queue: nil) { [weak self] _ in
             self?.showHidePortrait()

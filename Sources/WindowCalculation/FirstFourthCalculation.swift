@@ -7,7 +7,7 @@ class FirstFourthCalculation: WindowCalculation, OrientationAware {
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
         let visibleFrameOfScreen = params.visibleFrameOfScreen
         
-        guard RectangleDefaults.subsequentExecutionMode.value != .none,
+        guard RawmDefaults.subsequentExecutionMode.value != .none,
               params.action == .firstFourth,
               let last = params.lastAction,
               let lastSubAction = last.subAction

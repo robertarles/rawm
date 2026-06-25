@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        RectangleDefaults.loadFromSupportDir()
+        RawmDefaults.loadFromSupportDir()
         migrateShowEighthsInMenu()
 
         checkVersion()
@@ -109,7 +109,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func checkVersion() {
         let currentVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
-        if let lastVersion = RectangleDefaults.lastVersion.value,
+        if let lastVersion = RawmDefaults.lastVersion.value,
            let intLastVersion = Int(lastVersion) {
             if intLastVersion < 46 {
                 MASShortcutMigration.migrate()
@@ -123,12 +123,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
         } else {
-            RectangleDefaults.installVersion.value = currentVersion
-            RectangleDefaults.allowAnyShortcut.enabled = true
+            RawmDefaults.installVersion.value = currentVersion
+            RawmDefaults.allowAnyShortcut.enabled = true
         }
         MASShortcutMigration.syncRenamedSideShortcutAliases()
         
-        RectangleDefaults.lastVersion.value = currentVersion
+        RawmDefaults.lastVersion.value = currentVersion
     }
     
     func applicationWillBecomeActive(_ notification: Notification) {
@@ -152,7 +152,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func checkAutoCheckForUpdates() {
-        updaterController.updater.automaticallyChecksForUpdates = RectangleDefaults.SUEnableAutomaticChecks.enabled
+        updaterController.updater.automaticallyChecksForUpdates = RawmDefaults.SUEnableAutomaticChecks.enabled
     }
     
     func accessibilityTrusted() {
@@ -202,7 +202,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     /// certain applications have issues with the click listening done by the drag to snap feature
     func checkForProblematicApps() {
-        guard !RectangleDefaults.windowSnapping.userDisabled, !RectangleDefaults.notifiedOfProblemApps.enabled else { return }
+        guard !RawmDefaults.windowSnapping.userDisabled, !RawmDefaults.notifiedOfProblemApps.enabled else { return }
         
         let problemBundleIds: [String] = [
             "com.mathworks.matlab",
@@ -246,7 +246,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if !problemBundles.isEmpty {
             AlertUtil.oneButtonAlert(question: "Known issues with installed applications", text: "\(displayNameString)\n\nThese applications have issues with the drag to screen edge to snap functionality in rawm.\n\nYou can either ignore the applications using the menu item in rawm, or disable drag to screen edge snapping in rawm preferences.")
-            RectangleDefaults.notifiedOfProblemApps.enabled = true
+            RawmDefaults.notifiedOfProblemApps.enabled = true
         }
     }
         
@@ -262,15 +262,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let usingRecommended = response == .alertFirstButtonReturn || response == .abort
         
-        RectangleDefaults.alternateDefaultShortcuts.enabled = usingRecommended
+        RawmDefaults.alternateDefaultShortcuts.enabled = usingRecommended
         
-        RectangleDefaults.subsequentExecutionMode.value = usingRecommended ? .acrossMonitor : .resize
+        RawmDefaults.subsequentExecutionMode.value = usingRecommended ? .acrossMonitor : .resize
         
         welcomeWindowController?.close()
     }
     
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        if RectangleDefaults.relaunchOpensMenu.enabled {
+        if RawmDefaults.relaunchOpensMenu.enabled {
             statusItem.openMenu()
         } else {
             openPreferences(sender)
@@ -316,7 +316,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func viewLogging(_ sender: Any) {
-        RectangleLogger.showLogging(sender: sender)
+        RawmLogger.showLogging(sender: sender)
     }
     
     @IBAction func ignoreFrontMostApp(_ sender: NSMenuItem) {
@@ -337,7 +337,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func checkLaunchOnLogin() {
         if #available(macOS 13.0, *) {
-            if RectangleDefaults.launchOnLogin.enabled, !LaunchOnLogin.isEnabled {
+            if RawmDefaults.launchOnLogin.enabled, !LaunchOnLogin.isEnabled {
                 LaunchOnLogin.isEnabled = true
             }
         } else {
@@ -347,12 +347,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let killNotification = Notification.Name("killLauncher")
                 DistributedNotificationCenter.default().post(name: killNotification, object: Bundle.main.bundleIdentifier!)
             }
-            if !RectangleDefaults.SUHasLaunchedBefore {
-                RectangleDefaults.launchOnLogin.enabled = true
+            if !RawmDefaults.SUHasLaunchedBefore {
+                RawmDefaults.launchOnLogin.enabled = true
             }
             
             // Even if we are already set up to launch on login, setting it again since macOS can be buggy with this type of launch on login.
-            if RectangleDefaults.launchOnLogin.enabled {
+            if RawmDefaults.launchOnLogin.enabled {
                 let smLoginSuccess = SMLoginItemSetEnabled(AppDelegate.launcherAppId as CFString, true)
                 if !smLoginSuccess {
                     if #available(OSX 10.12, *) {
@@ -419,7 +419,7 @@ extension AppDelegate: NSMenuDelegate {
                 menuItem.isEnabled = false
             }
             if windowAction == .nextDisplay || windowAction == .previousDisplay {
-                menuItem.isHidden = screenCount == 1 || RectangleDefaults.combinedDisplayMode.userEnabled
+                menuItem.isHidden = screenCount == 1 || RawmDefaults.combinedDisplayMode.userEnabled
             }
         }
     }
@@ -442,7 +442,7 @@ extension AppDelegate: NSMenuDelegate {
     func addWindowActionMenuItems() {
         let additionalSizeCategories: Set<WindowActionCategory> = [.eighths, .ninths, .twelfths, .sixteenths]
         let submenuOnlyWhenAdditional: Set<WindowActionCategory> = [.thirds, .size]
-        let showAdditional = RectangleDefaults.showAdditionalSizesInMenu.userEnabled
+        let showAdditional = RawmDefaults.showAdditionalSizesInMenu.userEnabled
         var menuIndex = 0
         var categoryMenus: [CategoryMenu] = []
         for action in WindowAction.active {
@@ -450,7 +450,7 @@ extension AppDelegate: NSMenuDelegate {
             let newMenuItem = NSMenuItem(title: displayName, action: #selector(executeMenuWindowAction), keyEquivalent: "")
             newMenuItem.representedObject = action
 
-            if !RectangleDefaults.showAllActionsInMenu.userEnabled, let category = action.category {
+            if !RawmDefaults.showAllActionsInMenu.userEnabled, let category = action.category {
                 // When additional sizes are off, keep Thirds and Size as flat items
                 if submenuOnlyWhenAdditional.contains(category) && !showAdditional {
                     // Fall through to flat item handling below
@@ -484,7 +484,7 @@ extension AppDelegate: NSMenuDelegate {
                 categoryMenu.menu.delegate = self
                 let menuMenuItem = NSMenuItem(title: categoryMenu.category.displayName, action: nil, keyEquivalent: "")
                 if additionalSizeCategories.contains(categoryMenu.category) {
-                    menuMenuItem.isHidden = !RectangleDefaults.showAdditionalSizesInMenu.userEnabled
+                    menuMenuItem.isHidden = !RawmDefaults.showAdditionalSizesInMenu.userEnabled
                     additionalSizeMenuItems.append(menuMenuItem)
                 }
                 mainStatusMenu.insertItem(menuMenuItem, at: menuIndex)
@@ -514,8 +514,8 @@ extension AppDelegate: NSMenuDelegate {
     private func migrateShowEighthsInMenu() {
         let oldKey = "showEighthsInMenu"
         let oldValue = UserDefaults.standard.integer(forKey: oldKey)
-        if oldValue != 0 && RectangleDefaults.showAdditionalSizesInMenu.notSet {
-            RectangleDefaults.showAdditionalSizesInMenu.enabled = (oldValue == 1)
+        if oldValue != 0 && RawmDefaults.showAdditionalSizesInMenu.notSet {
+            RawmDefaults.showAdditionalSizesInMenu.enabled = (oldValue == 1)
         }
     }
 
@@ -589,7 +589,7 @@ extension AppDelegate {
     private func showHideTodoMenuItems() {
         for item in mainStatusMenu.items {
             if TodoItem.tags.contains(item.tag) {
-                item.isHidden = !RectangleDefaults.todo.userEnabled
+                item.isHidden = !RawmDefaults.todo.userEnabled
             }
         }
     }
@@ -614,7 +614,7 @@ extension AppDelegate {
     }
 
     private func updateTodoModeMenuItems(menu: NSMenu) {
-        guard RectangleDefaults.todo.userEnabled,
+        guard RawmDefaults.todo.userEnabled,
               let todoAppMenuItem = menu.item(withTag: TodoItem.app.tag),
               let todoModeMenuItem = menu.item(withTag: TodoItem.mode.tag),
               let todoReflowMenuItem = menu.item(withTag: TodoItem.reflow.tag),
@@ -634,7 +634,7 @@ extension AppDelegate {
             todoAppMenuItem.isHidden = true
         }
 
-        todoModeMenuItem.state = RectangleDefaults.todoMode.enabled ? .on : .off
+        todoModeMenuItem.state = RawmDefaults.todoMode.enabled ? .on : .off
         
         if let fullKeyEquivalent = TodoManager.getToggleKeyDisplay(),
             let keyEquivalent = fullKeyEquivalent.0?.lowercased() {
@@ -648,7 +648,7 @@ extension AppDelegate {
             todoReflowMenuItem.keyEquivalentModifierMask = fullKeyEquivalent.1
         }
         
-        todoReflowMenuItem.isEnabled = RectangleDefaults.todoMode.enabled
+        todoReflowMenuItem.isEnabled = RawmDefaults.todoMode.enabled
         
         todoWindowMenuItem.isHidden = !applicationToggle.todoAppIsActive() || TodoManager.isTodoWindowFront()
     }
@@ -680,7 +680,7 @@ extension AppDelegate {
             func isValidParameter(bundleId: String?) -> Bool {
                 let isValid = bundleId?.isEmpty != true
                 if !isValid {
-                    RectangleLogger.log("Received an empty app-bundle-id parameter. Either pass a valid app bundle id or remove the parameter.")
+                    RawmLogger.log("Received an empty app-bundle-id parameter. Either pass a valid app bundle id or remove the parameter.")
                 }
                 return isValid
             }

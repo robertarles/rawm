@@ -3,9 +3,9 @@
 import Cocoa
 
 // Applicable options:
-// RectangleDefaults.subsequentExecutionMode.traversesDisplays
-// RectangleDefaults.centeredDirectionalMove.enabled
-// RectangleDefaults.resizeOnDirectionalMove.enabled (resizes in thirds, or just to half-width if traversesDisplays is enabled
+// RawmDefaults.subsequentExecutionMode.traversesDisplays
+// RawmDefaults.centeredDirectionalMove.enabled
+// RawmDefaults.resizeOnDirectionalMove.enabled (resizes in thirds, or just to half-width if traversesDisplays is enabled
 
 class MoveLeftRightCalculation: WindowCalculation, RepeatedExecutionsInThirdsCalculation {
     
@@ -14,7 +14,7 @@ class MoveLeftRightCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
         var screen = params.usableScreens.currentScreen
         var action = params.action
         
-        let canTraverseDisplays = RectangleDefaults.subsequentExecutionMode.traversesDisplays && params.usableScreens.numScreens > 1
+        let canTraverseDisplays = RawmDefaults.subsequentExecutionMode.traversesDisplays && params.usableScreens.numScreens > 1
         
         let rectResult: RectResult
         if canTraverseDisplays && isRepeatedCommand(params) {
@@ -48,15 +48,15 @@ class MoveLeftRightCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
         let visibleFrameOfScreen = params.visibleFrameOfScreen
         
         var calculatedWindowRect: CGRect
-        if newDisplay && RectangleDefaults.resizeOnDirectionalMove.enabled {
+        if newDisplay && RawmDefaults.resizeOnDirectionalMove.enabled {
             calculatedWindowRect = calculateFirstRect(params).rect
-        } else if RectangleDefaults.resizeOnDirectionalMove.enabled {
+        } else if RawmDefaults.resizeOnDirectionalMove.enabled {
             calculatedWindowRect = calculateRepeatedRect(params).rect
         } else {
             calculatedWindowRect = calculateGenericRect(params).rect
         }
         
-        if RectangleDefaults.centeredDirectionalMove.enabled != false {
+        if RawmDefaults.centeredDirectionalMove.enabled != false {
             calculatedWindowRect.origin.y = round((visibleFrameOfScreen.height - calculatedWindowRect.height) / 2.0) + visibleFrameOfScreen.minY
         }
         

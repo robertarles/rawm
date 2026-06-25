@@ -59,14 +59,14 @@ class WindowManager {
         if let screen = parameters.screen {
             screens = UsableScreens(currentScreen: screen, numScreens: 1)
         } else {
-            screens = RectangleDefaults.useCursorScreenDetection.enabled
+            screens = RawmDefaults.useCursorScreenDetection.enabled
             ? screenDetection.detectScreensAtCursor()
             : screenDetection.detectScreens(using: frontmostWindowElement)
         }
         
         guard let usableScreens = screens else {
             NSSound.beep()
-            RectangleLogger.log("Unable to obtain usable screens")
+            RawmLogger.log("Unable to obtain usable screens")
             return
         }
         
@@ -95,7 +95,7 @@ class WindowManager {
             || usableScreens.frameOfCurrentScreen.isNull
             || usableScreens.currentScreen.adjustedVisibleFrame(ignoreTodo).isNull {
             NSSound.beep()
-            RectangleLogger.log("Window is not snappable or usable screen is not valid")
+            RawmLogger.log("Window is not snappable or usable screen is not valid")
             return
         }
         
@@ -107,24 +107,24 @@ class WindowManager {
         let calculationParams = WindowCalculationParameters(window: currentWindow, usableScreens: usableScreens, action: action, lastAction: lastRawmAction, ignoreTodo: ignoreTodo)
         guard var calcResult = windowCalculation?.calculate(calculationParams) else {
             NSSound.beep()
-            RectangleLogger.log("Nil calculation result")
+            RawmLogger.log("Nil calculation result")
             return
         }
         
         let gapsApplicable = calcResult.resultingAction.gapsApplicable
         
-        if RectangleDefaults.gapSize.value > 0, gapsApplicable != .none {
+        if RawmDefaults.gapSize.value > 0, gapsApplicable != .none {
             let gapSharedEdges = calcResult.resultingSubAction?.gapSharedEdge ?? calcResult.resultingAction.gapSharedEdge
             
-            calcResult.rect = GapCalculation.applyGaps(calcResult.rect, dimension: gapsApplicable, sharedEdges: gapSharedEdges, gapSize: RectangleDefaults.gapSize.value, skipTopGap: RectangleDefaults.skipGapTopEdge.enabled)
+            calcResult.rect = GapCalculation.applyGaps(calcResult.rect, dimension: gapsApplicable, sharedEdges: gapSharedEdges, gapSize: RawmDefaults.gapSize.value, skipTopGap: RawmDefaults.skipGapTopEdge.enabled)
         }
 
-        if RectangleDefaults.cyclingOverlapOffset.userEnabled, action.positionCycles {
+        if RawmDefaults.cyclingOverlapOffset.userEnabled, action.positionCycles {
             calcResult.rect = applyOverlapOffsetIfNeeded(calcResult.rect, windowId: windowId, screen: calcResult.screen)
         }
 
         if currentNormalizedRect.equalTo(calcResult.rect) {
-            RectangleLogger.log("Current frame is equal to new frame")
+            RawmLogger.log("Current frame is equal to new frame")
 
             recordAction(windowId: windowId, resultingRect: currentWindowRect, action: calcResult.resultingAction, subAction: calcResult.resultingSubAction)
 
@@ -147,11 +147,11 @@ class WindowManager {
         let isMovedAcrossDisplays = usableScreens.currentScreen != calcResult.screen
         if isMovedAcrossDisplays {
             if calcResult.rect.height != resultingRect.height {
-                RectangleLogger.log("Window size wasn't applied perfectly across displays. Trying again.")
+                RawmLogger.log("Window size wasn't applied perfectly across displays. Trying again.")
                 resultingRect = apply(result: resultParameters)
                 
                 if calcResult.rect.height != resultingRect.height {
-                    RectangleLogger.log("Final attempt to adjust across displays.")
+                    RawmLogger.log("Final attempt to adjust across displays.")
                     DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(25)) { [weak self] in
                         guard let self else { return }
                         let finalRect = self.apply(result: resultParameters)
@@ -186,18 +186,18 @@ class WindowManager {
     func windowMovedAcrossDisplays(windowElement: AccessibilityElement, resultingRect: CGRect) {
         windowElement.bringToFront(force: true)
         
-        if RectangleDefaults.moveCursorAcrossDisplays.userEnabled {
+        if RawmDefaults.moveCursorAcrossDisplays.userEnabled {
             CGWarpMouseCursorPosition(resultingRect.centerPoint)
         }
     }
     
     private func applyOverlapOffsetIfNeeded(_ rect: CGRect, windowId: CGWindowID, screen: NSScreen) -> CGRect {
-        let overlapOffset = CGFloat(RectangleDefaults.cyclingOverlapOffsetSize.value)
+        let overlapOffset = CGFloat(RawmDefaults.cyclingOverlapOffsetSize.value)
         guard overlapOffset > 0 else { return rect }
 
         let screenFrameAX = screen.adjustedVisibleFrame().screenFlipped
         let tolerance: CGFloat = 4
-        let maxCascade = min(5, max(1, RectangleDefaults.cyclingOverlapMaxCascade.value))
+        let maxCascade = min(5, max(1, RawmDefaults.cyclingOverlapMaxCascade.value))
 
         let otherWindows = AccessibilityElement.getAllWindowElements().filter { element in
             guard element.getWindowId() != windowId,
@@ -247,7 +247,7 @@ class WindowManager {
         }
 
         if cascadeLevel > 0 {
-            RectangleLogger.log("Cycling overlap detected, applied \(cascadeLevel) x \(overlapOffset)pt cascade offset")
+            RawmLogger.log("Cycling overlap detected, applied \(cascadeLevel) x \(overlapOffset)pt cascade offset")
         }
         return candidate
     }
@@ -255,13 +255,13 @@ class WindowManager {
     func postProcess(result: ResultParameters, resultingRect: CGRect) {
         let calcResult = result.calcResult
         
-        if RectangleDefaults.moveCursor.userEnabled, result.source == .keyboardShortcut {
+        if RawmDefaults.moveCursor.userEnabled, result.source == .keyboardShortcut {
             CGWarpMouseCursorPosition(resultingRect.centerPoint)
         }
         
         recordAction(windowId: result.windowId, resultingRect: resultingRect, action: calcResult.resultingAction, subAction: calcResult.resultingSubAction)
         
-        if RectangleLogger.logging {
+        if RawmLogger.logging {
             var logItems = ["\(result.action.name)",
                             "display: \(result.visibleFrameOfScreen.debugDescription)",
                             "calculatedRect: \(result.calcResult.rect.screenFlipped.debugDescription)",
@@ -271,7 +271,7 @@ class WindowManager {
             if let resultScreens = screenDetection.detectScreens(using: result.windowElement) {
                 logItems.append("resultScreen: \(resultScreens.currentScreen.localizedName)")
             }
-            RectangleLogger.log(logItems.joined(separator: ", "))
+            RawmLogger.log(logItems.joined(separator: ", "))
         }
     }
 }

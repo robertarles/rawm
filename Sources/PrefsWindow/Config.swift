@@ -3,7 +3,7 @@
 import Foundation
 import MASShortcut
 
-extension RectangleDefaults {
+extension RawmDefaults {
     static func encoded() -> String? {
         guard let version = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else { return nil }
         
@@ -25,7 +25,7 @@ extension RectangleDefaults {
         }
         
         var codableDefaults = [String: CodableDefault]()
-        for exportableDefault in RectangleDefaults.array {
+        for exportableDefault in RawmDefaults.array {
             codableDefaults[exportableDefault.key] = exportableDefault.toCodable()
         }
                 
@@ -66,7 +66,7 @@ extension RectangleDefaults {
         guard let jsonString = try? String(contentsOf: fileUrl, encoding: .utf8),
               let config = convert(jsonString: jsonString) else { return }
 
-        for availableDefault in RectangleDefaults.array {
+        for availableDefault in RawmDefaults.array {
             if let codedDefault = config.defaults[availableDefault.key] {
                 availableDefault.load(from: codedDefault)
             }

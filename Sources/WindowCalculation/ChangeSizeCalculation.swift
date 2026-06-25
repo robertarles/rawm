@@ -6,17 +6,17 @@ class ChangeSizeCalculation: WindowCalculation, ChangeWindowDimensionCalculation
 
     let screenEdgeGapSize: CGFloat
     let sizeOffsetAbs: CGFloat
-    let curtainChangeSize = RectangleDefaults.curtainChangeSize.enabled != false
+    let curtainChangeSize = RawmDefaults.curtainChangeSize.enabled != false
 
     var widthOffsetAbs: CGFloat {
-        CGFloat(RectangleDefaults.widthStepSize.value)
+        CGFloat(RawmDefaults.widthStepSize.value)
     }
 
     override init() {
-        let windowGapSize = RectangleDefaults.gapSize.value
+        let windowGapSize = RawmDefaults.gapSize.value
         screenEdgeGapSize = (windowGapSize <= 0) ? 5.0 : CGFloat(windowGapSize)
 
-        let defaultSizeOffset = RectangleDefaults.sizeOffset.value
+        let defaultSizeOffset = RawmDefaults.sizeOffset.value
         sizeOffsetAbs = (defaultSizeOffset <= 0)
             ? 30.0
             : CGFloat(defaultSizeOffset)
@@ -127,13 +127,13 @@ class ChangeSizeCalculation: WindowCalculation, ChangeWindowDimensionCalculation
     private func againstLeftAndRightScreenEdges(originalWindowRect: CGRect, resizedWindowRect: CGRect, visibleFrameOfScreen: CGRect) -> CGRect {
         var adjustedWindowRect = resizedWindowRect
         if againstRightScreenEdge(originalWindowRect, visibleFrameOfScreen) {
-            adjustedWindowRect.origin.x = visibleFrameOfScreen.maxX - adjustedWindowRect.width - CGFloat(RectangleDefaults.gapSize.value)
+            adjustedWindowRect.origin.x = visibleFrameOfScreen.maxX - adjustedWindowRect.width - CGFloat(RawmDefaults.gapSize.value)
             if againstLeftScreenEdge(originalWindowRect, visibleFrameOfScreen) {
-                adjustedWindowRect.size.width = visibleFrameOfScreen.width - (CGFloat(RectangleDefaults.gapSize.value) * 2)
+                adjustedWindowRect.size.width = visibleFrameOfScreen.width - (CGFloat(RawmDefaults.gapSize.value) * 2)
             }
         }
         if againstLeftScreenEdge(originalWindowRect, visibleFrameOfScreen) {
-            adjustedWindowRect.origin.x = visibleFrameOfScreen.minX + CGFloat(RectangleDefaults.gapSize.value)
+            adjustedWindowRect.origin.x = visibleFrameOfScreen.minX + CGFloat(RawmDefaults.gapSize.value)
         }
         return adjustedWindowRect
     }
@@ -141,13 +141,13 @@ class ChangeSizeCalculation: WindowCalculation, ChangeWindowDimensionCalculation
     private func againstTopAndBottomScreenEdges(originalWindowRect: CGRect, resizedWindowRect: CGRect, visibleFrameOfScreen: CGRect) -> CGRect{
         var adjustedWindowRect = resizedWindowRect
         if againstTopScreenEdge(originalWindowRect, visibleFrameOfScreen) {
-            adjustedWindowRect.origin.y = visibleFrameOfScreen.maxY - adjustedWindowRect.height - CGFloat(RectangleDefaults.gapSize.value)
+            adjustedWindowRect.origin.y = visibleFrameOfScreen.maxY - adjustedWindowRect.height - CGFloat(RawmDefaults.gapSize.value)
             if againstBottomScreenEdge(originalWindowRect, visibleFrameOfScreen) {
-                adjustedWindowRect.size.height = visibleFrameOfScreen.height - (CGFloat(RectangleDefaults.gapSize.value) * 2)
+                adjustedWindowRect.size.height = visibleFrameOfScreen.height - (CGFloat(RawmDefaults.gapSize.value) * 2)
             }
         }
         if againstBottomScreenEdge(originalWindowRect, visibleFrameOfScreen) {
-            adjustedWindowRect.origin.y = visibleFrameOfScreen.minY + CGFloat(RectangleDefaults.gapSize.value)
+            adjustedWindowRect.origin.y = visibleFrameOfScreen.minY + CGFloat(RawmDefaults.gapSize.value)
         }
         return adjustedWindowRect
     }

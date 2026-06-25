@@ -30,10 +30,10 @@ class SnapAreaModel {
     ]
     
     var landscape: [Directional:SnapAreaConfig] {
-        RectangleDefaults.landscapeSnapAreas.typedValue ?? SnapAreaModel.defaultLandscape
+        RawmDefaults.landscapeSnapAreas.typedValue ?? SnapAreaModel.defaultLandscape
     }
     var portrait: [Directional:SnapAreaConfig] {
-        RectangleDefaults.portraitSnapAreas.typedValue ?? SnapAreaModel.defaultPortrait
+        RawmDefaults.portraitSnapAreas.typedValue ?? SnapAreaModel.defaultPortrait
     }
     
     var isTopConfigured: Bool {
@@ -60,22 +60,22 @@ class SnapAreaModel {
     func setLandscape(directional: Directional, snapAreaConfig: SnapAreaConfig?) {
         var newConfig = landscape
         newConfig[directional] = snapAreaConfig
-        RectangleDefaults.landscapeSnapAreas.typedValue = newConfig
+        RawmDefaults.landscapeSnapAreas.typedValue = newConfig
     }
     
     func setPortrait(directional: Directional, snapAreaConfig: SnapAreaConfig?) {
         var newConfig = portrait
         newConfig[directional] = snapAreaConfig
-        RectangleDefaults.portraitSnapAreas.typedValue = newConfig
+        RawmDefaults.portraitSnapAreas.typedValue = newConfig
     }
     
     func migrate() {
-        if RectangleDefaults.sixthsSnapArea.userEnabled {
+        if RawmDefaults.sixthsSnapArea.userEnabled {
             setLandscape(directional: .t, snapAreaConfig: SnapAreaConfig(compound: .topSixths))
             setLandscape(directional: .b, snapAreaConfig: SnapAreaConfig(compound: .bottomSixths))
         }
 
-        let ignoredSnapAreas = SnapAreaOption(rawValue: RectangleDefaults.ignoredSnapAreas.value)
+        let ignoredSnapAreas = SnapAreaOption(rawValue: RawmDefaults.ignoredSnapAreas.value)
         guard ignoredSnapAreas.rawValue > 0 else { return }
         
         let directionalToSnapAreaOption: [Directional: SnapAreaOption] = [
