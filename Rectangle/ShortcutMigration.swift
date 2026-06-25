@@ -17,7 +17,8 @@ import Carbon
 enum ShortcutMigration {
 
     /// The UserDefaults key that tracks whether migration has already run.
-    private static let migrationDoneKey = "rawm.shortcutMigration.v1.done"
+    /// v3: fixes persistent-domain check so shortcut defaults actually survive relaunches.
+    private static let migrationDoneKey = "rawm.shortcutMigration.v3.done"
 
     /// Run migration if it has not already been performed.
     /// Call this from AppDelegate.applicationDidFinishLaunching, after ShortcutManager is initialized.

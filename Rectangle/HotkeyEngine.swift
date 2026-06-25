@@ -99,9 +99,22 @@ class HotkeyEngine {
 
     // MARK: - Default Shortcut Registration
 
-    /// Register a default MASShortcut for a defaults key (so first-launch has the shortcut pre-filled).
+    /// Register a default shortcut for a defaults key.
+    /// Writes to persistent UserDefaults so the binding survives subsequent launches.
+    /// Only writes if no value is already in the persistent domain (preserves user customizations).
     func registerDefault(defaultsKey: String, keyCode: Int, modifierFlags: NSEvent.ModifierFlags) {
         let shortcut = MASShortcut(keyCode: keyCode, modifierFlags: modifierFlags)
+        // Check the persistent domain only — registration domain values from registerDefaultShortcuts
+        // also appear via object(forKey:), so we must check persistence directly.
+        let bundleID = Bundle.main.bundleIdentifier ?? ""
+        let persisted = UserDefaults.standard.persistentDomain(forName: bundleID)
+        if persisted?[defaultsKey] == nil {
+            if let transformer = ValueTransformer(forName: NSValueTransformerName(rawValue: MASDictionaryTransformerName)),
+               let dict = transformer.reverseTransformedValue(shortcut) as? [String: Any] {
+                UserDefaults.standard.set(dict, forKey: defaultsKey)
+            }
+        }
+        // Also register in-memory default (belt-and-suspenders for MASShortcut internals)
         MASShortcutBinder.shared()?.registerDefaultShortcuts([defaultsKey: shortcut])
     }
 
