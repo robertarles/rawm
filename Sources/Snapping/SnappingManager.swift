@@ -317,7 +317,7 @@ class SnappingManager {
     
     func unsnapRestore(windowId: CGWindowID, currentRect: CGRect, cursorLoc: CGPoint?) {
         if RawmDefaults.unsnapRestore.enabled != false {
-            // if window was put there by rectangle, restore size
+            // if window was put there by rawm, restore size
             if let lastRect = AppDelegate.windowHistory.lastRawmActions[windowId]?.rect,
                 lastRect == initialWindowRect,
                 let restoreRect = AppDelegate.windowHistory.restoreRects[windowId] {
