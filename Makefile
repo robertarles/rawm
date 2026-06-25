@@ -1,4 +1,4 @@
-PROJECT     = Rectangle.xcodeproj
+PROJECT     = rawm.xcodeproj
 SCHEME      = rawm
 APP_NAME    = rawm.app
 INSTALL_DIR = /Applications
