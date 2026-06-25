@@ -8,7 +8,7 @@ class LeftRightHalfCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
         
         let usableScreens = params.usableScreens
         
-        switch Defaults.subsequentExecutionMode.value {
+        switch RectangleDefaults.subsequentExecutionMode.value {
             
         case .acrossMonitor:
             return calculateAcrossDisplays(params)
@@ -28,7 +28,7 @@ class LeftRightHalfCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
     }
     
     func calculateFirstRect(_ params: RectCalculationParameters) -> RectResult {
-        let ratio = Defaults.horizontalSplitRatio.value / 100.0
+        let ratio = RectangleDefaults.horizontalSplitRatio.value / 100.0
         let side: HalfSplitSide = params.action == .rightHalf ? .trailing : .leading
         let fraction = side == .trailing ? 1.0 - ratio : ratio
         return RectResult(HalfSplitFrameCalculation.horizontalRect(in: params.visibleFrameOfScreen, side: side, fraction: fraction))
@@ -57,7 +57,7 @@ class LeftRightHalfCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
         if isRepeatedCommand(params) {
             if let prevScreen = params.usableScreens.adjacentScreens?.prev {
 
-                if Defaults.subsequentExecutionMode.value == .acrossAndResize && prevScreen == params.usableScreens.screensOrdered.last {
+                if RectangleDefaults.subsequentExecutionMode.value == .acrossAndResize && prevScreen == params.usableScreens.screensOrdered.last {
                     return calculateResize(params)
                 }
 
@@ -75,7 +75,7 @@ class LeftRightHalfCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
         if isRepeatedCommand(params) {
             if let nextScreen = params.usableScreens.adjacentScreens?.next {
                 
-                if Defaults.subsequentExecutionMode.value == .acrossAndResize && nextScreen == params.usableScreens.screensOrdered.first {
+                if RectangleDefaults.subsequentExecutionMode.value == .acrossAndResize && nextScreen == params.usableScreens.screensOrdered.first {
                     return calculateResize(params)
                 }
 

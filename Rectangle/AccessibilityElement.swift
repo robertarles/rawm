@@ -95,7 +95,7 @@ class AccessibilityElement {
         set {
             guard let newValue = newValue else { return }
             wrappedElement.setValue(.position, newValue)
-            Logger.log("AX position proposed: \(newValue.debugDescription), result: \(position?.debugDescription ?? "N/A")")
+            RectangleLogger.log("AX position proposed: \(newValue.debugDescription), result: \(position?.debugDescription ?? "N/A")")
         }
     }
     
@@ -103,7 +103,7 @@ class AccessibilityElement {
         if let isResizable = wrappedElement.isValueSettable(.size) {
             return isResizable
         }
-        Logger.log("Unable to determine if window is resizeable. Assuming it is.")
+        RectangleLogger.log("Unable to determine if window is resizeable. Assuming it is.")
         return true
     }
     
@@ -114,7 +114,7 @@ class AccessibilityElement {
         set {
             guard let newValue = newValue else { return }
             wrappedElement.setValue(.size, newValue)
-            Logger.log("AX sizing proposed: \(newValue.debugDescription), result: \(size?.debugDescription ?? "N/A")")
+            RectangleLogger.log("AX sizing proposed: \(newValue.debugDescription), result: \(size?.debugDescription ?? "N/A")")
         }
     }
     
@@ -133,7 +133,7 @@ class AccessibilityElement {
         if let appElement = appElement {
             enhancedUI = appElement.enhancedUserInterface
             if enhancedUI == true {
-                Logger.log("AXEnhancedUserInterface was enabled, will disable before resizing")
+                RectangleLogger.log("AXEnhancedUserInterface was enabled, will disable before resizing")
                 appElement.enhancedUserInterface = false
             }
         }
@@ -145,7 +145,7 @@ class AccessibilityElement {
         size = frame.size
 
         // If "enhanced user interface" was originally enabled for the app, turn it back on
-        if Defaults.enhancedUI.value == .disableEnable, let appElement = appElement, enhancedUI == true {
+        if RectangleDefaults.enhancedUI.value == .disableEnable, let appElement = appElement, enhancedUI == true {
             appElement.enhancedUserInterface = true
         }
     }
@@ -205,7 +205,7 @@ class AccessibilityElement {
         if let pid = pid, let info = (WindowUtil.getWindowList().first { $0.pid == pid && $0.frame == frame }) {
             return info.id
         }
-        Logger.log("Unable to obtain window id")
+        RectangleLogger.log("Unable to obtain window id")
         return nil
     }
     
@@ -303,7 +303,7 @@ extension AccessibilityElement {
     
     static func getFrontWindowElement() -> AccessibilityElement? {
         guard let appElement = getFrontApplicationElement() else {
-            Logger.log("Failed to find the application that currently has focus.")
+            RectangleLogger.log("Failed to find the application that currently has focus.")
             return nil
         }
         if let focusedWindowElement = appElement.focusedWindowElement {
@@ -312,7 +312,7 @@ extension AccessibilityElement {
         if let firstWindowElement = appElement.windowElements?.first {
             return firstWindowElement
         }
-        Logger.log("Failed to find frontmost window.")
+        RectangleLogger.log("Failed to find frontmost window.")
         return nil
     }
     
@@ -327,9 +327,9 @@ extension AccessibilityElement {
     static func getWindowElementUnderCursor() -> AccessibilityElement? {
         let position = NSEvent.mouseLocation.screenFlipped
         
-        var systemWideFirst = Defaults.systemWideMouseDown.userEnabled
-        if Defaults.systemWideMouseDown.notSet, let frontAppId = ApplicationToggle.frontAppId {
-            systemWideFirst = Defaults.systemWideMouseDownApps.typedValue?.contains(frontAppId) == true
+        var systemWideFirst = RectangleDefaults.systemWideMouseDown.userEnabled
+        if RectangleDefaults.systemWideMouseDown.notSet, let frontAppId = ApplicationToggle.frontAppId {
+            systemWideFirst = RectangleDefaults.systemWideMouseDownApps.typedValue?.contains(frontAppId) == true
         }
         
         if systemWideFirst,
@@ -339,7 +339,7 @@ extension AccessibilityElement {
         }
 
         if let info = getWindowInfo(position) {
-            if !Defaults.dragFromStage.userDisabled {
+            if !RectangleDefaults.dragFromStage.userDisabled {
                 if StageUtil.stageCapable && StageUtil.stageEnabled,
                    let group = StageUtil.getStageStripWindowGroup(info.id),
                    let windowId = group.first,
@@ -362,13 +362,13 @@ extension AccessibilityElement {
            let element = AccessibilityElement(position),
            let windowElement = element.windowElement {
             
-            if Logger.logging, let pid = windowElement.pid {
+            if RectangleLogger.logging, let pid = windowElement.pid {
                 let appName = NSRunningApplication(processIdentifier: pid)?.localizedName ?? ""
-                Logger.log("Window under cursor fallback matched: \(appName)")
+                RectangleLogger.log("Window under cursor fallback matched: \(appName)")
             }
             return windowElement
         }
-        Logger.log("Unable to obtain the accessibility element with the specified attribute at mouse location")
+        RectangleLogger.log("Unable to obtain the accessibility element with the specified attribute at mouse location")
         return nil
     }
     

@@ -102,7 +102,7 @@ extension Set where Element == CycleSize {
     }
 }
 
-class CycleSizesDefault: Default {
+class CycleSizesDefault: RectangleDefault {
     public private(set) var key: String = "selectedCycleSizes"
     private var initialized = false
     

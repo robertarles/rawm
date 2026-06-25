@@ -7,7 +7,7 @@ class BottomCenterRightEighthCalculation: WindowCalculation, OrientationAware, E
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
         let visibleFrameOfScreen = params.visibleFrameOfScreen
 
-        guard Defaults.subsequentExecutionMode.value != .none,
+        guard RectangleDefaults.subsequentExecutionMode.value != .none,
               let last = params.lastAction,
               let lastSubAction = last.subAction
         else {

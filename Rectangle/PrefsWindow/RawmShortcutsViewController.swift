@@ -217,7 +217,7 @@ extension RawmShortcutsViewController: NSTableViewDelegate {
             shortcutViewsByKey[shortcutRow.defaultsKey] = shortcutView
             shortcutRecordingObserver.observe([shortcutView])
 
-            if Defaults.allowAnyShortcut.enabled {
+            if RectangleDefaults.allowAnyShortcut.enabled {
                 shortcutView.shortcutValidator = PassthroughShortcutValidator()
             }
             return shortcutView

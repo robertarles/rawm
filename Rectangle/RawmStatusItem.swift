@@ -17,7 +17,7 @@ class RawmStatusItem {
     private init() {}
     
     public func refreshVisibility() {
-        if Defaults.hideMenuBarIcon.enabled {
+        if RectangleDefaults.hideMenuBarIcon.enabled {
             remove()
         } else {
             add()
@@ -41,7 +41,7 @@ class RawmStatusItem {
         isVisibleObserver = nsStatusItem?.observe(\.isVisible, options: [.old, .new]) { nsStatusItem, change in
             if change.oldValue == true && change.newValue == false {
                 Notification.Name.menuBarIconHidden.post()
-                Defaults.hideMenuBarIcon.enabled = true
+                RectangleDefaults.hideMenuBarIcon.enabled = true
             }
         }
         nsStatusItem?.isVisible = true

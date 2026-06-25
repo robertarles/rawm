@@ -647,7 +647,7 @@ enum WindowAction: Int, Codable {
         case .center, .centerProminently, .nextDisplay, .previousDisplay,
              .displayOne, .displayTwo, .displayThree, .displayFour, .displayFive,
              .displaySix, .displaySeven, .displayEight, .displayNine: return false
-        case .moveUp, .moveDown, .moveLeft, .moveRight: return Defaults.resizeOnDirectionalMove.enabled
+        case .moveUp, .moveDown, .moveLeft, .moveRight: return RectangleDefaults.resizeOnDirectionalMove.enabled
         default: return true
         }
     }
@@ -723,7 +723,7 @@ enum WindowAction: Int, Codable {
         case .lastTwoThirds: return Shortcut( ctrl|alt, kVK_ANSI_T )
         case .lastThird: return Shortcut( ctrl|alt, kVK_ANSI_G )
         case .centerTwoThirds:
-            if let installVersion = Defaults.installVersion.value,
+            if let installVersion = RectangleDefaults.installVersion.value,
                let intInstallVersion = Int(installVersion),
                intInstallVersion > 94 {
                 return Shortcut( ctrl|alt, kVK_ANSI_R )
@@ -866,10 +866,10 @@ enum WindowAction: Int, Codable {
         case .bottomRight: return [.top, .left]
         case .topLeft: return [.bottom, .right]
         case .topRight: return [.bottom, .left]
-        case .moveUp: return Defaults.resizeOnDirectionalMove.enabled ? .bottom : .none
-        case .moveDown: return Defaults.resizeOnDirectionalMove.enabled ? .top : .none
-        case .moveLeft: return Defaults.resizeOnDirectionalMove.enabled ? .right : .none
-        case .moveRight: return Defaults.resizeOnDirectionalMove.enabled ? .left : .none
+        case .moveUp: return RectangleDefaults.resizeOnDirectionalMove.enabled ? .bottom : .none
+        case .moveDown: return RectangleDefaults.resizeOnDirectionalMove.enabled ? .top : .none
+        case .moveLeft: return RectangleDefaults.resizeOnDirectionalMove.enabled ? .right : .none
+        case .moveRight: return RectangleDefaults.resizeOnDirectionalMove.enabled ? .left : .none
         default:
             return .none
         }
@@ -896,13 +896,13 @@ enum WindowAction: Int, Codable {
             .topVerticalThird, .middleVerticalThird, .bottomVerticalThird, .topVerticalTwoThirds, .bottomVerticalTwoThirds:
             return .both
         case .moveUp, .moveDown:
-            return Defaults.resizeOnDirectionalMove.enabled ? .vertical : .none;
+            return RectangleDefaults.resizeOnDirectionalMove.enabled ? .vertical : .none;
         case .moveLeft, .moveRight:
-            return Defaults.resizeOnDirectionalMove.enabled ? .horizontal : .none;
+            return RectangleDefaults.resizeOnDirectionalMove.enabled ? .horizontal : .none;
         case .maximize:
-            return Defaults.applyGapsToMaximize.userDisabled ? .none : .both;
+            return RectangleDefaults.applyGapsToMaximize.userDisabled ? .none : .both;
         case .maximizeHeight:
-            return Defaults.applyGapsToMaximizeHeight.userDisabled ? .none : .vertical;
+            return RectangleDefaults.applyGapsToMaximizeHeight.userDisabled ? .none : .vertical;
         case .almostMaximize, .previousDisplay, .nextDisplay, .larger, .smaller, .largerWidth, .smallerWidth, .largerHeight, .smallerHeight, .center, .centerProminently, .restore, .specified, .reverseAll, .tileAll, .cascadeAll, .cascadeActiveApp, .tileActiveApp,
              .displayOne, .displayTwo, .displayThree, .displayFour, .displayFive,
              .displaySix, .displaySeven, .displayEight, .displayNine:

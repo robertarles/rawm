@@ -14,8 +14,8 @@ class FootprintWindow: NSWindow {
         level = .modalPanel
         hasShadow = false
         isReleasedWhenClosed = false
-        alphaValue = Defaults.footprintFade.userDisabled
-            ? CGFloat(Defaults.footprintAlpha.value)
+        alphaValue = RectangleDefaults.footprintFade.userDisabled
+            ? CGFloat(RectangleDefaults.footprintAlpha.value)
             : 0
   
         styleMask.insert(.fullSizeContentView)
@@ -30,7 +30,7 @@ class FootprintWindow: NSWindow {
         let boxView = NSBox()
         boxView.boxType = .custom
         boxView.borderColor = .lightGray
-        boxView.borderWidth = CGFloat(Defaults.footprintBorderWidth.value)
+        boxView.borderWidth = CGFloat(RectangleDefaults.footprintBorderWidth.value)
         
         if #available(macOS 26.0, *) {
             boxView.cornerRadius = 16
@@ -40,7 +40,7 @@ class FootprintWindow: NSWindow {
             boxView.cornerRadius = 5
         }
         boxView.wantsLayer = true
-        boxView.fillColor = Defaults.footprintColor.typedValue?.nsColor ?? NSColor.black
+        boxView.fillColor = RectangleDefaults.footprintColor.typedValue?.nsColor ?? NSColor.black
         
         contentView = boxView
     }
@@ -54,25 +54,25 @@ class FootprintWindow: NSWindow {
     }
     
     var realIsVisible: Bool {
-        if Defaults.footprintFade.userDisabled {
+        if RectangleDefaults.footprintFade.userDisabled {
             return super.isVisible
         } else {
-            return alphaValue == Defaults.footprintAlpha.cgFloat
+            return alphaValue == RectangleDefaults.footprintAlpha.cgFloat
         }
     }
     
     override func orderFront(_ sender: Any?) {
-        if Defaults.footprintFade.userDisabled {
+        if RectangleDefaults.footprintFade.userDisabled {
             super.orderFront(sender)
         } else {
             orderOutCanceled = true
             super.orderFront(sender)
-            animator().alphaValue = Defaults.footprintAlpha.cgFloat
+            animator().alphaValue = RectangleDefaults.footprintAlpha.cgFloat
         }
     }
     
     override func orderOut(_ sender: Any?) {
-        if Defaults.footprintFade.userDisabled {
+        if RectangleDefaults.footprintFade.userDisabled {
             super.orderOut(nil)
         } else {
             orderOutCanceled = false

@@ -12,7 +12,7 @@ class TodoManager {
     static let defaultsKeys = [toggleDefaultsKey, reflowDefaultsKey]
     
     static func setTodoMode(_ enabled: Bool, _ bringToFront: Bool = true) {
-        Defaults.todoMode.enabled = enabled
+        RectangleDefaults.todoMode.enabled = enabled
         registerUnregisterReflowShortcut()
         moveAllIfNeeded(bringToFront)
     }
@@ -46,7 +46,7 @@ class TodoManager {
         }
 
         MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: toggleDefaultsKey, toAction: {
-            let enabled = !Defaults.todoMode.enabled
+            let enabled = !RectangleDefaults.todoMode.enabled
             setTodoMode(enabled)
         })
     }
@@ -71,7 +71,7 @@ class TodoManager {
     }
     
     static func registerUnregisterToggleShortcut() {
-        if Defaults.todo.userEnabled {
+        if RectangleDefaults.todo.userEnabled {
             registerToggleShortcut()
         } else {
             unregisterToggleShortcut()
@@ -79,7 +79,7 @@ class TodoManager {
     }
     
     static func registerUnregisterReflowShortcut() {
-        if Defaults.todo.userEnabled && Defaults.todoMode.enabled {
+        if RectangleDefaults.todo.userEnabled && RectangleDefaults.todoMode.enabled {
             registerReflowShortcut()
         } else {
             unregisterReflowShortcut()
@@ -113,7 +113,7 @@ class TodoManager {
     }
     
     private static func getTodoWindowElement() -> AccessibilityElement? {
-        guard let bundleId = Defaults.todoApplication.value, let windowElements = AccessibilityElement(bundleId)?.windowElements else {
+        guard let bundleId = RectangleDefaults.todoApplication.value, let windowElements = AccessibilityElement(bundleId)?.windowElements else {
             todoWindowId = nil
             return nil
         }
@@ -178,7 +178,7 @@ class TodoManager {
 
                 var sharedEdge: Edge
                 var rect = adjustedVisibleFrame
-                let isRightSide = Defaults.todoSidebarSide.value == .right
+                let isRightSide = RectangleDefaults.todoSidebarSide.value == .right
 
                 sharedEdge = isRightSide ? .left : .right
 
@@ -189,8 +189,8 @@ class TodoManager {
 
                 rect = rect.screenFlipped
                 
-                if Defaults.gapSize.value > 0 {
-                    rect = GapCalculation.applyGaps(rect, sharedEdges: sharedEdge, gapSize: Defaults.gapSize.value)
+                if RectangleDefaults.gapSize.value > 0 {
+                    rect = GapCalculation.applyGaps(rect, sharedEdges: sharedEdge, gapSize: RectangleDefaults.gapSize.value)
                 }
                 todoWindow.setFrame(rect)
             }
@@ -202,11 +202,11 @@ class TodoManager {
     }
     
     static func getSidebarWidth(visibleFrameWidth: CGFloat) -> CGFloat {
-        var sidebarWidth = Defaults.todoSidebarWidth.cgFloat
+        var sidebarWidth = RectangleDefaults.todoSidebarWidth.cgFloat
         
         if sidebarWidth > 0 && sidebarWidth <= 1 {
             sidebarWidth = sidebarWidth * visibleFrameWidth
-        } else if Defaults.todoSidebarWidthUnit.value == .pct {
+        } else if RectangleDefaults.todoSidebarWidthUnit.value == .pct {
             sidebarWidth = convert(width: sidebarWidth, toUnit: .pixels, visibleFrameWidth: visibleFrameWidth)
         }
         
@@ -215,8 +215,8 @@ class TodoManager {
     
     static func changeSidebarWidthUnit(to unit: TodoSidebarWidthUnit) {
         if let visibleFrameWidth = TodoManager.todoScreen?.adjustedVisibleFrame(true).width {
-            let newValue = TodoManager.convert(width: Defaults.todoSidebarWidth.cgFloat, toUnit: unit, visibleFrameWidth: visibleFrameWidth)
-            Defaults.todoSidebarWidth.value = Float(newValue)
+            let newValue = TodoManager.convert(width: RectangleDefaults.todoSidebarWidth.cgFloat, toUnit: unit, visibleFrameWidth: visibleFrameWidth)
+            RectangleDefaults.todoSidebarWidth.value = Float(newValue)
         }
     }
     
@@ -227,7 +227,7 @@ class TodoManager {
     }
     
     static func moveAllIfNeeded(_ bringToFront: Bool = true) {
-        guard Defaults.todo.userEnabled && Defaults.todoMode.enabled else { return }
+        guard RectangleDefaults.todo.userEnabled && RectangleDefaults.todoMode.enabled else { return }
         moveAll(bringToFront)
     }
     
@@ -239,11 +239,11 @@ class TodoManager {
     
     private static func shiftWindowOffSidebar(_ w: AccessibilityElement, screenVisibleFrame: CGRect) {
         var rect = w.frame
-        let halfGapWidth = CGFloat(Defaults.gapSize.value) / 2
+        let halfGapWidth = CGFloat(RectangleDefaults.gapSize.value) / 2
         let screenVisibleFrameMinX = screenVisibleFrame.minX + halfGapWidth
         let screenVisibleFrameMaxX = screenVisibleFrame.maxX - halfGapWidth
 
-        if Defaults.todoSidebarSide.value == .left && rect.minX < screenVisibleFrameMinX {
+        if RectangleDefaults.todoSidebarSide.value == .left && rect.minX < screenVisibleFrameMinX {
             // Shift it to the right
             rect.origin.x = min(screenVisibleFrameMaxX - rect.width, screenVisibleFrameMinX)
             
@@ -255,7 +255,7 @@ class TodoManager {
             }
             
             w.setFrame(rect)
-        } else if Defaults.todoSidebarSide.value == .right && rect.maxX > screenVisibleFrameMaxX {
+        } else if RectangleDefaults.todoSidebarSide.value == .right && rect.maxX > screenVisibleFrameMaxX {
             // Shift it to the left
             rect.origin.x = min(rect.minX, max(screenVisibleFrameMinX, screenVisibleFrameMaxX - rect.width))
             

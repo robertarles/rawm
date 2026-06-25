@@ -99,7 +99,7 @@ class SlideoutController {
   var resizingMode: ResizingMode = .none
 
   var nswindow: NSWindow? {
-    return AppState.shared.appDelegate?.panel
+    return AppState.shared.appDelegate?.clipboardHistoryPanel
   }
 
   private var windowAnimationOrigin: CGPoint?

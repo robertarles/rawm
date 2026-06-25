@@ -7,7 +7,7 @@ class CenterCalculation: WindowCalculation {
     override func calculate(_ params: WindowCalculationParameters) -> WindowCalculationResult? {
 
         var screenFrame: CGRect?
-        if !Defaults.alwaysAccountForStage.userEnabled {
+        if !RectangleDefaults.alwaysAccountForStage.userEnabled {
             screenFrame = params.usableScreens.currentScreen.adjustedVisibleFrame(params.ignoreTodo, true)
         }
                 

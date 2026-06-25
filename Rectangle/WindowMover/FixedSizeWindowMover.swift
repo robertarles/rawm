@@ -25,7 +25,7 @@ class FixedSizeWindowMover: WindowMover {
     }
     
     private func getAlignmentEdges(initialNormalizedRect rect: CGRect, normalizedScreenFrame: CGRect) -> Edge {
-        let alignment = Defaults.moveFixedSizeToEdge.value
+        let alignment = RectangleDefaults.moveFixedSizeToEdge.value
         
         switch alignment {
         case .edgesAndCorners:

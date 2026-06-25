@@ -10,7 +10,7 @@ struct SnapArea: Equatable {
 
 class SnappingManager {
     
-    private let fullIgnoreIds: [String] = Defaults.fullIgnoreBundleIds.typedValue ?? ["com.install4j", 
+    private let fullIgnoreIds: [String] = RectangleDefaults.fullIgnoreBundleIds.typedValue ?? ["com.install4j", 
                                                                                       "com.mathworks.matlab",
                                                                                       "com.live2d.cubism.CECubismEditorApp",
                                                                                       "com.aquafold.datastudio.DataStudio",
@@ -35,13 +35,13 @@ class SnappingManager {
 
     let screenDetection = ScreenDetection()
     
-    private let marginTop = Defaults.snapEdgeMarginTop.cgFloat
-    private let marginBottom = Defaults.snapEdgeMarginBottom.cgFloat
-    private let marginLeft = Defaults.snapEdgeMarginLeft.cgFloat
-    private let marginRight = Defaults.snapEdgeMarginRight.cgFloat
+    private let marginTop = RectangleDefaults.snapEdgeMarginTop.cgFloat
+    private let marginBottom = RectangleDefaults.snapEdgeMarginBottom.cgFloat
+    private let marginLeft = RectangleDefaults.snapEdgeMarginLeft.cgFloat
+    private let marginRight = RectangleDefaults.snapEdgeMarginRight.cgFloat
     
     init() {
-        if Defaults.windowSnapping.enabled != false {
+        if RectangleDefaults.windowSnapping.enabled != false {
             enableSnapping()
         }
         
@@ -64,7 +64,7 @@ class SnappingManager {
     func frontAppChanged(notification: Notification) {
         if ApplicationToggle.shortcutsDisabled {
             DispatchQueue.main.async {
-                if !Defaults.ignoreDragSnapToo.userDisabled {
+                if !RectangleDefaults.ignoreDragSnapToo.userDisabled {
                     self.allowListening = false
                     self.toggleListening()
                 } else {
@@ -84,7 +84,7 @@ class SnappingManager {
     }
     
     func toggleListening() {
-        if allowListening, !isFullScreen, !Defaults.windowSnapping.userDisabled {
+        if allowListening, !isFullScreen, !RectangleDefaults.windowSnapping.userDisabled {
             enableSnapping()
         } else {
             disableSnapping()
@@ -114,13 +114,13 @@ class SnappingManager {
     }
         
     public func reloadFromDefaults() {
-        if Defaults.windowSnapping.userDisabled {
+        if RectangleDefaults.windowSnapping.userDisabled {
             if eventMonitor?.running == true {
                 disableSnapping()
             }
         } else {
             if eventMonitor?.running == true {
-                if Defaults.missionControlDragging.userDisabled != (eventMonitor is ActiveEventMonitor) {
+                if RectangleDefaults.missionControlDragging.userDisabled != (eventMonitor is ActiveEventMonitor) {
                     stopEventMonitor()
                     startEventMonitor()
                 }
@@ -146,7 +146,7 @@ class SnappingManager {
     
     private func startEventMonitor() {
         let mask: NSEvent.EventTypeMask = [.leftMouseDown, .leftMouseUp, .leftMouseDragged]
-        eventMonitor = Defaults.missionControlDragging.userDisabled ? ActiveEventMonitor(mask: mask, filterer: filter, handler: handle) : PassiveEventMonitor(mask: mask, handler: handle)
+        eventMonitor = RectangleDefaults.missionControlDragging.userDisabled ? ActiveEventMonitor(mask: mask, filterer: filter, handler: handle) : PassiveEventMonitor(mask: mask, handler: handle)
         eventMonitor?.start()
     }
     
@@ -163,9 +163,9 @@ class SnappingManager {
             if let cgEvent = event.cgEvent, let screen = NSScreen.main {
                 let minY = screen.frame.screenFlipped.minY
                 if cgEvent.location.y == minY && dragPrevY == minY {
-                    if event.deltaY < -Defaults.missionControlDraggingAllowedOffscreenDistance.cgFloat {
+                    if event.deltaY < -RectangleDefaults.missionControlDraggingAllowedOffscreenDistance.cgFloat {
                         cgEvent.location.y = minY + 1
-                        dragRestrictionExpirationTimestamp = DispatchTime.now().uptimeMilliseconds + UInt64(Defaults.missionControlDraggingDisallowedDuration.value)
+                        dragRestrictionExpirationTimestamp = DispatchTime.now().uptimeMilliseconds + UInt64(RectangleDefaults.missionControlDraggingDisallowedDuration.value)
                     } else if !dragRestrictionExpired {
                         cgEvent.location.y = minY + 1
                     }
@@ -179,8 +179,8 @@ class SnappingManager {
     }
     
     func canSnap(_ event: NSEvent) -> Bool {
-        if Defaults.snapModifiers.value > 0 {
-            if event.modifierFlags.intersection(.deviceIndependentFlagsMask).rawValue != Defaults.snapModifiers.value {
+        if RectangleDefaults.snapModifiers.value > 0 {
+            if event.modifierFlags.intersection(.deviceIndependentFlagsMask).rawValue != RectangleDefaults.snapModifiers.value {
                 return false
             }
         }
@@ -195,7 +195,7 @@ class SnappingManager {
     func handle(event: NSEvent) {
         switch event.type {
         case .leftMouseDown:
-            if !Defaults.obtainWindowOnClick.userDisabled {
+            if !RectangleDefaults.obtainWindowOnClick.userDisabled {
                 windowElement = AccessibilityElement.getWindowElementUnderCursor()
                 windowId = windowElement?.getWindowId()
                 initialWindowRect = windowElement?.frame
@@ -275,7 +275,7 @@ class SnappingManager {
                         return
                     }
                     
-                    if Defaults.hapticFeedbackOnSnap.userEnabled {
+                    if RectangleDefaults.hapticFeedbackOnSnap.userEnabled {
                         NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .now)
                     }
                     
@@ -285,7 +285,7 @@ class SnappingManager {
                         if box == nil {
                             box = FootprintWindow()
                         }
-                        if Defaults.footprintAnimationDurationMultiplier.value > 0 {
+                        if RectangleDefaults.footprintAnimationDurationMultiplier.value > 0 {
                             if !box!.realIsVisible, let origin = getFootprintAnimationOrigin(snapArea, newBoxRect) {
                                 let frame = CGRect(origin: origin, size: .zero)
                                 box!.setFrame(frame, display: false)
@@ -294,7 +294,7 @@ class SnappingManager {
                             box!.setFrame(newBoxRect, display: true)
                         }
                         box!.orderFront(nil)
-                        if Defaults.footprintAnimationDurationMultiplier.value > 0 {
+                        if RectangleDefaults.footprintAnimationDurationMultiplier.value > 0 {
                             NSAnimationContext.runAnimationGroup { changes in
                                 changes.duration = getFootprintAnimationDuration(box!, newBoxRect)
                                 box!.animator().setFrame(newBoxRect, display: true)
@@ -316,7 +316,7 @@ class SnappingManager {
     }
     
     func unsnapRestore(windowId: CGWindowID, currentRect: CGRect, cursorLoc: CGPoint?) {
-        if Defaults.unsnapRestore.enabled != false {
+        if RectangleDefaults.unsnapRestore.enabled != false {
             // if window was put there by rectangle, restore size
             if let lastRect = AppDelegate.windowHistory.lastRawmActions[windowId]?.rect,
                 lastRect == initialWindowRect,
@@ -349,7 +349,7 @@ class SnappingManager {
     }
     
     func getFootprintAnimationDuration(_ box: FootprintWindow, _ boxRect: CGRect) -> Double {
-        return box.animationResizeTime(boxRect) * Double(Defaults.footprintAnimationDurationMultiplier.value)
+        return box.animationResizeTime(boxRect) * Double(RectangleDefaults.footprintAnimationDurationMultiplier.value)
     }
     
     func getFootprintAnimationOrigin(_ snapArea: SnapArea, _ boxRect: CGRect) -> CGPoint? {
@@ -384,10 +384,10 @@ class SnappingManager {
             
             let gapsApplicable = hotSpot.action.gapsApplicable
             
-            if Defaults.gapSize.value > 0, gapsApplicable != .none {
+            if RectangleDefaults.gapSize.value > 0, gapsApplicable != .none {
                 let gapSharedEdges = rectResult.subAction?.gapSharedEdge ?? hotSpot.action.gapSharedEdge
 
-                return GapCalculation.applyGaps(rectResult.rect, dimension: gapsApplicable, sharedEdges: gapSharedEdges, gapSize: Defaults.gapSize.value, skipTopGap: Defaults.skipGapTopEdge.enabled)
+                return GapCalculation.applyGaps(rectResult.rect, dimension: gapsApplicable, sharedEdges: gapSharedEdges, gapSize: RectangleDefaults.gapSize.value, skipTopGap: RectangleDefaults.skipGapTopEdge.enabled)
             }
             
             return rectResult.rect
@@ -402,11 +402,11 @@ class SnappingManager {
             guard let directional = directionalLocationOfCursor(loc: loc, screen: screen)
             else { continue }
             
-            if let windowId = windowId, Defaults.todo.userEnabled && Defaults.todoMode.enabled && TodoManager.isTodoWindow(windowId) {
-                if Defaults.todoSidebarSide.value == .left && directional == .l {
+            if let windowId = windowId, RectangleDefaults.todo.userEnabled && RectangleDefaults.todoMode.enabled && TodoManager.isTodoWindow(windowId) {
+                if RectangleDefaults.todoSidebarSide.value == .left && directional == .l {
                     return SnapArea(screen: screen, directional: directional, action: .leftTodo)
                 }
-                if Defaults.todoSidebarSide.value == .right && directional == .r {
+                if RectangleDefaults.todoSidebarSide.value == .right && directional == .r {
                     return SnapArea(screen: screen, directional: directional, action: .rightTodo)
                 }
             }
@@ -428,7 +428,7 @@ class SnappingManager {
     
     func directionalLocationOfCursor(loc: NSPoint, screen: NSScreen) -> Directional? {
         let frame = screen.frame
-        let cornerSize = Defaults.cornerSnapAreaSize.cgFloat
+        let cornerSize = RectangleDefaults.cornerSnapAreaSize.cgFloat
         
         /// cgrect contains doesn't include max edges, so manually compare
         guard loc.x >= frame.minX,

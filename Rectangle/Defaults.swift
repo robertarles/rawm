@@ -1,8 +1,8 @@
-/// Defaults.swift
+/// RectangleDefaults.swift
 
 import Cocoa
 
-class Defaults {
+class RectangleDefaults {
     static let launchOnLogin = BoolDefault(key: "launchOnLogin")
     static let disabledApps = StringDefault(key: "disabledApps")
     static let hideMenuBarIcon = BoolDefault(key: "hideMenubarIcon")
@@ -101,7 +101,7 @@ class Defaults {
     static let screensOrderedByX = OptionalBoolDefault(key: "screensOrderedByX")
     static let combinedDisplayMode = OptionalBoolDefault(key: "combinedDisplayMode")
     static let greenButtonOverride = BoolDefault(key: "greenButtonOverride")
-    static var array: [Default] = [
+    static var array: [RectangleDefault] = [
         launchOnLogin,
         disabledApps,
         hideMenuBarIcon,
@@ -210,13 +210,13 @@ struct CodableDefault: Codable {
     }
 }
 
-protocol Default {
+protocol RectangleDefault {
     var key: String { get }
     func load(from codable: CodableDefault)
     func toCodable() -> CodableDefault
 }
 
-class BoolDefault: Default {
+class BoolDefault: RectangleDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -245,7 +245,7 @@ class BoolDefault: Default {
     }
 }
 
-class OptionalBoolDefault: Default {
+class OptionalBoolDefault: RectangleDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -296,7 +296,7 @@ class OptionalBoolDefault: Default {
     }
 }
 
-class StringDefault: Default {
+class StringDefault: RectangleDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -323,7 +323,7 @@ class StringDefault: Default {
     }
 }
 
-class FloatDefault: Default {
+class FloatDefault: RectangleDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -357,7 +357,7 @@ class FloatDefault: Default {
     }
 }
 
-class IntDefault: Default {
+class IntDefault: RectangleDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -442,7 +442,7 @@ class JSONDefault<T: Codable>: StringDefault {
     }
 }
 
-class IntEnumDefault<E: RawRepresentable>: Default where E.RawValue == Int {
+class IntEnumDefault<E: RawRepresentable>: RectangleDefault where E.RawValue == Int {
     public private(set) var key: String
     private let defaultValue: E
 

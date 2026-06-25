@@ -37,27 +37,27 @@ enum MacTilingDefaults: String {
     }
     
     static func checkForBuiltInTiling(skipIfAlreadyNotified: Bool) {
-        guard #available(macOS 15, *), !Defaults.windowSnapping.userDisabled
+        guard #available(macOS 15, *), !RectangleDefaults.windowSnapping.userDisabled
         else { return }
 
         let isStandardTilingConflicting = (tilingByEdgeDrag.enabled || tilingOptionAccelerator.enabled)
         
-        let shouldSkipStandardCheck = skipIfAlreadyNotified && Defaults.internalTilingNotified.enabled
+        let shouldSkipStandardCheck = skipIfAlreadyNotified && RectangleDefaults.internalTilingNotified.enabled
         
         if isStandardTilingConflicting && !shouldSkipStandardCheck {
             resolveStandardTilingConflict()
         } else if isTopTilingConflicting {
             resolveTopTilingConflict()
         }
-        Defaults.internalTilingNotified.enabled = true
+        RectangleDefaults.internalTilingNotified.enabled = true
     }
     
     private static func resolveTopTilingConflict() {
-        Logger.log("Automatically disabling macOS top edge tiling to resolve conflict with macOS.")
+        RectangleLogger.log("Automatically disabling macOS top edge tiling to resolve conflict with macOS.")
         
         topTilingByEdgeDrag.disable()
         
-        if !Defaults.internalTilingNotified.enabled {
+        if !RectangleDefaults.internalTilingNotified.enabled {
             // First time running rawm & only has drag to top enabled in macOS
             let result = AlertUtil.twoButtonAlert(
                 question: "Top screen edge tiling in macOS is now disabled".localized,
@@ -93,7 +93,7 @@ enum MacTilingDefaults: String {
                 openSystemSettings()
             }
         case .alertSecondButtonReturn:
-            Defaults.windowSnapping.enabled = false
+            RectangleDefaults.windowSnapping.enabled = false
             Notification.Name.windowSnapping.post(object: false)
 
             let result = AlertUtil.twoButtonAlert(

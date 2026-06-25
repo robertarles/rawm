@@ -10,13 +10,13 @@ class MoveUpDownCalculation: WindowCalculation, RepeatedExecutionsInThirdsCalcul
         
         var calculatedWindowRect: CGRect
         
-        if Defaults.resizeOnDirectionalMove.enabled {
+        if RectangleDefaults.resizeOnDirectionalMove.enabled {
             calculatedWindowRect = calculateRepeatedRect(params).rect
         } else {
             calculatedWindowRect = calculateGenericRect(params).rect
         }
         
-        if Defaults.centeredDirectionalMove.enabled != false {
+        if RectangleDefaults.centeredDirectionalMove.enabled != false {
             calculatedWindowRect.origin.x = round((visibleFrameOfScreen.width - calculatedWindowRect.width) / 2.0) + visibleFrameOfScreen.minX
         }
         

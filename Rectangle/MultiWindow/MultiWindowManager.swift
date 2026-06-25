@@ -34,7 +34,7 @@ class MultiWindowManager {
               let screens = screenDetection.detectScreens(using: windowElement)
         else {
             NSSound.beep()
-            Logger.log("Can't detect screen for multiple windows")
+            RectangleLogger.log("Can't detect screen for multiple windows")
             return nil
         }
 
@@ -49,7 +49,7 @@ class MultiWindowManager {
 
         var actualWindows = [AccessibilityElement]()
         for w in windows {
-            if Defaults.todo.userEnabled, TodoManager.isTodoWindow(w) { continue }
+            if RectangleDefaults.todo.userEnabled, TodoManager.isTodoWindow(w) { continue }
             let screen = screenDetection.detectScreens(using: w)?.currentScreen
             if screen == currentScreen,
                w.isWindow == true,
@@ -103,7 +103,7 @@ class MultiWindowManager {
 
         let screenFrame = screens.currentScreen.adjustedVisibleFrame().screenFlipped
 
-        let delta = CGFloat(Defaults.cascadeAllDeltaSize.value)
+        let delta = CGFloat(RectangleDefaults.cascadeAllDeltaSize.value)
 
         for (ind, w) in windows.enumerated() {
             cascadeWindow(w, screenFrame: screenFrame, delta: delta, index: ind)
@@ -134,7 +134,7 @@ class MultiWindowManager {
 
         let screenFrame = screens.currentScreen.adjustedVisibleFrame().screenFlipped
 
-        let delta = CGFloat(Defaults.cascadeAllDeltaSize.value)
+        let delta = CGFloat(RectangleDefaults.cascadeAllDeltaSize.value)
 
         // keep windows with a pid equal to the front window's pid
         var filtered = windows.filter(hasFrontWindowPid(_:))

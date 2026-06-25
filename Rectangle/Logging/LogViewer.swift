@@ -2,7 +2,7 @@
 
 import Cocoa
 
-class Logger {
+class RectangleLogger {
     
     static var logging = false
     
@@ -41,7 +41,7 @@ class LogWindowController: NSWindowController, NSWindowDelegate {
     }
     
     func windowWillClose(_ notification: Notification) {
-        Logger.logging = false
+        RectangleLogger.logging = false
         clearClicked(self)
     }
 }

@@ -6,12 +6,12 @@ class LowerLeftCalculation: WindowCalculation, CornerCycleExpansionCalculation, 
     
     let horizontalSide: HalfSplitSide = .leading
     let verticalSide: HalfSplitSide = .trailing
-    var horizontalSplitFraction: Float { Defaults.horizontalSplitRatio.value / 100.0 }
-    var verticalSplitFraction: Float { 1.0 - Defaults.verticalSplitRatio.value / 100.0 }
+    var horizontalSplitFraction: Float { RectangleDefaults.horizontalSplitRatio.value / 100.0 }
+    var verticalSplitFraction: Float { 1.0 - RectangleDefaults.verticalSplitRatio.value / 100.0 }
 
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
 
-        if Defaults.subsequentExecutionMode.cyclesQuadrantPositions {
+        if RectangleDefaults.subsequentExecutionMode.cyclesQuadrantPositions {
             if let last = params.lastAction,
                let lastSubAction = last.subAction,
                last.action == .bottomLeft || lastSubAction == .bottomLeftQuarter {
@@ -22,7 +22,7 @@ class LowerLeftCalculation: WindowCalculation, CornerCycleExpansionCalculation, 
             return quarterRect(params.visibleFrameOfScreen)
         }
 
-        if params.lastAction == nil || !Defaults.subsequentExecutionMode.resizes {
+        if params.lastAction == nil || !RectangleDefaults.subsequentExecutionMode.resizes {
             return calculateFirstRect(params)
         }
 

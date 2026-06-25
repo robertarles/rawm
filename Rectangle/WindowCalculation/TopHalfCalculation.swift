@@ -6,7 +6,7 @@ class TopHalfCalculation: WindowCalculation, RepeatedExecutionsInThirdsCalculati
 
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
 
-        if params.lastAction == nil || !Defaults.subsequentExecutionMode.resizes {
+        if params.lastAction == nil || !RectangleDefaults.subsequentExecutionMode.resizes {
             return calculateFirstRect(params)
         }
         
@@ -14,7 +14,7 @@ class TopHalfCalculation: WindowCalculation, RepeatedExecutionsInThirdsCalculati
     }
     
     func calculateFirstRect(_ params: RectCalculationParameters) -> RectResult {
-        return RectResult(HalfSplitFrameCalculation.verticalRect(in: params.visibleFrameOfScreen, side: .leading, fraction: Defaults.verticalSplitRatio.value / 100.0))
+        return RectResult(HalfSplitFrameCalculation.verticalRect(in: params.visibleFrameOfScreen, side: .leading, fraction: RectangleDefaults.verticalSplitRatio.value / 100.0))
     }
 
     func calculateFractionalRect(_ params: RectCalculationParameters, fraction: Float) -> RectResult {

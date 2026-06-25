@@ -8,14 +8,14 @@ protocol ChangeWindowDimensionCalculation {
 
 extension ChangeWindowDimensionCalculation {
     private func minimumWindowWidth() -> CGFloat {
-        let defaultWidth = Defaults.minimumWindowWidth.value
+        let defaultWidth = RectangleDefaults.minimumWindowWidth.value
         return (defaultWidth <= 0 || defaultWidth > 1)
             ? 0.25
             : CGFloat(defaultWidth)
     }
     
     private func minimumWindowHeight() -> CGFloat {
-        let defaultHeight = Defaults.minimumWindowHeight.value
+        let defaultHeight = RectangleDefaults.minimumWindowHeight.value
         return (defaultHeight <= 0 || defaultHeight > 1)
             ? 0.25
             : CGFloat(defaultHeight)

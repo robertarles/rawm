@@ -3,9 +3,9 @@
 import Cocoa
 
 // Applicable options:
-// Defaults.subsequentExecutionMode.traversesDisplays
-// Defaults.centeredDirectionalMove.enabled
-// Defaults.resizeOnDirectionalMove.enabled (resizes in thirds, or just to half-width if traversesDisplays is enabled
+// RectangleDefaults.subsequentExecutionMode.traversesDisplays
+// RectangleDefaults.centeredDirectionalMove.enabled
+// RectangleDefaults.resizeOnDirectionalMove.enabled (resizes in thirds, or just to half-width if traversesDisplays is enabled
 
 class MoveLeftRightCalculation: WindowCalculation, RepeatedExecutionsInThirdsCalculation {
     
@@ -14,7 +14,7 @@ class MoveLeftRightCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
         var screen = params.usableScreens.currentScreen
         var action = params.action
         
-        let canTraverseDisplays = Defaults.subsequentExecutionMode.traversesDisplays && params.usableScreens.numScreens > 1
+        let canTraverseDisplays = RectangleDefaults.subsequentExecutionMode.traversesDisplays && params.usableScreens.numScreens > 1
         
         let rectResult: RectResult
         if canTraverseDisplays && isRepeatedCommand(params) {
@@ -48,15 +48,15 @@ class MoveLeftRightCalculation: WindowCalculation, RepeatedExecutionsInThirdsCal
         let visibleFrameOfScreen = params.visibleFrameOfScreen
         
         var calculatedWindowRect: CGRect
-        if newDisplay && Defaults.resizeOnDirectionalMove.enabled {
+        if newDisplay && RectangleDefaults.resizeOnDirectionalMove.enabled {
             calculatedWindowRect = calculateFirstRect(params).rect
-        } else if Defaults.resizeOnDirectionalMove.enabled {
+        } else if RectangleDefaults.resizeOnDirectionalMove.enabled {
             calculatedWindowRect = calculateRepeatedRect(params).rect
         } else {
             calculatedWindowRect = calculateGenericRect(params).rect
         }
         
-        if Defaults.centeredDirectionalMove.enabled != false {
+        if RectangleDefaults.centeredDirectionalMove.enabled != false {
             calculatedWindowRect.origin.y = round((visibleFrameOfScreen.height - calculatedWindowRect.height) / 2.0) + visibleFrameOfScreen.minY
         }
         

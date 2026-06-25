@@ -9,7 +9,7 @@ class ScreenDetection {
         guard let firstScreen = screens.first else { return nil }
         
         if screens.count == 1 {
-            let adjacentScreens = Defaults.traverseSingleScreen.enabled == true
+            let adjacentScreens = RectangleDefaults.traverseSingleScreen.enabled == true
             ? AdjacentScreens(prev: firstScreen, next: firstScreen)
             : nil
             
@@ -102,7 +102,7 @@ class ScreenDetection {
     }
 
     func order(screens: [NSScreen]) -> [NSScreen] {
-        if Defaults.screensOrderedByX.userEnabled {
+        if RectangleDefaults.screensOrderedByX.userEnabled {
             let screensOrderedByX = screens.sorted(by: { screen1, screen2 in
                 return screen1.frame.origin.x < screen2.frame.origin.x
             })
@@ -153,15 +153,15 @@ extension NSScreen {
     func adjustedVisibleFrame(_ ignoreTodo: Bool = false, _ ignoreStage: Bool = false) -> CGRect {
         var newFrame = visibleFrame
 
-        if !NSScreen.screensHaveSeparateSpaces && Defaults.combinedDisplayMode.userEnabled {
+        if !NSScreen.screensHaveSeparateSpaces && RectangleDefaults.combinedDisplayMode.userEnabled {
             newFrame = NSScreen.screens.reduce(CGRect.null) { $0.union($1.visibleFrame) }
         }
 
-        if !ignoreStage && Defaults.stageSize.value > 0 {
+        if !ignoreStage && RectangleDefaults.stageSize.value > 0 {
             if StageUtil.stageCapable && StageUtil.stageEnabled && StageUtil.stageStripShow && StageUtil.isStageStripVisible(self) {
-                let stageSize = Defaults.stageSize.value < 1
-                    ? newFrame.size.width * Defaults.stageSize.cgFloat
-                    : Defaults.stageSize.cgFloat
+                let stageSize = RectangleDefaults.stageSize.value < 1
+                    ? newFrame.size.width * RectangleDefaults.stageSize.cgFloat
+                    : RectangleDefaults.stageSize.cgFloat
                 
                 if StageUtil.stageStripPosition == .left {
                     newFrame.origin.x += stageSize
@@ -170,26 +170,26 @@ extension NSScreen {
             }
         }
         
-        if !ignoreTodo, Defaults.todo.userEnabled, Defaults.todoMode.enabled, TodoManager.todoScreen == self, TodoManager.hasTodoWindow() {
+        if !ignoreTodo, RectangleDefaults.todo.userEnabled, RectangleDefaults.todoMode.enabled, TodoManager.todoScreen == self, TodoManager.hasTodoWindow() {
             let sidebarWidth = TodoManager.getSidebarWidth(visibleFrameWidth: newFrame.width)
             newFrame.size.width -= sidebarWidth
-            if Defaults.todoSidebarSide.value == .left {
+            if RectangleDefaults.todoSidebarSide.value == .left {
                 newFrame.origin.x += sidebarWidth
             }
         }
 
-        if Defaults.screenEdgeGapsOnMainScreenOnly.enabled, self != NSScreen.screens.first {
+        if RectangleDefaults.screenEdgeGapsOnMainScreenOnly.enabled, self != NSScreen.screens.first {
             return newFrame
         }
 
-        newFrame.origin.x += Defaults.screenEdgeGapLeft.cgFloat
-        newFrame.origin.y += Defaults.screenEdgeGapBottom.cgFloat
-        newFrame.size.width -= (Defaults.screenEdgeGapLeft.cgFloat + Defaults.screenEdgeGapRight.cgFloat)
+        newFrame.origin.x += RectangleDefaults.screenEdgeGapLeft.cgFloat
+        newFrame.origin.y += RectangleDefaults.screenEdgeGapBottom.cgFloat
+        newFrame.size.width -= (RectangleDefaults.screenEdgeGapLeft.cgFloat + RectangleDefaults.screenEdgeGapRight.cgFloat)
         
-        if #available(macOS 12.0, *), self.safeAreaInsets.top != 0, Defaults.screenEdgeGapTopNotch.value != 0 {
-            newFrame.size.height -= (Defaults.screenEdgeGapTopNotch.cgFloat + Defaults.screenEdgeGapBottom.cgFloat)
+        if #available(macOS 12.0, *), self.safeAreaInsets.top != 0, RectangleDefaults.screenEdgeGapTopNotch.value != 0 {
+            newFrame.size.height -= (RectangleDefaults.screenEdgeGapTopNotch.cgFloat + RectangleDefaults.screenEdgeGapBottom.cgFloat)
         } else {
-            newFrame.size.height -= (Defaults.screenEdgeGapTop.cgFloat + Defaults.screenEdgeGapBottom.cgFloat)
+            newFrame.size.height -= (RectangleDefaults.screenEdgeGapTop.cgFloat + RectangleDefaults.screenEdgeGapBottom.cgFloat)
         }
         
         return newFrame
