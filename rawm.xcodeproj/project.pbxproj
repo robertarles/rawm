@@ -80,7 +80,7 @@
 		9821403F22B3EBD900ABFB3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9821403E22B3EBD900ABFB3F /* AppDelegate.swift */; };
 		9821404322B3EBDA00ABFB3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9821404222B3EBDA00ABFB3F /* Assets.xcassets */; };
 		9821404622B3EBDA00ABFB3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9821404422B3EBDA00ABFB3F /* Main.storyboard */; };
-		9821405B22B3ECCA00ABFB3F /* RectangleLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9821403C22B3EBD900ABFB3F /* RectangleLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9821405B22B3ECCA00ABFB3F /* rawmLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9821403C22B3EBD900ABFB3F /* rawmLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9821405E22B3ED3600ABFB3F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9821405D22B3ED3600ABFB3F /* ServiceManagement.framework */; };
 		9821406022B3EFB200ABFB3F /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9821405F22B3EFB200ABFB3F /* Defaults.swift */; };
 		9824700D22AF9B7D0037B409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9824700C22AF9B7D0037B409 /* AppDelegate.swift */; };
@@ -315,7 +315,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				9821405B22B3ECCA00ABFB3F /* RectangleLauncher.app in CopyFiles */,
+				9821405B22B3ECCA00ABFB3F /* rawmLauncher.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +475,7 @@
 		9821403222B38A1B00ABFB3F /* UpperLeftCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperLeftCalculation.swift; sourceTree = "<group>"; };
 		9821403422B38A2B00ABFB3F /* UpperRightCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperRightCalculation.swift; sourceTree = "<group>"; };
 		9821403622B3D16700ABFB3F /* MaximizeHeightCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeHeightCalculation.swift; sourceTree = "<group>"; };
-		9821403C22B3EBD900ABFB3F /* RectangleLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rawm-launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9821403C22B3EBD900ABFB3F /* rawmLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rawm-launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9821403E22B3EBD900ABFB3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9821404222B3EBDA00ABFB3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9821404522B3EBDA00ABFB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -484,13 +484,13 @@
 		9821405D22B3ED3600ABFB3F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		9821405F22B3EFB200ABFB3F /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		9821552627BFFB13002523EC /* rawm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rawm-Bridging-Header.h"; sourceTree = "<group>"; };
-		9824700922AF9B7D0037B409 /* Rectangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rawm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9824700922AF9B7D0037B409 /* rawm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rawm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9824700C22AF9B7D0037B409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9824701022AF9B7E0037B409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9824701322AF9B7E0037B409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9824701522AF9B7E0037B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9824701622AF9B7E0037B409 /* rawm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rawm.entitlements; sourceTree = "<group>"; };
-		9824701B22AF9B7E0037B409 /* RectangleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rawm-tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9824701B22AF9B7E0037B409 /* rawmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rawm-tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9824701F22AF9B7E0037B409 /* RawmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawmTests.swift; sourceTree = "<group>"; };
 		9824702122AF9B7E0037B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9824702A22AFA22E0037B409 /* AccessibilityWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityWindowController.swift; sourceTree = "<group>"; };
@@ -805,7 +805,7 @@
 			path = MultiWindow;
 			sourceTree = "<group>";
 		};
-		9821403D22B3EBD900ABFB3F /* RectangleLauncher */ = {
+		9821403D22B3EBD900ABFB3F /* rawmLauncher */ = {
 			isa = PBXGroup;
 			children = (
 				9808018623D05C1F0077774A /* rawmLauncherRelease.entitlements */,
@@ -989,9 +989,9 @@
 		9824700022AF9B7D0037B409 = {
 			isa = PBXGroup;
 			children = (
-				9824700B22AF9B7D0037B409 /* Rectangle */,
-				9824701E22AF9B7E0037B409 /* RectangleTests */,
-				9821403D22B3EBD900ABFB3F /* RectangleLauncher */,
+				9824700B22AF9B7D0037B409 /* rawm */,
+				9824701E22AF9B7E0037B409 /* rawmTests */,
+				9821403D22B3EBD900ABFB3F /* rawmLauncher */,
 				9824700A22AF9B7D0037B409 /* Products */,
 				9821405C22B3ED3600ABFB3F /* Frameworks */,
 			);
@@ -1000,14 +1000,14 @@
 		9824700A22AF9B7D0037B409 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9824700922AF9B7D0037B409 /* Rectangle.app */,
-				9824701B22AF9B7E0037B409 /* RectangleTests.xctest */,
-				9821403C22B3EBD900ABFB3F /* RectangleLauncher.app */,
+				9824700922AF9B7D0037B409 /* rawm.app */,
+				9824701B22AF9B7E0037B409 /* rawmTests.xctest */,
+				9821403C22B3EBD900ABFB3F /* rawmLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9824700B22AF9B7D0037B409 /* Rectangle */ = {
+		9824700B22AF9B7D0037B409 /* rawm */ = {
 			isa = PBXGroup;
 			children = (
 				9824700C22AF9B7D0037B409 /* AppDelegate.swift */,
@@ -1056,7 +1056,7 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		9824701E22AF9B7E0037B409 /* RectangleTests */ = {
+		9824701E22AF9B7E0037B409 /* rawmTests */ = {
 			isa = PBXGroup;
 			children = (
 				9824701F22AF9B7E0037B409 /* RawmTests.swift */,
@@ -1128,9 +1128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9821403B22B3EBD900ABFB3F /* RectangleLauncher */ = {
+		9821403B22B3EBD900ABFB3F /* rawmLauncher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9821405422B3EBDA00ABFB3F /* Build configuration list for PBXNativeTarget "RectangleLauncher" */;
+			buildConfigurationList = 9821405422B3EBDA00ABFB3F /* Build configuration list for PBXNativeTarget "rawmLauncher" */;
 			buildPhases = (
 				9821403822B3EBD900ABFB3F /* Sources */,
 				9821403922B3EBD900ABFB3F /* Frameworks */,
@@ -1142,12 +1142,12 @@
 			);
 			name = rawm-launcher;
 			productName = rawm-launcher;
-			productReference = 9821403C22B3EBD900ABFB3F /* RectangleLauncher.app */;
+			productReference = 9821403C22B3EBD900ABFB3F /* rawmLauncher.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9824700822AF9B7D0037B409 /* Rectangle */ = {
+		9824700822AF9B7D0037B409 /* rawm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9824702422AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "Rectangle" */;
+			buildConfigurationList = 9824702422AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "rawm" */;
 			buildPhases = (
 				9824700522AF9B7D0037B409 /* Sources */,
 				9824700622AF9B7D0037B409 /* Frameworks */,
@@ -1171,12 +1171,12 @@
 				3E41C700221C4681830133EA /* Settings */,
 			);
 			productName = rawm;
-			productReference = 9824700922AF9B7D0037B409 /* Rectangle.app */;
+			productReference = 9824700922AF9B7D0037B409 /* rawm.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9824701A22AF9B7E0037B409 /* RectangleTests */ = {
+		9824701A22AF9B7E0037B409 /* rawmTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9824702722AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "RectangleTests" */;
+			buildConfigurationList = 9824702722AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "rawmTests" */;
 			buildPhases = (
 				9824701722AF9B7E0037B409 /* Sources */,
 				9824701822AF9B7E0037B409 /* Frameworks */,
@@ -1189,7 +1189,7 @@
 			);
 			name = rawm-tests;
 			productName = rawm-tests;
-			productReference = 9824701B22AF9B7E0037B409 /* RectangleTests.xctest */;
+			productReference = 9824701B22AF9B7E0037B409 /* rawmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1232,7 +1232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9824700422AF9B7D0037B409 /* Build configuration list for PBXProject "Rectangle" */;
+			buildConfigurationList = 9824700422AF9B7D0037B409 /* Build configuration list for PBXProject "rawm" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1286,9 +1286,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9824700822AF9B7D0037B409 /* Rectangle */,
-				9824701A22AF9B7E0037B409 /* RectangleTests */,
-				9821403B22B3EBD900ABFB3F /* RectangleLauncher */,
+				9824700822AF9B7D0037B409 /* rawm */,
+				9824701A22AF9B7E0037B409 /* rawmTests */,
+				9821403B22B3EBD900ABFB3F /* rawmLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -1621,7 +1621,7 @@
 /* Begin PBXTargetDependency section */
 		9824701D22AF9B7E0037B409 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9824700822AF9B7D0037B409 /* Rectangle */;
+			target = 9824700822AF9B7D0037B409 /* rawm */;
 			targetProxy = 9824701C22AF9B7E0037B409 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1948,7 +1948,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9821405422B3EBDA00ABFB3F /* Build configuration list for PBXNativeTarget "RectangleLauncher" */ = {
+		9821405422B3EBDA00ABFB3F /* Build configuration list for PBXNativeTarget "rawmLauncher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9821405522B3EBDA00ABFB3F /* Debug */,
@@ -1957,7 +1957,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9824700422AF9B7D0037B409 /* Build configuration list for PBXProject "Rectangle" */ = {
+		9824700422AF9B7D0037B409 /* Build configuration list for PBXProject "rawm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9824702222AF9B7E0037B409 /* Debug */,
@@ -1966,7 +1966,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9824702422AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "Rectangle" */ = {
+		9824702422AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "rawm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9824702522AF9B7E0037B409 /* Debug */,
@@ -1975,7 +1975,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9824702722AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "RectangleTests" */ = {
+		9824702722AF9B7E0037B409 /* Build configuration list for PBXNativeTarget "rawmTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9824702822AF9B7E0037B409 /* Debug */,
