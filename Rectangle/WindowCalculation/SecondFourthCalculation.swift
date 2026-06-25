@@ -8,7 +8,7 @@ class SecondFourthCalculation: WindowCalculation, OrientationAware {
         
         let visibleFrameOfScreen = params.visibleFrameOfScreen
         
-        guard RectangleDefaults.subsequentExecutionMode.value != .none,
+        guard RawmDefaults.subsequentExecutionMode.value != .none,
             let last = params.lastAction,
             let lastSubAction = last.subAction,
             last.action == .secondFourth

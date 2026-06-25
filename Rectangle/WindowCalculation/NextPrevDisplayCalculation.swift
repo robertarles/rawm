@@ -20,7 +20,7 @@ class NextPrevDisplayCalculation: WindowCalculation {
         if let screen = screen {
             let rectParams = params.asRectParams(visibleFrame: screen.adjustedVisibleFrame(params.ignoreTodo))
             
-            if RectangleDefaults.attemptMatchOnNextPrevDisplay.userEnabled {
+            if RawmDefaults.attemptMatchOnNextPrevDisplay.userEnabled {
                 if let lastAction = params.lastAction,
                    let calculation = WindowCalculationFactory.calculationsByAction[lastAction.action] {
                     
@@ -46,7 +46,7 @@ class NextPrevDisplayCalculation: WindowCalculation {
     }
     
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
-        if params.lastAction?.action == .maximize && !RectangleDefaults.autoMaximize.userDisabled {
+        if params.lastAction?.action == .maximize && !RawmDefaults.autoMaximize.userDisabled {
             let rectResult = WindowCalculationFactory.maximizeCalculation.calculateRect(params)
             return RectResult(rectResult.rect, resultingAction: .maximize)
         }

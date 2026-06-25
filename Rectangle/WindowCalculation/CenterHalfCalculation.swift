@@ -14,7 +14,7 @@ class CenterHalfCalculation: WindowCalculation, OrientationAware, RepeatedExecut
     
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
         
-        if (params.lastAction != nil && RectangleDefaults.subsequentExecutionMode.resizes) || RectangleDefaults.centerHalfCycles.userEnabled {
+        if (params.lastAction != nil && RawmDefaults.subsequentExecutionMode.resizes) || RawmDefaults.centerHalfCycles.userEnabled {
             return calculateRepeatedRect(params)
         }
         

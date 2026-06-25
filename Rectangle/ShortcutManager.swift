@@ -80,7 +80,7 @@ class ShortcutManager {
     private func registerDefaults() {
 
         let defaultShortcuts = WindowAction.active.reduce(into: [String: MASShortcut]()) { dict, windowAction in
-            guard let defaultShortcut = RectangleDefaults.alternateDefaultShortcuts.enabled
+            guard let defaultShortcut = RawmDefaults.alternateDefaultShortcuts.enabled
                 ? windowAction.alternateDefault
                 : windowAction.spectacleDefault
             else { return }
@@ -108,7 +108,7 @@ class ShortcutManager {
         }
 
         // Check if repeat cycles displays
-        if RectangleDefaults.subsequentExecutionMode.value == .cycleMonitor,
+        if RawmDefaults.subsequentExecutionMode.value == .cycleMonitor,
            parameters.action.classification != .size,
            parameters.action.classification != .display {
             guard let windowElement = parameters.windowElement ?? AccessibilityElement.getFrontWindowElement(),

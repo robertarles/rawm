@@ -1,8 +1,8 @@
-/// RectangleDefaults.swift
+/// RawmDefaults.swift
 
 import Cocoa
 
-class RectangleDefaults {
+class RawmDefaults {
     static let launchOnLogin = BoolDefault(key: "launchOnLogin")
     static let disabledApps = StringDefault(key: "disabledApps")
     static let hideMenuBarIcon = BoolDefault(key: "hideMenubarIcon")
@@ -101,7 +101,7 @@ class RectangleDefaults {
     static let screensOrderedByX = OptionalBoolDefault(key: "screensOrderedByX")
     static let combinedDisplayMode = OptionalBoolDefault(key: "combinedDisplayMode")
     static let greenButtonOverride = BoolDefault(key: "greenButtonOverride")
-    static var array: [RectangleDefault] = [
+    static var array: [RawmDefault] = [
         launchOnLogin,
         disabledApps,
         hideMenuBarIcon,
@@ -210,13 +210,13 @@ struct CodableDefault: Codable {
     }
 }
 
-protocol RectangleDefault {
+protocol RawmDefault {
     var key: String { get }
     func load(from codable: CodableDefault)
     func toCodable() -> CodableDefault
 }
 
-class BoolDefault: RectangleDefault {
+class BoolDefault: RawmDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -245,7 +245,7 @@ class BoolDefault: RectangleDefault {
     }
 }
 
-class OptionalBoolDefault: RectangleDefault {
+class OptionalBoolDefault: RawmDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -296,7 +296,7 @@ class OptionalBoolDefault: RectangleDefault {
     }
 }
 
-class StringDefault: RectangleDefault {
+class StringDefault: RawmDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -323,7 +323,7 @@ class StringDefault: RectangleDefault {
     }
 }
 
-class FloatDefault: RectangleDefault {
+class FloatDefault: RawmDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -357,7 +357,7 @@ class FloatDefault: RectangleDefault {
     }
 }
 
-class IntDefault: RectangleDefault {
+class IntDefault: RawmDefault {
     public private(set) var key: String
     private var initialized = false
     
@@ -442,7 +442,7 @@ class JSONDefault<T: Codable>: StringDefault {
     }
 }
 
-class IntEnumDefault<E: RawRepresentable>: RectangleDefault where E.RawValue == Int {
+class IntEnumDefault<E: RawRepresentable>: RawmDefault where E.RawValue == Int {
     public private(set) var key: String
     private let defaultValue: E
 

@@ -55,40 +55,40 @@ class SettingsViewController: NSViewController {
         } else {
             let smLoginSuccess = SMLoginItemSetEnabled(AppDelegate.launcherAppId as CFString, newSetting)
             if !smLoginSuccess {
-                RectangleLogger.log("Unable to set launch at login preference. Attempting one more time.")
+                RawmLogger.log("Unable to set launch at login preference. Attempting one more time.")
                 SMLoginItemSetEnabled(AppDelegate.launcherAppId as CFString, newSetting)
             }
         }
-        RectangleDefaults.launchOnLogin.enabled = newSetting
+        RawmDefaults.launchOnLogin.enabled = newSetting
     }
     
     @IBAction func toggleHideMenuBarIcon(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.hideMenuBarIcon.enabled = newSetting
+        RawmDefaults.hideMenuBarIcon.enabled = newSetting
         RawmStatusItem.instance.refreshVisibility()
     }
 
     @IBAction func setSubsequentExecutionBehavior(_ sender: NSPopUpButton) {
         let tag = sender.selectedTag()
         guard let mode = SubsequentExecutionMode(rawValue: tag) else {
-            RectangleLogger.log("Expected a pop up button to have a selected item with a valid tag matching a value of SubsequentExecutionMode. Got: \(String(describing: tag))")
+            RawmLogger.log("Expected a pop up button to have a selected item with a valid tag matching a value of SubsequentExecutionMode. Got: \(String(describing: tag))")
             return
         }
 
-        RectangleDefaults.subsequentExecutionMode.value = mode
+        RawmDefaults.subsequentExecutionMode.value = mode
         initializeCycleSizesView(animated: true)
     }
     
     @IBAction func toggleSkipGapTopEdge(_ sender: NSButton) {
-        RectangleDefaults.skipGapTopEdge.enabled = sender.state == .on
+        RawmDefaults.skipGapTopEdge.enabled = sender.state == .on
     }
 
     @IBAction func gapSliderChanged(_ sender: NSSlider) {
         gapLabel.stringValue = "\(sender.intValue) px"
         if let event = NSApp.currentEvent {
             if event.type == .leftMouseUp || event.type == .keyDown {
-                if Float(sender.intValue) != RectangleDefaults.gapSize.value {
-                    RectangleDefaults.gapSize.value = Float(sender.intValue)
+                if Float(sender.intValue) != RawmDefaults.gapSize.value {
+                    RawmDefaults.gapSize.value = Float(sender.intValue)
                 }
             }
         }
@@ -96,37 +96,37 @@ class SettingsViewController: NSViewController {
     
     @IBAction func toggleCursorMove(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.moveCursorAcrossDisplays.enabled = newSetting
+        RawmDefaults.moveCursorAcrossDisplays.enabled = newSetting
     }
 
     @IBAction func toggleUseCursorScreenDetection(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.useCursorScreenDetection.enabled = newSetting
+        RawmDefaults.useCursorScreenDetection.enabled = newSetting
     }
 
     @IBAction func toggleAllowAnyShortcut(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.allowAnyShortcut.enabled = newSetting
+        RawmDefaults.allowAnyShortcut.enabled = newSetting
         Notification.Name.allowAnyShortcut.post(object: newSetting)
     }
     
     @objc func toggleShowAdditionalSizesInMenu(_ sender: NSButton) {
         let enabled: Bool = sender.state == .on
-        RectangleDefaults.showAdditionalSizesInMenu.enabled = enabled
+        RawmDefaults.showAdditionalSizesInMenu.enabled = enabled
         Notification.Name.showAdditionalSizesInMenuChanged.post()
     }
 
     @objc func toggleCyclingOverlapOffset(_ sender: NSButton) {
-        RectangleDefaults.cyclingOverlapOffset.enabled = sender.state == .on
+        RawmDefaults.cyclingOverlapOffset.enabled = sender.state == .on
     }
 
     @objc func setCornerCycleExpansionAxis(_ sender: NSButton) {
         guard let axis = CornerCycleExpansionAxis(rawValue: sender.tag) else {
-            RectangleLogger.log("Expected tag of cyclic corner expansion axis radio button to match a value of CornerCycleExpansionAxis. Got: \(String(describing: sender.tag))")
+            RawmLogger.log("Expected tag of cyclic corner expansion axis radio button to match a value of CornerCycleExpansionAxis. Got: \(String(describing: sender.tag))")
             return
         }
 
-        RectangleDefaults.cornerCycleExpansionAxis.value = axis
+        RawmDefaults.cornerCycleExpansionAxis.value = axis
         setToggleStatesForCornerCycleExpansionAxisButtons()
     }
     
@@ -158,22 +158,22 @@ class SettingsViewController: NSViewController {
                 NSWorkspace.shared.open(URL(string:"x-apple.systempreferences:com.apple.preference.dock")!)
             }
         }
-        RectangleDefaults.doubleClickTitleBar.value = (newSetting ? WindowAction.maximize.rawValue : -1) + 1
+        RawmDefaults.doubleClickTitleBar.value = (newSetting ? WindowAction.maximize.rawValue : -1) + 1
         Notification.Name.windowTitleBar.post()
     }
     
     @objc func toggleCombinedDisplayMode(_ sender: NSButton) {
-        RectangleDefaults.combinedDisplayMode.enabled = sender.state == .on
+        RawmDefaults.combinedDisplayMode.enabled = sender.state == .on
     }
 
     @objc func toggleGreenButtonOverride(_ sender: NSButton) {
-        RectangleDefaults.greenButtonOverride.enabled = sender.state == .on
+        RawmDefaults.greenButtonOverride.enabled = sender.state == .on
         Notification.Name.greenButtonOverride.post()
     }
 
     @IBAction func toggleTodoMode(_ sender: NSButton) {
         let newSetting: Bool = sender.state == .on
-        RectangleDefaults.todo.enabled = newSetting
+        RawmDefaults.todo.enabled = newSetting
         showHideTodoModeSettings(animated: true)
         Notification.Name.todoMenuToggled.post()
     }
@@ -189,16 +189,16 @@ class SettingsViewController: NSViewController {
     @IBAction func setTodoWidthUnit(_ sender: NSPopUpButton) {
         let tag = sender.selectedTag()
         guard let unit = TodoSidebarWidthUnit(rawValue: tag) else {
-            RectangleLogger.log("Expected a pop up button to have a selected item with a valid tag matching a value of TodoSidebarWidthUnit. Got: \(String(describing: tag))")
+            RawmLogger.log("Expected a pop up button to have a selected item with a valid tag matching a value of TodoSidebarWidthUnit. Got: \(String(describing: tag))")
             return
         }
-        RectangleDefaults.todoSidebarWidthUnit.value = unit
+        RawmDefaults.todoSidebarWidthUnit.value = unit
         
         TodoManager.refreshTodoScreen()
         
         TodoManager.changeSidebarWidthUnit(to: unit)
 
-        todoAppWidthField.stringValue = "\(RectangleDefaults.todoSidebarWidth.value)"
+        todoAppWidthField.stringValue = "\(RawmDefaults.todoSidebarWidth.value)"
 
         TodoManager.moveAllIfNeeded(false)
     }
@@ -206,11 +206,11 @@ class SettingsViewController: NSViewController {
     @IBAction func setTodoAppSide(_ sender: NSPopUpButton) {
         let tag = sender.selectedTag()
         guard let side = TodoSidebarSide(rawValue: tag) else {
-            RectangleLogger.log("Expected a pop up button to have a selected item with a valid tag matching a value of TodoSidebarSide. Got: \(String(describing: tag))")
+            RawmLogger.log("Expected a pop up button to have a selected item with a valid tag matching a value of TodoSidebarSide. Got: \(String(describing: tag))")
             return
         }
 
-        RectangleDefaults.todoSidebarSide.value = side
+        RawmDefaults.todoSidebarSide.value = side
         
         TodoManager.moveAllIfNeeded(false)
     }
@@ -220,8 +220,8 @@ class SettingsViewController: NSViewController {
         if let event = NSApp.currentEvent {
             if event.type == .leftMouseUp || event.type == .keyDown {
                 let value: Float = sender.floatValue == 0 ? -1 : sender.floatValue
-                if value != RectangleDefaults.stageSize.value {
-                    RectangleDefaults.stageSize.value = value
+                if value != RawmDefaults.stageSize.value {
+                    RawmDefaults.stageSize.value = value
                 }
             }
         }
@@ -229,7 +229,7 @@ class SettingsViewController: NSViewController {
     
     @IBAction func restoreDefaults(_ sender: Any) {
         // Ask user if they want to restore to rawm or Spectacle defaults
-        let currentDefaults = RectangleDefaults.alternateDefaultShortcuts.enabled ? "rawm" : "Spectacle"
+        let currentDefaults = RawmDefaults.alternateDefaultShortcuts.enabled ? "rawm" : "Spectacle"
         let defaultShortcutsTitle = NSLocalizedString("Default Shortcuts", tableName: "Main", value: "", comment: "")
         let currentlyUsingText = NSLocalizedString("Currently using: ", tableName: "Main", value: "", comment: "")
         let cancelText = NSLocalizedString("Cancel", tableName: "Main", value: "", comment: "")
@@ -239,14 +239,14 @@ class SettingsViewController: NSViewController {
         //  Restore default shortcuts
         WindowAction.active.forEach { UserDefaults.standard.removeObject(forKey: $0.name) }
         let rectangleDefaults = response == .alertFirstButtonReturn
-        if rectangleDefaults != RectangleDefaults.alternateDefaultShortcuts.enabled {
-            RectangleDefaults.alternateDefaultShortcuts.enabled = rectangleDefaults
+        if rectangleDefaults != RawmDefaults.alternateDefaultShortcuts.enabled {
+            RawmDefaults.alternateDefaultShortcuts.enabled = rectangleDefaults
             Notification.Name.changeDefaults.post()
         }
         
         // Restore snap areas
-        RectangleDefaults.portraitSnapAreas.typedValue = nil
-        RectangleDefaults.landscapeSnapAreas.typedValue = nil
+        RawmDefaults.portraitSnapAreas.typedValue = nil
+        RawmDefaults.landscapeSnapAreas.typedValue = nil
         Notification.Name.defaultSnapAreas.post()
     }
     
@@ -258,12 +258,12 @@ class SettingsViewController: NSViewController {
         let response = savePanel.runModal()
         if response == .OK, let url = savePanel.url {
             do {
-                if let jsonString = RectangleDefaults.encoded() {
+                if let jsonString = RawmDefaults.encoded() {
                     try jsonString.write(to: url, atomically: false, encoding: .utf8)
                 }
             }
             catch {
-                RectangleLogger.log(error.localizedDescription)
+                RawmLogger.log(error.localizedDescription)
             }
         }
         Notification.Name.windowSnapping.post(object: true)
@@ -275,7 +275,7 @@ class SettingsViewController: NSViewController {
         openPanel.allowedFileTypes = ["json"]
         let response = openPanel.runModal()
         if response == .OK, let url = openPanel.url {
-            RectangleDefaults.load(fileUrl: url)
+            RawmDefaults.load(fileUrl: url)
         }
         Notification.Name.windowSnapping.post(object: true)
     }
@@ -368,9 +368,9 @@ class SettingsViewController: NSViewController {
             let bottomRightEighthShortcutView = MASShortcutView(frame: NSRect(x: 0, y: 0, width: 160, height: 19))
 
             let widthStepField = AutoSaveFloatField(frame: NSRect(x: 0, y: 0, width: 160, height: 19))
-            widthStepField.stringValue = String(Int(RectangleDefaults.widthStepSize.value))
+            widthStepField.stringValue = String(Int(RawmDefaults.widthStepSize.value))
             widthStepField.delegate = self
-            widthStepField.defaults = RectangleDefaults.widthStepSize
+            widthStepField.defaults = RawmDefaults.widthStepSize
             widthStepField.translatesAutoresizingMaskIntoConstraints = false
             widthStepField.refusesFirstResponder = true
             widthStepField.alignment = .right
@@ -399,9 +399,9 @@ class SettingsViewController: NSViewController {
             percentFormatter.maximum = 99
 
             let hSplitField = AutoSaveFloatField(frame: NSRect(x: 0, y: 0, width: 160, height: 19))
-            hSplitField.stringValue = String(Int(RectangleDefaults.horizontalSplitRatio.value))
+            hSplitField.stringValue = String(Int(RawmDefaults.horizontalSplitRatio.value))
             hSplitField.delegate = self
-            hSplitField.defaults = RectangleDefaults.horizontalSplitRatio
+            hSplitField.defaults = RawmDefaults.horizontalSplitRatio
             hSplitField.fallbackValue = 50
             hSplitField.translatesAutoresizingMaskIntoConstraints = false
             hSplitField.refusesFirstResponder = true
@@ -412,14 +412,14 @@ class SettingsViewController: NSViewController {
             hSplitPopUpButton.translatesAutoresizingMaskIntoConstraints = false
             hSplitPopUpButton.target = self
             hSplitPopUpButton.action = #selector(didSelectHalfSplitRatioPreset(sender:))
-            hSplitPopUpButton.defaults = RectangleDefaults.horizontalSplitRatio
+            hSplitPopUpButton.defaults = RawmDefaults.horizontalSplitRatio
             hSplitPopUpButton.customField = hSplitField
             configureHalfSplitRatioPopUpButton(hSplitPopUpButton)
 
             let vSplitField = AutoSaveFloatField(frame: NSRect(x: 0, y: 0, width: 160, height: 19))
-            vSplitField.stringValue = String(Int(RectangleDefaults.verticalSplitRatio.value))
+            vSplitField.stringValue = String(Int(RawmDefaults.verticalSplitRatio.value))
             vSplitField.delegate = self
-            vSplitField.defaults = RectangleDefaults.verticalSplitRatio
+            vSplitField.defaults = RawmDefaults.verticalSplitRatio
             vSplitField.fallbackValue = 50
             vSplitField.translatesAutoresizingMaskIntoConstraints = false
             vSplitField.refusesFirstResponder = true
@@ -430,7 +430,7 @@ class SettingsViewController: NSViewController {
             vSplitPopUpButton.translatesAutoresizingMaskIntoConstraints = false
             vSplitPopUpButton.target = self
             vSplitPopUpButton.action = #selector(didSelectHalfSplitRatioPreset(sender:))
-            vSplitPopUpButton.defaults = RectangleDefaults.verticalSplitRatio
+            vSplitPopUpButton.defaults = RawmDefaults.verticalSplitRatio
             vSplitPopUpButton.customField = vSplitField
             configureHalfSplitRatioPopUpButton(vSplitPopUpButton)
 
@@ -459,7 +459,7 @@ class SettingsViewController: NSViewController {
             bottomCenterRightEighthShortcutView.setAssociatedUserDefaultsKey(WindowAction.bottomCenterRightEighth.name, withTransformerName: MASDictionaryTransformerName)
             bottomRightEighthShortcutView.setAssociatedUserDefaultsKey(WindowAction.bottomRightEighth.name, withTransformerName: MASDictionaryTransformerName)
 
-            if RectangleDefaults.allowAnyShortcut.enabled {
+            if RawmDefaults.allowAnyShortcut.enabled {
                 let passThroughValidator = PassthroughShortcutValidator()
                 largerWidthShortcutView.shortcutValidator = passThroughValidator
                 smallerWidthShortcutView.shortcutValidator = passThroughValidator
@@ -793,7 +793,7 @@ class SettingsViewController: NSViewController {
             mainStackView.addArrangedSubview(bottomVerticalTwoThirdsRow)
             // Grid Positions - cycling shortcuts for larger grids
             let showAdditionalSizesCheckbox = NSButton(checkboxWithTitle: NSLocalizedString("Show additional sizes in menu", tableName: "Main", value: "", comment: ""), target: self, action: #selector(toggleShowAdditionalSizesInMenu(_:)))
-            showAdditionalSizesCheckbox.state = RectangleDefaults.showAdditionalSizesInMenu.userEnabled ? .on : .off
+            showAdditionalSizesCheckbox.state = RawmDefaults.showAdditionalSizesInMenu.userEnabled ? .on : .off
             showAdditionalSizesCheckbox.translatesAutoresizingMaskIntoConstraints = false
             showAdditionalSizesCheckbox.alignment = .left
             showAdditionalSizesCheckbox.imageHugsTitle = true
@@ -864,7 +864,7 @@ class SettingsViewController: NSViewController {
             let twelfthsCyclingRow = makeRow(makeLabelStack(twelfthsCyclingLabel, twelfthsCyclingIcon), twelfthsCyclingShortcutView)
             let sixteenthsCyclingRow = makeRow(makeLabelStack(sixteenthsCyclingLabel, sixteenthsCyclingIcon), sixteenthsCyclingShortcutView)
 
-            if RectangleDefaults.allowAnyShortcut.enabled {
+            if RawmDefaults.allowAnyShortcut.enabled {
                 let passThroughValidator = PassthroughShortcutValidator()
                 ninthsCyclingShortcutView.shortcutValidator = passThroughValidator
                 twelfthsCyclingShortcutView.shortcutValidator = passThroughValidator
@@ -892,7 +892,7 @@ class SettingsViewController: NSViewController {
             ])
 
             let overlapOffsetCheckbox = NSButton(checkboxWithTitle: NSLocalizedString("Offset cycling position on overlap", tableName: "Main", value: "", comment: ""), target: self, action: #selector(toggleCyclingOverlapOffset(_:)))
-            overlapOffsetCheckbox.state = RectangleDefaults.cyclingOverlapOffset.userEnabled ? .on : .off
+            overlapOffsetCheckbox.state = RawmDefaults.cyclingOverlapOffset.userEnabled ? .on : .off
             overlapOffsetCheckbox.translatesAutoresizingMaskIntoConstraints = false
             overlapOffsetCheckbox.alignment = .left
 
@@ -1069,15 +1069,15 @@ class SettingsViewController: NSViewController {
     }
     
     func initializeTodoModeSettings() {
-        todoCheckbox.state = RectangleDefaults.todo.userEnabled ? .on : .off
-        todoAppWidthField.stringValue = String(RectangleDefaults.todoSidebarWidth.value)
+        todoCheckbox.state = RawmDefaults.todo.userEnabled ? .on : .off
+        todoAppWidthField.stringValue = String(RawmDefaults.todoSidebarWidth.value)
         todoAppWidthField.delegate = self
-        todoAppWidthField.defaults = RectangleDefaults.todoSidebarWidth
+        todoAppWidthField.defaults = RawmDefaults.todoSidebarWidth
         todoAppWidthField.defaultsSetAction = {
             TodoManager.moveAllIfNeeded(false)
         }
-        todoAppWidthUnitPopUpButton.selectItem(withTag: RectangleDefaults.todoSidebarWidthUnit.value.rawValue)
-        todoAppSidePopUpButton.selectItem(withTag: RectangleDefaults.todoSidebarSide.value.rawValue)
+        todoAppWidthUnitPopUpButton.selectItem(withTag: RawmDefaults.todoSidebarWidthUnit.value.rawValue)
+        todoAppSidePopUpButton.selectItem(withTag: RawmDefaults.todoSidebarSide.value.rawValue)
         TodoManager.initToggleShortcut()
         TodoManager.initReflowShortcut()
         toggleTodoShortcutView.shortcutValidator = TodoShortcutValidator(defaultsKey: TodoManager.toggleDefaultsKey)
@@ -1088,38 +1088,38 @@ class SettingsViewController: NSViewController {
     }
     
     private func showHideTodoModeSettings(animated: Bool) {
-        setVisibility(shown: RectangleDefaults.todo.userEnabled, ofView: todoView, withConstraint: todoViewHeightConstraint, animated: animated)
+        setVisibility(shown: RawmDefaults.todo.userEnabled, ofView: todoView, withConstraint: todoViewHeightConstraint, animated: animated)
     }
     
     func initializeToggles() {
-        checkForUpdatesAutomaticallyCheckbox.state = RectangleDefaults.SUEnableAutomaticChecks.enabled ? .on : .off
+        checkForUpdatesAutomaticallyCheckbox.state = RawmDefaults.SUEnableAutomaticChecks.enabled ? .on : .off
         
-        launchOnLoginCheckbox.state = RectangleDefaults.launchOnLogin.enabled ? .on : .off
+        launchOnLoginCheckbox.state = RawmDefaults.launchOnLogin.enabled ? .on : .off
         
-        hideMenuBarIconCheckbox.state = RectangleDefaults.hideMenuBarIcon.enabled ? .on : .off
+        hideMenuBarIconCheckbox.state = RawmDefaults.hideMenuBarIcon.enabled ? .on : .off
         
-        subsequentExecutionPopUpButton.selectItem(withTag: RectangleDefaults.subsequentExecutionMode.value.rawValue)
+        subsequentExecutionPopUpButton.selectItem(withTag: RawmDefaults.subsequentExecutionMode.value.rawValue)
         
-        allowAnyShortcutCheckbox.state = RectangleDefaults.allowAnyShortcut.enabled ? .on : .off
+        allowAnyShortcutCheckbox.state = RawmDefaults.allowAnyShortcut.enabled ? .on : .off
                 
-        gapSlider.intValue = Int32(RectangleDefaults.gapSize.value)
+        gapSlider.intValue = Int32(RawmDefaults.gapSize.value)
         gapLabel.stringValue = "\(gapSlider.intValue) px"
         gapSlider.isContinuous = true
-        skipGapTopEdgeCheckbox.state = RectangleDefaults.skipGapTopEdge.enabled ? .on : .off
+        skipGapTopEdgeCheckbox.state = RawmDefaults.skipGapTopEdge.enabled ? .on : .off
         
-        cursorAcrossCheckbox.state = RectangleDefaults.moveCursorAcrossDisplays.userEnabled ? .on : .off
+        cursorAcrossCheckbox.state = RawmDefaults.moveCursorAcrossDisplays.userEnabled ? .on : .off
 
-        useCursorScreenDetectionCheckbox.isHidden = !RectangleDefaults.useCursorScreenDetection.enabled
-        useCursorScreenDetectionCheckbox.state = RectangleDefaults.useCursorScreenDetection.enabled ? .on : .off
+        useCursorScreenDetectionCheckbox.isHidden = !RawmDefaults.useCursorScreenDetection.enabled
+        useCursorScreenDetectionCheckbox.state = RawmDefaults.useCursorScreenDetection.enabled ? .on : .off
 
-        doubleClickTitleBarCheckbox.state = WindowAction(rawValue: RectangleDefaults.doubleClickTitleBar.value - 1) != nil ? .on : .off
+        doubleClickTitleBarCheckbox.state = WindowAction(rawValue: RawmDefaults.doubleClickTitleBar.value - 1) != nil ? .on : .off
 
-        combinedDisplayModeCheckbox?.state = RectangleDefaults.combinedDisplayMode.userEnabled ? .on : .off
+        combinedDisplayModeCheckbox?.state = RawmDefaults.combinedDisplayMode.userEnabled ? .on : .off
 
-        greenButtonOverrideCheckbox?.state = RectangleDefaults.greenButtonOverride.enabled ? .on : .off
+        greenButtonOverrideCheckbox?.state = RawmDefaults.greenButtonOverride.enabled ? .on : .off
 
         if StageUtil.stageCapable {
-            stageSlider.intValue = Int32(RectangleDefaults.stageSize.value)
+            stageSlider.intValue = Int32(RawmDefaults.stageSize.value)
             stageSlider.isContinuous = true
             stageLabel.stringValue = "\(stageSlider.intValue) px"
         } else {
@@ -1130,7 +1130,7 @@ class SettingsViewController: NSViewController {
     }
     
     private func initializeCycleSizesView(animated: Bool = false) {
-        let showOptionsView = RectangleDefaults.subsequentExecutionMode.resizes
+        let showOptionsView = RawmDefaults.subsequentExecutionMode.resizes
         
         if showOptionsView {
             setToggleStatesForCycleSizeCheckboxes()
@@ -1146,7 +1146,7 @@ class SettingsViewController: NSViewController {
            let insertIdx = parentStack.arrangedSubviews.firstIndex(of: doubleClickTitleBarCheckbox) {
             
             let checkbox = NSButton(checkboxWithTitle: NSLocalizedString("Treat multiple displays as one", tableName: "Main", value: "", comment: ""), target: self, action: #selector(toggleCombinedDisplayMode(_:)))
-            checkbox.state = RectangleDefaults.combinedDisplayMode.userEnabled ? .on : .off
+            checkbox.state = RawmDefaults.combinedDisplayMode.userEnabled ? .on : .off
             // Match storyboard checkbox content priorities to prevent vertical compression
             checkbox.setContentCompressionResistancePriority(.required, for: .vertical)
             checkbox.setContentHuggingPriority(.defaultHigh, for: .vertical)
@@ -1181,7 +1181,7 @@ class SettingsViewController: NSViewController {
            let insertIdx = parentStack.arrangedSubviews.firstIndex(of: doubleClickTitleBarCheckbox) {
 
             let checkbox = NSButton(checkboxWithTitle: NSLocalizedString("Green stoplight button maximizes instead of Full Screen", tableName: "Main", value: "", comment: ""), target: self, action: #selector(toggleGreenButtonOverride(_:)))
-            checkbox.state = RectangleDefaults.greenButtonOverride.enabled ? .on : .off
+            checkbox.state = RawmDefaults.greenButtonOverride.enabled ? .on : .off
             // Match storyboard checkbox content priorities to prevent vertical compression
             checkbox.setContentCompressionResistancePriority(.required, for: .vertical)
             checkbox.setContentHuggingPriority(.defaultHigh, for: .vertical)
@@ -1297,7 +1297,7 @@ class SettingsViewController: NSViewController {
     @objc private func didSelectHalfSplitRatioPreset(sender: Any?) {
         guard let popUpButton = sender as? HalfSplitRatioPopUpButton,
               let defaults = popUpButton.defaults else {
-            RectangleLogger.log("Expected action to be sent from HalfSplitRatioPopUpButton. Instead, sender is: \(String(describing: sender))")
+            RawmLogger.log("Expected action to be sent from HalfSplitRatioPopUpButton. Instead, sender is: \(String(describing: sender))")
             return
         }
         
@@ -1307,7 +1307,7 @@ class SettingsViewController: NSViewController {
         }
         
         guard let cycleSize = CycleSize(rawValue: popUpButton.selectedTag()) else {
-            RectangleLogger.log("Expected tag of half split ratio popup to match a value of CycleSize. Got: \(String(describing: popUpButton.selectedTag()))")
+            RawmLogger.log("Expected tag of half split ratio popup to match a value of CycleSize. Got: \(String(describing: popUpButton.selectedTag()))")
             return
         }
         
@@ -1318,34 +1318,34 @@ class SettingsViewController: NSViewController {
     
     @objc private func didCheckCycleSizeCheckbox(sender: Any?) {
         guard let checkbox = sender as? NSButton else {
-            RectangleLogger.log("Expected action to be sent from NSButton. Instead, sender is: \(String(describing: sender))")
+            RawmLogger.log("Expected action to be sent from NSButton. Instead, sender is: \(String(describing: sender))")
             return
         }
         
         let rawValue = checkbox.tag
         
         guard let cycleSize = CycleSize(rawValue: rawValue) else {
-            RectangleLogger.log("Expected tag of cycle size checkbox to match a value of CycleSize. Got: \(String(describing: rawValue))")
+            RawmLogger.log("Expected tag of cycle size checkbox to match a value of CycleSize. Got: \(String(describing: rawValue))")
             return
         }
         
         // If selected cycle sizes has not been changed, write the defaults.
-        if !RectangleDefaults.cycleSizesIsChanged.enabled {
-            RectangleDefaults.selectedCycleSizes.value = CycleSize.defaultSizes
+        if !RawmDefaults.cycleSizesIsChanged.enabled {
+            RawmDefaults.selectedCycleSizes.value = CycleSize.defaultSizes
         }
         
-        RectangleDefaults.cycleSizesIsChanged.enabled = true
+        RawmDefaults.cycleSizesIsChanged.enabled = true
         
         if checkbox.state == .on {
-            RectangleDefaults.selectedCycleSizes.value.insert(cycleSize)
+            RawmDefaults.selectedCycleSizes.value.insert(cycleSize)
         } else {
-            RectangleDefaults.selectedCycleSizes.value.remove(cycleSize)
+            RawmDefaults.selectedCycleSizes.value.remove(cycleSize)
         }
     }
     
     private func setToggleStatesForCycleSizeCheckboxes() {
-        let useDefaultCycleSizes = !RectangleDefaults.cycleSizesIsChanged.enabled
-        let cycleSizes = useDefaultCycleSizes ? CycleSize.defaultSizes : RectangleDefaults.selectedCycleSizes.value
+        let useDefaultCycleSizes = !RawmDefaults.cycleSizesIsChanged.enabled
+        let cycleSizes = useDefaultCycleSizes ? CycleSize.defaultSizes : RawmDefaults.selectedCycleSizes.value
         
         cycleSizeCheckboxes.forEach { checkbox in
             guard let cycleSizeForCheckbox = CycleSize(rawValue: checkbox.tag) else {
@@ -1360,7 +1360,7 @@ class SettingsViewController: NSViewController {
 
     private func setToggleStatesForCornerCycleExpansionAxisButtons() {
         cornerCycleExpansionAxisButtons.forEach { button in
-            button.state = button.tag == RectangleDefaults.cornerCycleExpansionAxis.value.rawValue ? .on : .off
+            button.state = button.tag == RawmDefaults.cornerCycleExpansionAxis.value.rawValue ? .on : .off
         }
     }
 

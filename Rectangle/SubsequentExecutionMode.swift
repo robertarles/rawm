@@ -11,7 +11,7 @@ enum SubsequentExecutionMode: Int {
     case resizeAndCycleQuadrants = 5
 }
 
-class SubsequentExecutionDefault: RectangleDefault {
+class SubsequentExecutionDefault: RawmDefault {
     public private(set) var key: String = "subsequentExecutionMode"
     private var initialized = false
     

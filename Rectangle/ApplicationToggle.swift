@@ -32,13 +32,13 @@ class ApplicationToggle: NSObject {
         let encoder = JSONEncoder()
         if let jsonDisabledApps = try? encoder.encode(disabledApps) {
             if let jsonString = String(data: jsonDisabledApps, encoding: .utf8) {
-                RectangleDefaults.disabledApps.value = jsonString
+                RawmDefaults.disabledApps.value = jsonString
             }
         }
     }
     
     private func getDisabledApps() ->  Set<String>? {
-        guard let jsonDisabledAppsString = RectangleDefaults.disabledApps.value else { return nil }
+        guard let jsonDisabledAppsString = RawmDefaults.disabledApps.value else { return nil }
         
         let decoder = JSONDecoder()
         guard let jsonDisabledApps = jsonDisabledAppsString.data(using: .utf8) else { return nil }
@@ -51,7 +51,7 @@ class ApplicationToggle: NSObject {
         if !Self.shortcutsDisabled {
             Self.shortcutsDisabled = true
             self.shortcutManager.unbindShortcuts()
-            if !RectangleDefaults.ignoreDragSnapToo.userDisabled {
+            if !RawmDefaults.ignoreDragSnapToo.userDisabled {
                 Notification.Name.windowSnapping.post(object: false)
             }
         }
@@ -61,7 +61,7 @@ class ApplicationToggle: NSObject {
         if Self.shortcutsDisabled {
             Self.shortcutsDisabled = false
             self.shortcutManager.bindShortcuts()
-            if !RectangleDefaults.ignoreDragSnapToo.userDisabled {
+            if !RawmDefaults.ignoreDragSnapToo.userDisabled {
                 Notification.Name.windowSnapping.post(object: true)
             }
         }
@@ -105,7 +105,7 @@ class ApplicationToggle: NSObject {
             } else {
                 enableShortcuts()
             }
-            if RectangleDefaults.enhancedUI.value == .frontmostDisable {
+            if RawmDefaults.enhancedUI.value == .frontmostDisable {
                 DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50)) {
                     AccessibilityElement.getFrontApplicationElement()?.enhancedUserInterface = false
                 }
@@ -117,10 +117,10 @@ class ApplicationToggle: NSObject {
 // todo mode
 extension ApplicationToggle {
     public func setTodoApp() {
-        RectangleDefaults.todoApplication.value = Self.frontAppId
+        RawmDefaults.todoApplication.value = Self.frontAppId
     }
 
     public func todoAppIsActive() -> Bool {
-        return RectangleDefaults.todoApplication.value == Self.frontAppId
+        return RawmDefaults.todoApplication.value == Self.frontAppId
     }
 }

@@ -7,7 +7,7 @@ class BottomLeftNinthCalculation: WindowCalculation, OrientationAware, NinthsRep
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
         let visibleFrameOfScreen = params.visibleFrameOfScreen
 
-        guard RectangleDefaults.subsequentExecutionMode.value != .none,
+        guard RawmDefaults.subsequentExecutionMode.value != .none,
               let last = params.lastAction,
               let lastSubAction = last.subAction
         else {

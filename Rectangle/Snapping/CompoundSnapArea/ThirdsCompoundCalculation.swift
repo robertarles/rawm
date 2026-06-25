@@ -34,14 +34,14 @@ struct ThirdsCompoundCalculation: CompoundSnapAreaCalculation {
 
 struct PortraitSideThirdsCompoundCalculation: CompoundSnapAreaCalculation {
     
-    private let marginTop = RectangleDefaults.snapEdgeMarginTop.cgFloat
-    private let marginBottom = RectangleDefaults.snapEdgeMarginBottom.cgFloat
-    private let ignoredSnapAreas = SnapAreaOption(rawValue: RectangleDefaults.ignoredSnapAreas.value)
+    private let marginTop = RawmDefaults.snapEdgeMarginTop.cgFloat
+    private let marginBottom = RawmDefaults.snapEdgeMarginBottom.cgFloat
+    private let ignoredSnapAreas = SnapAreaOption(rawValue: RawmDefaults.ignoredSnapAreas.value)
     
     func snapArea(cursorLocation loc: NSPoint, screen: NSScreen, directional: Directional, priorSnapArea: SnapArea?) -> SnapArea? {
         let frame = screen.frame
         let thirdHeight = floor(frame.height / 3)
-        let shortEdgeSize = RectangleDefaults.shortEdgeSnapAreaSize.cgFloat
+        let shortEdgeSize = RawmDefaults.shortEdgeSnapAreaSize.cgFloat
         
         if loc.y <= frame.minY + marginBottom + shortEdgeSize {
             let snapAreaOption: SnapAreaOption = loc.x < frame.midX ? .bottomLeftShort : .bottomRightShort

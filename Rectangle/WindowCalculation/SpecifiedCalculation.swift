@@ -6,8 +6,8 @@ final class SpecifiedCalculation: WindowCalculation {
     private let specifiedWidth: CGFloat
 
     override init() {
-        specifiedHeight = CGFloat(RectangleDefaults.specifiedHeight.value)
-        specifiedWidth = CGFloat(RectangleDefaults.specifiedWidth.value)
+        specifiedHeight = CGFloat(RawmDefaults.specifiedHeight.value)
+        specifiedWidth = CGFloat(RawmDefaults.specifiedWidth.value)
     }
 
     override func calculateRect(_ params: RectCalculationParameters) -> RectResult {
