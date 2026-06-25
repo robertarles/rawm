@@ -23,7 +23,7 @@ protocol RawmActionItem {
 
 // MARK: - WindowActionItem
 
-/// Wraps Rectangle's existing WindowAction enum so it participates in the unified action system.
+/// Wraps rawm's existing WindowAction enum so it participates in the unified action system.
 /// Window actions continue to be dispatched via ShortcutManager/MASShortcut;
 /// this wrapper is used for display and persistence in the unified Shortcuts UI.
 struct WindowActionItem: RawmActionItem {

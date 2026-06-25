@@ -1,4 +1,4 @@
-/// RectangleDefaults.swift
+/// Defaults.swift
 
 import Cocoa
 

@@ -4,7 +4,7 @@
 /// Window Actions, Clipboard Actions, and Shell Actions.
 ///
 /// This view controller presents a table (Name | Shortcut | Delete) with an
-/// "Add Shortcut" button at the bottom. Existing Rectangle window shortcuts are
+/// "Add Shortcut" button at the bottom. Existing rawm window shortcuts are
 /// included for reference. Non-window actions (Clipboard, Shell) can be added,
 /// edited, and deleted here.
 

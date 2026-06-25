@@ -101,7 +101,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.prevActiveApp = change.oldValue ?? nil
         }
         
-        // Start the Maccy-derived clipboard history subsystem.
+        // Start the clipboard history subsystem.
         // This registers the pasteboard poller and history callbacks.
         AppState.shared.appDelegate = self
         ClipboardManager.shared.start()

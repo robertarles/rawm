@@ -1,6 +1,6 @@
 /// ClipboardBootstrap.swift
 ///
-/// Wires the Maccy-derived clipboard subsystem into rawm's app lifecycle.
+/// Wires the clipboard subsystem into rawm's app lifecycle.
 /// All clipboard types (Clipboard, History, AppState, FloatingPanel, etc.)
 /// must be accessible since they are all compiled into the rawm module.
 
@@ -60,7 +60,7 @@ extension AppDelegate {
     /// Storage key for the clipboard popup panel, held in an associated object.
     private static var clipboardPanelKey = "clipboardPanel"
 
-    /// The clipboard history popup panel. Accessed by Maccy's Popup and SlideoutController.
+    /// The clipboard history popup panel. Accessed by the clipboard subsystem's Popup and SlideoutController.
     var clipboardHistoryPanel: FloatingPanel<AnyView>? {
         get {
             return objc_getAssociatedObject(self, &AppDelegate.clipboardPanelKey) as? FloatingPanel<AnyView>
