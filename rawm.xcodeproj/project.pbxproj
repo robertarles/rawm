@@ -475,7 +475,7 @@
 		9821403222B38A1B00ABFB3F /* UpperLeftCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperLeftCalculation.swift; sourceTree = "<group>"; };
 		9821403422B38A2B00ABFB3F /* UpperRightCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperRightCalculation.swift; sourceTree = "<group>"; };
 		9821403622B3D16700ABFB3F /* MaximizeHeightCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeHeightCalculation.swift; sourceTree = "<group>"; };
-		9821403C22B3EBD900ABFB3F /* RectangleLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RectangleLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9821403C22B3EBD900ABFB3F /* RectangleLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rawm-launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9821403E22B3EBD900ABFB3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9821404222B3EBDA00ABFB3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9821404522B3EBDA00ABFB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -484,13 +484,13 @@
 		9821405D22B3ED3600ABFB3F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		9821405F22B3EFB200ABFB3F /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		9821552627BFFB13002523EC /* Rectangle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rectangle-Bridging-Header.h"; sourceTree = "<group>"; };
-		9824700922AF9B7D0037B409 /* Rectangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rectangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9824700922AF9B7D0037B409 /* Rectangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rawm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9824700C22AF9B7D0037B409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9824701022AF9B7E0037B409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9824701322AF9B7E0037B409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9824701522AF9B7E0037B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9824701622AF9B7E0037B409 /* Rectangle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rectangle.entitlements; sourceTree = "<group>"; };
-		9824701B22AF9B7E0037B409 /* RectangleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RectangleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9824701B22AF9B7E0037B409 /* RectangleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rawm-tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9824701F22AF9B7E0037B409 /* RawmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawmTests.swift; sourceTree = "<group>"; };
 		9824702122AF9B7E0037B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9824702A22AFA22E0037B409 /* AccessibilityWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityWindowController.swift; sourceTree = "<group>"; };
@@ -815,7 +815,7 @@
 				9821404722B3EBDA00ABFB3F /* Info.plist */,
 				9821404822B3EBDA00ABFB3F /* RectangleLauncher.entitlements */,
 			);
-			path = RectangleLauncher;
+			path = Launcher;
 			sourceTree = "<group>";
 		};
 		9821405C22B3ED3600ABFB3F /* Frameworks */ = {
@@ -1053,7 +1053,7 @@
 				FE4438CD4E85440A882FCF9D /* Clipboard */,
 				571276341EE8FA117E60F60A /* ClipboardBootstrap.swift */,
 			);
-			path = Rectangle;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		9824701E22AF9B7E0037B409 /* RectangleTests */ = {
@@ -1063,7 +1063,7 @@
 				944F25D02CE5A144004B2FD2 /* ShortcutRecordingObserverTests.swift */,
 				9824702122AF9B7E0037B409 /* Info.plist */,
 			);
-			path = RectangleTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		985B9BFA22BE218C00A2E8F0 /* Popover */ = {
@@ -1652,7 +1652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RectangleLauncher/RectangleLauncher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Launcher/RectangleLauncher.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1660,7 +1660,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
-				INFOPLIST_FILE = RectangleLauncher/Info.plist;
+				INFOPLIST_FILE = Launcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1680,7 +1680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RectangleLauncher/RectangleLauncherRelease.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Launcher/RectangleLauncherRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1688,7 +1688,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XSYZ3E4B7D;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = RectangleLauncher/Info.plist;
+				INFOPLIST_FILE = Launcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1838,7 +1838,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_OTHER_FLAGS = "--enable-icon-stack-fallback-generation=disabled";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Rectangle/Rectangle.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/Rectangle.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1846,7 +1846,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
-				INFOPLIST_FILE = Rectangle/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1857,7 +1857,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Rectangle/Rectangle-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Rectangle-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1870,7 +1870,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_OTHER_FLAGS = "--enable-icon-stack-fallback-generation=disabled";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Rectangle/RectangleRelease.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/RectangleRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -1879,7 +1879,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = Rectangle/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1890,7 +1890,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Rectangle/Rectangle-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Rectangle-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1905,7 +1905,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = RectangleTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1916,7 +1916,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rectangle.app/Contents/MacOS/Rectangle";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rawm.app/Contents/MacOS/rawm";
 			};
 			name = Debug;
 		};
@@ -1930,7 +1930,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XSYZ3E4B7D;
-				INFOPLIST_FILE = RectangleTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1941,7 +1941,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rectangle.app/Contents/MacOS/Rectangle";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rawm.app/Contents/MacOS/rawm";
 			};
 			name = Release;
 		};
