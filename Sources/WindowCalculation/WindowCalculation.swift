@@ -230,6 +230,10 @@ class WindowCalculationFactory {
     static let bottomCenterRightEighthCalculation = BottomCenterRightEighthCalculation()
     static let bottomRightEighthCalculation = BottomRightEighthCalculation()
     static let specifiedCalculation = SpecifiedCalculation()
+    static let customSizeCalculation = SpecifiedCalculation(
+        widthDefault:  RawmDefaults.customSizeWidth,
+        heightDefault: RawmDefaults.customSizeHeight
+    )
     static let leftTodoCalculation = LeftTodoCalculation()
     static let rightTodoCalculation = RightTodoCalculation()
     static let bottomVerticalTwoThirdsCalculation = BottomVerticalTwoThirdsCalculation()
@@ -343,6 +347,7 @@ class WindowCalculationFactory {
      .doubleWidthLeft: halfOrDoubleDimensionCalculation,
      .doubleWidthRight: halfOrDoubleDimensionCalculation,
      .specified: specifiedCalculation,
+     .customSize: customSizeCalculation,
      .leftTodo: leftTodoCalculation,
      .rightTodo: rightTodoCalculation,
      .topVerticalThird: topVerticalThirdCalculation,

@@ -47,6 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        CrashReporter.install()
         RawmDefaults.loadFromSupportDir()
         migrateShowEighthsInMenu()
 

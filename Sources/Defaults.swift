@@ -68,6 +68,8 @@ class RawmDefaults {
     static let notifiedOfProblemApps = BoolDefault(key: "notifiedOfProblemApps")
     static let specifiedHeight = FloatDefault(key: "specifiedHeight", defaultValue: 1050)
     static let specifiedWidth = FloatDefault(key: "specifiedWidth", defaultValue: 1680)
+    static let customSizeWidth  = FloatDefault(key: "customSizeWidth",  defaultValue: 1920)
+    static let customSizeHeight = FloatDefault(key: "customSizeHeight", defaultValue: 1080)
     static let horizontalSplitRatio = FloatDefault(key: "horizontalSplitRatio", defaultValue: 50)
     static let verticalSplitRatio = FloatDefault(key: "verticalSplitRatio", defaultValue: 50)
     static let moveCursorAcrossDisplays = OptionalBoolDefault(key: "moveCursorAcrossDisplays")
@@ -158,6 +160,8 @@ class RawmDefaults {
         notifiedOfProblemApps,
         specifiedHeight,
         specifiedWidth,
+        customSizeWidth,
+        customSizeHeight,
         horizontalSplitRatio,
         verticalSplitRatio,
         moveCursorAcrossDisplays,

@@ -3,9 +3,14 @@ SCHEME      = rawm
 APP_NAME    = rawm.app
 INSTALL_DIR = /Applications
 
-# Ad-hoc signing for local builds — no Apple Developer certificate required.
-# Xcode GUI handles signing automatically via its session; xcodebuild CLI cannot,
-# so we use identity="-" (ad-hoc). Entitlements (Accessibility) still work locally.
+# Use the first available Apple Development certificate for signing.
+# A stable cert identity preserves TCC (accessibility) permission across reinstalls.
+# Ad-hoc signing ("-") changes identity every build, causing macOS to revoke the
+# accessibility grant on each install and making shortcuts appear gone.
+SIGNING_IDENTITY := $(shell security find-identity -v -p codesigning 2>/dev/null \
+    | grep -E "Apple Development|Developer ID Application" \
+    | head -1 | sed 's/.*"\(.*\)"/\1/')
+
 SIGN_FLAGS  = CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=YES
 
 # Resolve the DerivedData build dir at make-time so it survives DerivedData resets.
@@ -40,8 +45,15 @@ install: build
 	@echo "Installing $(APP_NAME) → $(INSTALL_DIR)/$(APP_NAME)"
 	rm -rf "$(INSTALL_DIR)/$(APP_NAME)"
 	cp -R "$(BUILD_DIR)/$(APP_NAME)" "$(INSTALL_DIR)/$(APP_NAME)"
-	@echo "Re-signing bundle (ad-hoc) to unify team IDs across all embedded frameworks..."
-	codesign --sign - --force --deep "$(INSTALL_DIR)/$(APP_NAME)"
+	@echo "Signing bundle (stable identity preserves TCC accessibility grant across reinstalls)..."
+	@if [ -n "$(SIGNING_IDENTITY)" ]; then \
+	    echo "  Using: $(SIGNING_IDENTITY)"; \
+	    codesign --sign "$(SIGNING_IDENTITY)" --force --deep "$(INSTALL_DIR)/$(APP_NAME)"; \
+	else \
+	    echo "  WARNING: No Apple Development cert found — falling back to ad-hoc."; \
+	    echo "  Accessibility permission may need to be re-granted after each install."; \
+	    codesign --sign - --force --deep "$(INSTALL_DIR)/$(APP_NAME)"; \
+	fi
 	@echo "Launching rawm..."
 	open "$(INSTALL_DIR)/$(APP_NAME)"
 

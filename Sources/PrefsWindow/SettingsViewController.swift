@@ -690,6 +690,96 @@ class SettingsViewController: NSViewController {
             vSplitControlsStack.addArrangedSubview(vSplitField)
             vSplitRow.addArrangedSubview(vSplitControlsStack)
             
+            // Custom Sizes section
+            let customSizesHeaderLabel = NSTextField(labelWithString: NSLocalizedString("Custom Sizes (px)", tableName: "Main", value: "", comment: ""))
+            customSizesHeaderLabel.font = NSFont.boldSystemFont(ofSize: NSFont.systemFontSize)
+            customSizesHeaderLabel.alignment = .center
+            customSizesHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
+
+            let pixelFormatter = NumberFormatter()
+            pixelFormatter.allowsFloats = false
+            pixelFormatter.minimum = 1
+
+            let specifiedWidthLabel = NSTextField(labelWithString: NSLocalizedString("Specified Width", tableName: "Main", value: "", comment: ""))
+            specifiedWidthLabel.alignment = .right
+            specifiedWidthLabel.translatesAutoresizingMaskIntoConstraints = false
+
+            let specifiedWidthField = AutoSaveFloatField(frame: NSRect(x: 0, y: 0, width: 80, height: 19))
+            specifiedWidthField.stringValue = String(Int(RawmDefaults.specifiedWidth.value))
+            specifiedWidthField.delegate = self
+            specifiedWidthField.defaults = RawmDefaults.specifiedWidth
+            specifiedWidthField.translatesAutoresizingMaskIntoConstraints = false
+            specifiedWidthField.refusesFirstResponder = true
+            specifiedWidthField.alignment = .right
+            specifiedWidthField.formatter = pixelFormatter
+
+            let specifiedHeightLabel = NSTextField(labelWithString: NSLocalizedString("Specified Height", tableName: "Main", value: "", comment: ""))
+            specifiedHeightLabel.alignment = .right
+            specifiedHeightLabel.translatesAutoresizingMaskIntoConstraints = false
+
+            let specifiedHeightField = AutoSaveFloatField(frame: NSRect(x: 0, y: 0, width: 80, height: 19))
+            specifiedHeightField.stringValue = String(Int(RawmDefaults.specifiedHeight.value))
+            specifiedHeightField.delegate = self
+            specifiedHeightField.defaults = RawmDefaults.specifiedHeight
+            specifiedHeightField.translatesAutoresizingMaskIntoConstraints = false
+            specifiedHeightField.refusesFirstResponder = true
+            specifiedHeightField.alignment = .right
+            specifiedHeightField.formatter = pixelFormatter
+
+            let customSizeWidthLabel = NSTextField(labelWithString: NSLocalizedString("Custom Size Width", tableName: "Main", value: "", comment: ""))
+            customSizeWidthLabel.alignment = .right
+            customSizeWidthLabel.translatesAutoresizingMaskIntoConstraints = false
+
+            let customSizeWidthField = AutoSaveFloatField(frame: NSRect(x: 0, y: 0, width: 80, height: 19))
+            customSizeWidthField.stringValue = String(Int(RawmDefaults.customSizeWidth.value))
+            customSizeWidthField.delegate = self
+            customSizeWidthField.defaults = RawmDefaults.customSizeWidth
+            customSizeWidthField.translatesAutoresizingMaskIntoConstraints = false
+            customSizeWidthField.refusesFirstResponder = true
+            customSizeWidthField.alignment = .right
+            customSizeWidthField.formatter = pixelFormatter
+
+            let customSizeHeightLabel = NSTextField(labelWithString: NSLocalizedString("Custom Size Height", tableName: "Main", value: "", comment: ""))
+            customSizeHeightLabel.alignment = .right
+            customSizeHeightLabel.translatesAutoresizingMaskIntoConstraints = false
+
+            let customSizeHeightField = AutoSaveFloatField(frame: NSRect(x: 0, y: 0, width: 80, height: 19))
+            customSizeHeightField.stringValue = String(Int(RawmDefaults.customSizeHeight.value))
+            customSizeHeightField.delegate = self
+            customSizeHeightField.defaults = RawmDefaults.customSizeHeight
+            customSizeHeightField.translatesAutoresizingMaskIntoConstraints = false
+            customSizeHeightField.refusesFirstResponder = true
+            customSizeHeightField.alignment = .right
+            customSizeHeightField.formatter = pixelFormatter
+
+            let specifiedWidthRow = NSStackView()
+            specifiedWidthRow.orientation = .horizontal
+            specifiedWidthRow.alignment = .centerY
+            specifiedWidthRow.spacing = 18
+            specifiedWidthRow.addArrangedSubview(specifiedWidthLabel)
+            specifiedWidthRow.addArrangedSubview(specifiedWidthField)
+
+            let specifiedHeightRow = NSStackView()
+            specifiedHeightRow.orientation = .horizontal
+            specifiedHeightRow.alignment = .centerY
+            specifiedHeightRow.spacing = 18
+            specifiedHeightRow.addArrangedSubview(specifiedHeightLabel)
+            specifiedHeightRow.addArrangedSubview(specifiedHeightField)
+
+            let customSizeWidthRow = NSStackView()
+            customSizeWidthRow.orientation = .horizontal
+            customSizeWidthRow.alignment = .centerY
+            customSizeWidthRow.spacing = 18
+            customSizeWidthRow.addArrangedSubview(customSizeWidthLabel)
+            customSizeWidthRow.addArrangedSubview(customSizeWidthField)
+
+            let customSizeHeightRow = NSStackView()
+            customSizeHeightRow.orientation = .horizontal
+            customSizeHeightRow.alignment = .centerY
+            customSizeHeightRow.spacing = 18
+            customSizeHeightRow.addArrangedSubview(customSizeHeightLabel)
+            customSizeHeightRow.addArrangedSubview(customSizeHeightField)
+
             let topVerticalThirdRow = NSStackView()
             topVerticalThirdRow.orientation = .horizontal
             topVerticalThirdRow.alignment = .centerY
@@ -921,6 +1011,13 @@ class SettingsViewController: NSViewController {
             mainStackView.addArrangedSubview(hSplitRow)
             mainStackView.addArrangedSubview(vSplitRow)
 
+            mainStackView.addArrangedSubview(customSizesHeaderLabel)
+            mainStackView.setCustomSpacing(10, after: customSizesHeaderLabel)
+            mainStackView.addArrangedSubview(specifiedWidthRow)
+            mainStackView.addArrangedSubview(specifiedHeightRow)
+            mainStackView.addArrangedSubview(customSizeWidthRow)
+            mainStackView.addArrangedSubview(customSizeHeightRow)
+
             NSLayoutConstraint.activate([
                 headerLabel.widthAnchor.constraint(equalTo: mainStackView.widthAnchor),
                 splitRatioHeaderLabel.widthAnchor.constraint(equalTo: mainStackView.widthAnchor),
@@ -993,7 +1090,15 @@ class SettingsViewController: NSViewController {
                 gridHeaderLabel.widthAnchor.constraint(equalTo: mainStackView.widthAnchor),
                 cyclingHintLabel.widthAnchor.constraint(equalTo: mainStackView.widthAnchor, constant: -20),
                 hSplitControlsStack.trailingAnchor.constraint(equalTo: largerWidthShortcutView.trailingAnchor),
-                vSplitControlsStack.trailingAnchor.constraint(equalTo: largerWidthShortcutView.trailingAnchor)
+                vSplitControlsStack.trailingAnchor.constraint(equalTo: largerWidthShortcutView.trailingAnchor),
+                customSizesHeaderLabel.widthAnchor.constraint(equalTo: mainStackView.widthAnchor),
+                specifiedWidthLabel.widthAnchor.constraint(equalTo: specifiedHeightLabel.widthAnchor),
+                specifiedHeightLabel.widthAnchor.constraint(equalTo: customSizeWidthLabel.widthAnchor),
+                customSizeWidthLabel.widthAnchor.constraint(equalTo: customSizeHeightLabel.widthAnchor),
+                specifiedWidthField.widthAnchor.constraint(equalToConstant: 80),
+                specifiedHeightField.widthAnchor.constraint(equalToConstant: 80),
+                customSizeWidthField.widthAnchor.constraint(equalToConstant: 80),
+                customSizeHeightField.widthAnchor.constraint(equalToConstant: 80)
             ])
 
             let containerView = NSView()
