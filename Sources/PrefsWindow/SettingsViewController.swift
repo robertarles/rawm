@@ -1017,7 +1017,12 @@ class SettingsViewController: NSViewController {
         initializeToggles()
 
         checkForUpdatesAutomaticallyCheckbox.bind(.value, to: AppDelegate.instance.updaterController.updater, withKeyPath: "automaticallyChecksForUpdates", options: nil)
-        
+
+        // Hidden for now — Sparkle UI is not yet surfaced in this build.
+        // To re-enable, remove these two lines.
+        checkForUpdatesAutomaticallyCheckbox.isHidden = true
+        checkForUpdatesButton.isHidden = true
+
         let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         let buildString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
         
