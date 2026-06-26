@@ -78,6 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         mainStatusMenu.autoenablesItems = false
         addMenuIcons()
         addWindowActionMenuItems()
+        updatesMenuItem.isHidden = true
 
         NotificationCenter.default.addObserver(self, selector: #selector(rebuildMenu), name: .showAdditionalSizesInMenuChanged, object: nil)
 
