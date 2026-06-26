@@ -13,6 +13,7 @@ struct ClipboardPreferencesView: View {
     @Default(.size) private var historySize
     @Default(.ignoredApps) private var ignoredApps
     @Default(.enabledPasteboardTypes) private var enabledPasteboardTypes
+    @Default(.clipboardNotificationsEnabled) private var clipboardNotificationsEnabled
 
     // Pasteboard type groups
     private let textTypes: [NSPasteboard.PasteboardType] = StorageType.text.types
@@ -39,6 +40,17 @@ struct ClipboardPreferencesView: View {
                                 .labelsHidden()
                         }
                         Text("Number of items to keep in clipboard history.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(8)
+                }
+
+                // MARK: Notifications
+                GroupBox(label: Text("Notifications").font(.headline)) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Toggle("Show notification on clipboard change", isOn: $clipboardNotificationsEnabled)
+                        Text("When enabled, a system notification is shown each time an item is copied or pasted.")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }

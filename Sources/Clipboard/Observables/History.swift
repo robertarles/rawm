@@ -163,7 +163,9 @@ class History: ItemsContainer { // swiftlint:disable:this type_body_length
       }
     } else {
       Task {
-        Notifier.notify(body: item.title, sound: .write)
+        if Defaults[.clipboardNotificationsEnabled] {
+          Notifier.notify(body: item.title, sound: .write)
+        }
       }
     }
 
