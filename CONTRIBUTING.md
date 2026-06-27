@@ -29,11 +29,29 @@ Required targets:
 - `make test` MUST fail the build when any test fails.
 - `make test-e2e` MUST fail the build when any scenario fails.
 - `make coverage` MUST fail the build when total code coverage, including branches,
-  is below 90%.
-  Coverage applies to the `make test` unit/integration suite; end-to-end tests provide
-  behavioral coverage of user journeys and are not subject to the line/branch threshold.
+  is below the coverage threshold (see "Coverage threshold" below).
+
+Coverage is measured over the `make test` unit/integration suite only. End-to-end tests
+are for behavioral and UI verification and are NOT included in code-coverage measurement.
+
+### Coverage threshold
+
+The coverage goal is **90%** total coverage, including branches, measured over the
+`make test` unit/integration suite.
+
+This threshold MAY be reduced when justified, but every reduction MUST be documented, and
+the documentation MUST state:
+
+- the reasoning for the reduction, and
+- the percentage of the codebase that the reasoning accounts for.
+
+This applies both to lowering the overall threshold and to excluding any code from coverage
+measurement. Undocumented reductions are not permitted.
 
 ### End-to-end and UI testing
+
+End-to-end tests exist to verify user-facing behavior and UI. They are a track of their
+own and are independent of code-coverage measurement (see "Gates").
 
 End-to-end tests, including UI, MUST be fronted by **Gherkin** feature specifications
 (`Given`/`When`/`Then`). Gherkin is required as a *format*, not a specific tool — any
