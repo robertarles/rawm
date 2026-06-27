@@ -30,6 +30,9 @@ build/
 ## Generated test & coverage reports (CONTRIBUTING.md: ./reports/ is generated output)
 reports/
 
+## Python bytecode cache (from report-generation scripts)
+__pycache__/
+
 ## Automatic backup files
 *~.nib/
 *.swp
