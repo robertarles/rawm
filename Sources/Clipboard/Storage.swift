@@ -1,3 +1,4 @@
+import Defaults
 import Foundation
 import SwiftData
 
@@ -8,7 +9,9 @@ class Storage {
   var container: ModelContainer
   var context: ModelContext { container.mainContext }
   var size: String {
-    guard let size = try? url.resourceValues(forKeys: [.fileSizeKey]).allValues.first?.value as? Int64, size > 1 else {
+    guard Defaults[.clipboardPersistenceEnabled],
+          let size = try? url.resourceValues(forKeys: [.fileSizeKey]).allValues.first?.value as? Int64,
+          size > 1 else {
       return ""
     }
 
@@ -18,20 +21,20 @@ class Storage {
   private let url = URL.applicationSupportDirectory.appending(path: "rawm/Storage.sqlite")
 
   init() {
-    // One-time migration: move storage from old Maccy path to rawm path.
-    let oldURL = URL.applicationSupportDirectory.appending(path: "Maccy/Storage.sqlite")
-    if FileManager.default.fileExists(atPath: oldURL.path) &&
-       !FileManager.default.fileExists(atPath: url.path) {
-      try? FileManager.default.moveItem(at: oldURL, to: url)
-    }
+    let config: ModelConfiguration
 
-    var config = ModelConfiguration(url: url)
+    if Defaults[.clipboardPersistenceEnabled] {
+      // One-time migration: move storage from old Maccy path to rawm path.
+      let oldURL = URL.applicationSupportDirectory.appending(path: "Maccy/Storage.sqlite")
+      if FileManager.default.fileExists(atPath: oldURL.path) &&
+         !FileManager.default.fileExists(atPath: url.path) {
+        try? FileManager.default.moveItem(at: oldURL, to: url)
+      }
 
-    #if DEBUG
-    if CommandLine.arguments.contains("enable-testing") {
+      config = ModelConfiguration(url: url)
+    } else {
       config = ModelConfiguration(isStoredInMemoryOnly: true)
     }
-    #endif
 
     do {
       container = try ModelContainer(for: HistoryItem.self, configurations: config)

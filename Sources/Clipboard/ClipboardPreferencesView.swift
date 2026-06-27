@@ -14,6 +14,7 @@ struct ClipboardPreferencesView: View {
     @Default(.ignoredApps) private var ignoredApps
     @Default(.enabledPasteboardTypes) private var enabledPasteboardTypes
     @Default(.clipboardNotificationsEnabled) private var clipboardNotificationsEnabled
+    @Default(.clipboardPersistenceEnabled) private var clipboardPersistenceEnabled
 
     // Pasteboard type groups
     private let textTypes: [NSPasteboard.PasteboardType] = StorageType.text.types
@@ -40,6 +41,17 @@ struct ClipboardPreferencesView: View {
                                 .labelsHidden()
                         }
                         Text("Number of items to keep in clipboard history.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(8)
+                }
+
+                // MARK: Storage
+                GroupBox(label: Text("Storage").font(.headline)) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Toggle("Persist clipboard history to disk", isOn: $clipboardPersistenceEnabled)
+                        Text("When off (default), history is kept in memory only and lost on quit. When on, history is saved to disk at ~/Library/Application Support/rawm/Storage.sqlite. Changes take effect after relaunch.")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }

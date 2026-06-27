@@ -14,6 +14,7 @@ extension Defaults.Keys {
   static let clearOnQuit = Key<Bool>("clearOnQuit", default: false)
   static let clearSystemClipboard = Key<Bool>("clearSystemClipboard", default: false)
   static let clipboardNotificationsEnabled = Key<Bool>("clipboardNotificationsEnabled", default: false)
+  static let clipboardPersistenceEnabled = Key<Bool>("clipboardPersistenceEnabled", default: false)
   static let clipboardCheckInterval = Key<Double>("clipboardCheckInterval", default: 0.5)
   static let enabledPasteboardTypes = Key<Set<NSPasteboard.PasteboardType>>(
     "enabledPasteboardTypes", default: Set(StorageType.all.types)
