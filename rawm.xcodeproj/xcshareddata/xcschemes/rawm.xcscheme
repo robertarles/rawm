@@ -26,7 +26,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9824700822AF9B7D0037B409"
+            BuildableName = "rawm.app"
+            BlueprintName = "rawm"
+            ReferencedContainer = "container:rawm.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"

@@ -1,4 +1,4 @@
-# Rectangle Terminal Commands for Hidden Preferences
+# Terminal Commands for Hidden Preferences
 
 The preferences window is purposefully slim, but there's a lot that can be modified via Terminal. After executing a terminal command, restart the app as these values are loaded on application startup. For Rectangle Pro, please replace `com.knollsoft.Rectangle` with `com.knollsoft.Hookshot` for the following commands. A number of the commands below are for configuring keyboard shortcuts, and you'll need to know the key code and modifier flags integer values. You can use the free [key codes app](https://apps.apple.com/us/app/key-codes/id414568915) to help with this.
 
@@ -112,7 +112,7 @@ defaults write com.knollsoft.Rectangle todo -int 1
 Modifier keys can be combined by adding the sum of Integer Values together.
 
 | Modifier Key | Integer Value |
-|--------------|---------------|
+| ------------ | ------------- |
 | cmd          | 1048576       |
 | option       | 524288        |
 | ctrl         | 262144        |
@@ -156,7 +156,7 @@ There is an extra command that horizontally centers the window but moves up the 
 
 The key code is:
 
-* centerProminently
+- centerProminently
 
 For example, the command for setting the shortcut to `ctrl option command C` would be:
 
@@ -164,22 +164,21 @@ For example, the command for setting the shortcut to `ctrl option command C` wou
 defaults write com.knollsoft.Rectangle centerProminently -dict-add keyCode -float 8 modifierFlags -float 1835305
 ```
 
-
 ## Add extra "ninths" sizing commands
 
 Commands for resizing to screen ninths are not available in the UI.
 
 The key codes are:
 
-* topLeftNinth
-* topCenterNinth
-* topRightNinth
-* middleLeftNinth
-* middleCenterNinth
-* middleRightNinth
-* bottomLeftNinth
-* bottomCenterNinth
-* bottomRightNinth
+- topLeftNinth
+- topCenterNinth
+- topRightNinth
+- middleLeftNinth
+- middleCenterNinth
+- middleRightNinth
+- bottomLeftNinth
+- bottomCenterNinth
+- bottomRightNinth
 
 For example, the command for setting the top left ninth shortcut to `ctrl opt shift 1` would be:
 
@@ -193,14 +192,14 @@ Commands for resizing to screen eighths are not available in the UI. This divide
 
 The key codes are:
 
-* topLeftEighth
-* topCenterLeftEighth
-* topCenterRightEighth
-* topRightEighth
-* bottomLeftEighth
-* bottomCenterLeftEighth
-* bottomCenterRightEighth
-* bottomRightEighth
+- topLeftEighth
+- topCenterLeftEighth
+- topCenterRightEighth
+- topRightEighth
+- bottomLeftEighth
+- bottomCenterLeftEighth
+- bottomCenterRightEighth
+- bottomRightEighth
 
 For example, the command for setting the top left eighth shortcut to `ctrl opt shift 1` would be:
 
@@ -208,16 +207,16 @@ For example, the command for setting the top left eighth shortcut to `ctrl opt s
 defaults write com.knollsoft.Rectangle topLeftEighth -dict-add keyCode -float 18 modifierFlags -float 917504
 ```
 
-## Add additional "thirds" sizing commands 
+## Add additional "thirds" sizing commands
 
 These commands for resizing to corner two-thirds are not available in the UI but can be configured via CLI.
 
 The key codes are:
 
-* topLeftThird
-* topRightThird
-* bottomLeftThird
-* bottomRightThird
+- topLeftThird
+- topRightThird
+- bottomLeftThird
+- bottomRightThird
 
 (these correspond to two-thirds, and when repeated will cycle through each of the calculations)
 
@@ -229,20 +228,20 @@ defaults write com.knollsoft.Rectangle topLeftThird -dict-add keyCode -float 18 
 
 ## Add doubling/halving window sizing commands
 
-These commands for doubling/halving the window width/height are not available in the UI but can be configured via CLI. 
+These commands for doubling/halving the window width/height are not available in the UI but can be configured via CLI.
 
 The key codes are:
 
-* doubleHeightUp
-* doubleHeightDown
-* doubleWidthLeft
-* doubleWidthRight
-* halveHeightUp
-* halveHeightDown
-* halveWidthLeft
-* halveWidthRight
+- doubleHeightUp
+- doubleHeightDown
+- doubleWidthLeft
+- doubleWidthRight
+- halveHeightUp
+- halveHeightDown
+- halveWidthLeft
+- halveWidthRight
 
-The action direction (e.g., "Right") is the direction that the center of the window will move towards as a result of resizing. 
+The action direction (e.g., "Right") is the direction that the center of the window will move towards as a result of resizing.
 
 For example, the command for setting the doubleWidthRight shortcut to `ctrl option shift right` would be:
 
@@ -256,10 +255,10 @@ Commands for tiling and cascading the visible windows are not available in the U
 
 The key codes are:
 
-* tileAll
-* cascadeAll
-* cascadeActiveApp
-* tileActiveApp
+- tileAll
+- cascadeAll
+- cascadeActiveApp
+- tileActiveApp
 
 _tileAll_ and _cascadeAll_ act on all visible windows.
 
@@ -408,7 +407,7 @@ defaults write com.knollsoft.Rectangle screenEdgeGapsOnMainScreenOnly -bool true
 Each drag to snap area on the edge of a screen can be ignored with a single Terminal command, but it's a bit field setting so you'll have to determine the bit field for which ones you want to disable.
 
 | Bit | Snap Area                 | Window Action       |
-|-----|---------------------------|---------------------|
+| --- | ------------------------- | ------------------- |
 | 0   | Top                       | Maximize            |
 | 1   | Bottom                    | Thirds              |
 | 2   | Left                      | Left Half           |
@@ -452,7 +451,7 @@ defaults write com.knollsoft.Rectangle applyGapsToMaximizeHeight -int 2
 
 ## Enabling snap areas for sixths
 
-To enable snap areas for sixths corners, execute: 
+To enable snap areas for sixths corners, execute:
 
 ```bash
 defaults write com.knollsoft.Rectangle sixthsSnapArea -bool true
@@ -470,7 +469,7 @@ defaults write com.knollsoft.Rectangle moveCursor -int 1
 
 ## Prevent a window that is quickly dragged above the menu bar from going into Mission Control
 
-Important: This can cause issues with dragging and dropping in certain apps like Adobe Illustrator, and can affect text selection in a select few apps as well. 
+Important: This can cause issues with dragging and dropping in certain apps like Adobe Illustrator, and can affect text selection in a select few apps as well.
 
 Windows that are slowly moved above the menu bar will still go into Mission Control.
 
@@ -547,3 +546,4 @@ Some windows can't be resized to fill a snap area — either because they're a f
 ```bash
 defaults write com.knollsoft.Rectangle moveFixedSizeToEdge -bool true
 ```
+
