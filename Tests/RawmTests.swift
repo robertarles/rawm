@@ -123,10 +123,10 @@ class ScreenFlippedTests: XCTestCase {
 class DefaultsExportTests: XCTestCase {
 
     func testOverlapDefaultsInExportArray() {
-        let keys = Defaults.array.map { $0.key }
-        XCTAssertTrue(keys.contains("cyclingOverlapOffset"), "cyclingOverlapOffset missing from Defaults.array")
-        XCTAssertTrue(keys.contains("cyclingOverlapOffsetSize"), "cyclingOverlapOffsetSize missing from Defaults.array")
-        XCTAssertTrue(keys.contains("cyclingOverlapMaxCascade"), "cyclingOverlapMaxCascade missing from Defaults.array")
+        let keys = RawmDefaults.array.map { $0.key }
+        XCTAssertTrue(keys.contains("cyclingOverlapOffset"), "cyclingOverlapOffset missing from RawmDefaults.array")
+        XCTAssertTrue(keys.contains("cyclingOverlapOffsetSize"), "cyclingOverlapOffsetSize missing from RawmDefaults.array")
+        XCTAssertTrue(keys.contains("cyclingOverlapMaxCascade"), "cyclingOverlapMaxCascade missing from RawmDefaults.array")
     }
 }
 
@@ -160,23 +160,23 @@ class HalfSplitCornerCalculationTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        savedHorizontalSplitRatio = Defaults.horizontalSplitRatio.value
-        savedVerticalSplitRatio = Defaults.verticalSplitRatio.value
-        savedSubsequentExecutionMode = Defaults.subsequentExecutionMode.value
-        savedCornerCycleExpansionAxis = Defaults.cornerCycleExpansionAxis.value
-        savedCycleSizesIsChanged = Defaults.cycleSizesIsChanged.enabled
-        savedSelectedCycleSizes = Defaults.selectedCycleSizes.value
-        Defaults.subsequentExecutionMode.value = .resize
-        Defaults.cycleSizesIsChanged.enabled = false
+        savedHorizontalSplitRatio = RawmDefaults.horizontalSplitRatio.value
+        savedVerticalSplitRatio = RawmDefaults.verticalSplitRatio.value
+        savedSubsequentExecutionMode = RawmDefaults.subsequentExecutionMode.value
+        savedCornerCycleExpansionAxis = RawmDefaults.cornerCycleExpansionAxis.value
+        savedCycleSizesIsChanged = RawmDefaults.cycleSizesIsChanged.enabled
+        savedSelectedCycleSizes = RawmDefaults.selectedCycleSizes.value
+        RawmDefaults.subsequentExecutionMode.value = .resize
+        RawmDefaults.cycleSizesIsChanged.enabled = false
     }
     
     override func tearDown() {
-        Defaults.horizontalSplitRatio.value = savedHorizontalSplitRatio
-        Defaults.verticalSplitRatio.value = savedVerticalSplitRatio
-        Defaults.subsequentExecutionMode.value = savedSubsequentExecutionMode
-        Defaults.cornerCycleExpansionAxis.value = savedCornerCycleExpansionAxis
-        Defaults.cycleSizesIsChanged.enabled = savedCycleSizesIsChanged
-        Defaults.selectedCycleSizes.value = savedSelectedCycleSizes
+        RawmDefaults.horizontalSplitRatio.value = savedHorizontalSplitRatio
+        RawmDefaults.verticalSplitRatio.value = savedVerticalSplitRatio
+        RawmDefaults.subsequentExecutionMode.value = savedSubsequentExecutionMode
+        RawmDefaults.cornerCycleExpansionAxis.value = savedCornerCycleExpansionAxis
+        RawmDefaults.cycleSizesIsChanged.enabled = savedCycleSizesIsChanged
+        RawmDefaults.selectedCycleSizes.value = savedSelectedCycleSizes
         super.tearDown()
     }
     
@@ -239,7 +239,7 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedCornersWithHorizontalExpansionCycleWidthOnly() {
         setSplitRatio(60)
-        Defaults.cornerCycleExpansionAxis.value = .horizontal
+        RawmDefaults.cornerCycleExpansionAxis.value = .horizontal
 
         assertRepeatedCornerRects(
             topLeft: CGRect(x: 10, y: 380, width: 800, height: 540),
@@ -251,7 +251,7 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testSecondRepeatedCornerShortcutBeginsCyclingImmediately() {
         setSplitRatio(CycleSize.twoThirds.percentValue)
-        Defaults.cornerCycleExpansionAxis.value = .horizontal
+        RawmDefaults.cornerCycleExpansionAxis.value = .horizontal
 
         let firstFrame = WindowCalculationFactory.upperLeftCalculation.calculateRect(params(for: .topLeft)).rect
         let secondFrame = WindowCalculationFactory.upperLeftCalculation.calculateRect(repeatedParams(for: .topLeft, currentRect: firstFrame, count: 1)).rect
@@ -264,7 +264,7 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedCornerCyclingDoesNotReturnNoOpFrameWhenBaseMatchesCycleSize() {
         setSplitRatio(CycleSize.twoThirds.percentValue)
-        Defaults.cornerCycleExpansionAxis.value = .vertical
+        RawmDefaults.cornerCycleExpansionAxis.value = .vertical
 
         let firstFrame = WindowCalculationFactory.upperRightCalculation.calculateRect(params(for: .topRight)).rect
         let secondFrame = WindowCalculationFactory.upperRightCalculation.calculateRect(repeatedParams(for: .topRight, currentRect: firstFrame, count: 1)).rect
@@ -277,7 +277,7 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedCornersWithVerticalExpansionCycleHeightOnly() {
         setSplitRatio(60)
-        Defaults.cornerCycleExpansionAxis.value = .vertical
+        RawmDefaults.cornerCycleExpansionAxis.value = .vertical
 
         assertRepeatedCornerRects(
             topLeft: CGRect(x: 10, y: 320, width: 720, height: 600),
@@ -289,14 +289,14 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedHalfActionsStillCycleOnTheirNaturalAxis() {
         setSplitRatio(60)
-        Defaults.cornerCycleExpansionAxis.value = .vertical
+        RawmDefaults.cornerCycleExpansionAxis.value = .vertical
 
         assertRect(WindowCalculationFactory.leftHalfCalculation.calculateRepeatedRect(repeatedParams(for: .leftHalf)).rect,
                    equals: CGRect(x: 10, y: 20, width: 800, height: 900))
         assertRect(WindowCalculationFactory.rightHalfCalculation.calculateRepeatedRect(repeatedParams(for: .rightHalf)).rect,
                    equals: CGRect(x: 410, y: 20, width: 800, height: 900))
 
-        Defaults.cornerCycleExpansionAxis.value = .horizontal
+        RawmDefaults.cornerCycleExpansionAxis.value = .horizontal
 
         assertRect(WindowCalculationFactory.topHalfCalculation.calculateRect(repeatedParams(for: .topHalf)).rect,
                    equals: CGRect(x: 10, y: 320, width: 1200, height: 600))
@@ -306,8 +306,8 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedHalfActionStartsAtFirstSelectedCycleSizeWhenOneHalfIsDeselected() {
         setSplitRatio(50)
-        Defaults.cycleSizesIsChanged.enabled = true
-        Defaults.selectedCycleSizes.value = [.oneThird, .twoThirds]
+        RawmDefaults.cycleSizesIsChanged.enabled = true
+        RawmDefaults.selectedCycleSizes.value = [.oneThird, .twoThirds]
 
         let firstRepeatedRect = WindowCalculationFactory.bottomHalfCalculation.calculateRepeatedRect(repeatedParams(for: .bottomHalf)).rect
         let secondRepeatedRect = WindowCalculationFactory.bottomHalfCalculation.calculateRepeatedRect(repeatedParams(for: .bottomHalf, currentRect: firstRepeatedRect, count: 2)).rect
@@ -318,9 +318,9 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedBottomCornerStartsAtFirstSelectedCycleSizeWhenOneHalfIsDeselected() {
         setSplitRatio(50)
-        Defaults.cornerCycleExpansionAxis.value = .vertical
-        Defaults.cycleSizesIsChanged.enabled = true
-        Defaults.selectedCycleSizes.value = [.oneThird, .twoThirds]
+        RawmDefaults.cornerCycleExpansionAxis.value = .vertical
+        RawmDefaults.cycleSizesIsChanged.enabled = true
+        RawmDefaults.selectedCycleSizes.value = [.oneThird, .twoThirds]
 
         let firstRect = WindowCalculationFactory.lowerLeftCalculation.calculateRect(params(for: .bottomLeft)).rect
         let firstRepeatedRect = WindowCalculationFactory.lowerLeftCalculation.calculateRect(repeatedParams(for: .bottomLeft, currentRect: firstRect)).rect
@@ -333,8 +333,8 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedHalfActionWithNoCycleSizesSelectedUsesFirstRect() {
         setSplitRatio(60)
-        Defaults.cycleSizesIsChanged.enabled = true
-        Defaults.selectedCycleSizes.value = []
+        RawmDefaults.cycleSizesIsChanged.enabled = true
+        RawmDefaults.selectedCycleSizes.value = []
 
         assertRect(WindowCalculationFactory.leftHalfCalculation.calculateRepeatedRect(repeatedParams(for: .leftHalf)).rect,
                    equals: CGRect(x: 10, y: 20, width: 720, height: 900))
@@ -342,8 +342,8 @@ class HalfSplitCornerCalculationTests: XCTestCase {
 
     func testRepeatedCornerActionWithNoCycleSizesSelectedUsesFirstRect() {
         setSplitRatio(60)
-        Defaults.cycleSizesIsChanged.enabled = true
-        Defaults.selectedCycleSizes.value = []
+        RawmDefaults.cycleSizesIsChanged.enabled = true
+        RawmDefaults.selectedCycleSizes.value = []
 
         let firstRect = WindowCalculationFactory.upperLeftCalculation.calculateRect(params(for: .topLeft)).rect
         let repeatedRect = WindowCalculationFactory.upperLeftCalculation.calculateRect(repeatedParams(for: .topLeft, currentRect: firstRect)).rect
@@ -352,8 +352,8 @@ class HalfSplitCornerCalculationTests: XCTestCase {
     }
     
     private func setSplitRatio(_ percent: Float) {
-        Defaults.horizontalSplitRatio.value = percent
-        Defaults.verticalSplitRatio.value = percent
+        RawmDefaults.horizontalSplitRatio.value = percent
+        RawmDefaults.verticalSplitRatio.value = percent
     }
     
     private func assertCornerRects(topLeft: CGRect, topRight: CGRect, bottomLeft: CGRect, bottomRight: CGRect) {
@@ -485,13 +485,13 @@ class SnappingManagerSessionTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        savedSnappingEnabled = Defaults.windowSnapping.enabled
-        Defaults.windowSnapping.enabled = false
+        savedSnappingEnabled = RawmDefaults.windowSnapping.enabled
+        RawmDefaults.windowSnapping.enabled = false
     }
 
     override func tearDown() {
         super.tearDown()
-        Defaults.windowSnapping.enabled = savedSnappingEnabled
+        RawmDefaults.windowSnapping.enabled = savedSnappingEnabled
     }
 
     func testSessionDidBecomeActiveTriggersCheckFullScreen() {
@@ -508,7 +508,7 @@ class SnappingManagerSessionTests: XCTestCase {
     }
 
     func testSessionDidBecomeActiveEventMonitorPreserved() {
-        Defaults.windowSnapping.enabled = true
+        RawmDefaults.windowSnapping.enabled = true
         let sm = SnappingManager()
         let wasRunning = sm.eventMonitor?.running ?? false
 
@@ -548,7 +548,7 @@ class SnappingManagerSessionTests: XCTestCase {
     }
 
     func testSleepWakeMaintainsSnapping() {
-        Defaults.windowSnapping.enabled = true
+        RawmDefaults.windowSnapping.enabled = true
         let sm = SnappingManager()
         let wasRunning = sm.eventMonitor?.running ?? false
 
@@ -563,7 +563,7 @@ class SnappingManagerSessionTests: XCTestCase {
     }
 
     func testSessionUnlockThenWakeMaintainsSnapping() {
-        Defaults.windowSnapping.enabled = true
+        RawmDefaults.windowSnapping.enabled = true
         let sm = SnappingManager()
         let wasRunning = sm.eventMonitor?.running ?? false
 
@@ -600,7 +600,7 @@ class SnappingManagerSessionTests: XCTestCase {
     }
 
     func testFullScreenThenWakeThenLeaveFullScreen() {
-        Defaults.windowSnapping.enabled = true
+        RawmDefaults.windowSnapping.enabled = true
         let sm = SnappingManager()
         let wasRunning = sm.eventMonitor?.running ?? false
 
@@ -626,7 +626,7 @@ class SnappingManagerSessionTests: XCTestCase {
     }
 
     func testSessionResignActiveThenBecomeActive() {
-        Defaults.windowSnapping.enabled = true
+        RawmDefaults.windowSnapping.enabled = true
         let sm = SnappingManager()
         let wasRunning = sm.eventMonitor?.running ?? false
 
@@ -646,7 +646,7 @@ class SnappingManagerSessionTests: XCTestCase {
     }
 
     func testScreensDoNotSleepNotificationsBreakSnapping() {
-        Defaults.windowSnapping.enabled = true
+        RawmDefaults.windowSnapping.enabled = true
         let sm = SnappingManager()
         let wasRunning = sm.eventMonitor?.running ?? false
 
@@ -666,7 +666,7 @@ class SnappingManagerSessionTests: XCTestCase {
     }
 
     func testScreenSleepSessionResignThenWakeAndSessionActive() {
-        Defaults.windowSnapping.enabled = true
+        RawmDefaults.windowSnapping.enabled = true
         let sm = SnappingManager()
         let wasRunning = sm.eventMonitor?.running ?? false
 

@@ -88,6 +88,12 @@
 		9824701122AF9B7E0037B409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9824701022AF9B7E0037B409 /* Assets.xcassets */; };
 		9824701422AF9B7E0037B409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9824701222AF9B7E0037B409 /* Main.storyboard */; };
 		9824702022AF9B7E0037B409 /* RawmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9824701F22AF9B7E0037B409 /* RawmTests.swift */; };
+		751677D43EAFA23B882C4E85 /* SnappingHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8242027A4F213237AD6C8738 /* SnappingHistoryTests.swift */; };
+		4555793633796237D920527D /* ShortcutDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B6C806ABB79C81B3A42F1 /* ShortcutDefaultsTests.swift */; };
+		75DDB3DF689EB21B9C31E945 /* ClipboardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AC77E30304750094311AEB /* ClipboardModelTests.swift */; };
+		B3E518DAAAEF7D18CB316697 /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D6EA8FDFDC31F27277665 /* UtilitiesTests.swift */; };
+		9647F27B1BB9579E602765E5 /* WindowCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2896FCD377453215CB5A4E /* WindowCalculationTests.swift */; };
+		003AAB6C5E7D3416F821A918 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57565B5DCF2BB2C1F0CAFD0F /* TestSupport.swift */; };
 		9824702C22AFA22E0037B409 /* AccessibilityWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9824702A22AFA22E0037B409 /* AccessibilityWindowController.swift */; };
 		9824702F22AFA2E50037B409 /* AccessibilityAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9824702E22AFA2E50037B409 /* AccessibilityAuthorization.swift */; };
 		9824703122AFA8470037B409 /* RawmStatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9824703022AFA8470037B409 /* RawmStatusItem.swift */; };
@@ -496,6 +502,12 @@
 		9824701622AF9B7E0037B409 /* rawm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rawm.entitlements; sourceTree = "<group>"; };
 		9824701B22AF9B7E0037B409 /* rawmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rawm-tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9824701F22AF9B7E0037B409 /* RawmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawmTests.swift; sourceTree = "<group>"; };
+		8242027A4F213237AD6C8738 /* SnappingHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingHistoryTests.swift; sourceTree = "<group>"; };
+		4D2B6C806ABB79C81B3A42F1 /* ShortcutDefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutDefaultsTests.swift; sourceTree = "<group>"; };
+		08AC77E30304750094311AEB /* ClipboardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardModelTests.swift; sourceTree = "<group>"; };
+		724D6EA8FDFDC31F27277665 /* UtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
+		CE2896FCD377453215CB5A4E /* WindowCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCalculationTests.swift; sourceTree = "<group>"; };
+		57565B5DCF2BB2C1F0CAFD0F /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
 		9824702122AF9B7E0037B409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9824702A22AFA22E0037B409 /* AccessibilityWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityWindowController.swift; sourceTree = "<group>"; };
 		9824702E22AFA2E50037B409 /* AccessibilityAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityAuthorization.swift; sourceTree = "<group>"; };
@@ -1077,6 +1089,12 @@
 			isa = PBXGroup;
 			children = (
 				9824701F22AF9B7E0037B409 /* RawmTests.swift */,
+				8242027A4F213237AD6C8738 /* SnappingHistoryTests.swift */,
+				4D2B6C806ABB79C81B3A42F1 /* ShortcutDefaultsTests.swift */,
+				08AC77E30304750094311AEB /* ClipboardModelTests.swift */,
+				724D6EA8FDFDC31F27277665 /* UtilitiesTests.swift */,
+				CE2896FCD377453215CB5A4E /* WindowCalculationTests.swift */,
+				57565B5DCF2BB2C1F0CAFD0F /* TestSupport.swift */,
 				944F25D02CE5A144004B2FD2 /* ShortcutRecordingObserverTests.swift */,
 				9824702122AF9B7E0037B409 /* Info.plist */,
 			);
@@ -1632,6 +1650,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9824702022AF9B7E0037B409 /* RawmTests.swift in Sources */,
+				751677D43EAFA23B882C4E85 /* SnappingHistoryTests.swift in Sources */,
+				4555793633796237D920527D /* ShortcutDefaultsTests.swift in Sources */,
+				75DDB3DF689EB21B9C31E945 /* ClipboardModelTests.swift in Sources */,
+				B3E518DAAAEF7D18CB316697 /* UtilitiesTests.swift in Sources */,
+				9647F27B1BB9579E602765E5 /* WindowCalculationTests.swift in Sources */,
+				003AAB6C5E7D3416F821A918 /* TestSupport.swift in Sources */,
 				944F25D12CE5A144004B2FD2 /* ShortcutRecordingObserverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,7 +20,7 @@ BUILD_DIR = $(shell xcodebuild -project $(PROJECT) -scheme $(SCHEME) \
               -configuration Release -showBuildSettings 2>/dev/null \
               | awk '$$1 == "BUILT_PRODUCTS_DIR" {print $$3; exit}')
 
-.PHONY: all build install uninstall reinstall test clean run open help
+.PHONY: all build install uninstall reinstall test coverage coverage-report coverage-baseline clean run open help
 
 all: build
 
@@ -31,12 +31,21 @@ build:
 	  | xcpretty 2>/dev/null || xcodebuild -project $(PROJECT) -scheme $(SCHEME) \
 	    -configuration Release $(SIGN_FLAGS) build
 
-## Run tests
+## Run tests (with coverage instrumentation; output to build/)
 test:
-	xcodebuild test -project $(PROJECT) -scheme $(SCHEME) \
-	  -destination 'platform=macOS' $(SIGN_FLAGS) 2>&1 \
-	  | xcpretty 2>/dev/null || xcodebuild test -project $(PROJECT) -scheme $(SCHEME) \
-	    -destination 'platform=macOS' $(SIGN_FLAGS)
+	./scripts/run-tests.sh
+
+## Run tests then enforce the coverage floor (line + branch over the testable core)
+coverage: test
+	./scripts/coverage-gate.sh
+
+## Show the coverage report without gating (assumes a prior `make test`)
+coverage-report:
+	./scripts/coverage-gate.sh || true
+
+## Re-seed/ratchet the coverage floor from the latest run (floor only moves up)
+coverage-baseline: test
+	./scripts/coverage-gate.sh --update-baseline
 
 ## Install release build to /Applications (quits running instance first)
 install: build
@@ -93,7 +102,10 @@ help:
 	@echo "  make install    — Release build + install to $(INSTALL_DIR)"
 	@echo "  make uninstall  — Remove from $(INSTALL_DIR)"
 	@echo "  make reinstall  — Uninstall then install"
-	@echo "  make test       — Run test suite"
+	@echo "  make test       — Run test suite (with coverage instrumentation)"
+	@echo "  make coverage   — Run tests + enforce coverage floor (line & branch)"
+	@echo "  make coverage-report — Show coverage table without gating"
+	@echo "  make coverage-baseline — Ratchet the coverage floor up to current"
 	@echo "  make clean      — Clean DerivedData"
 	@echo "  make run        — Debug build and launch from DerivedData"
 	@echo "  make open       — Open in Xcode"

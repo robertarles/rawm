@@ -1,0 +1,42 @@
+# coverage-ignore.txt
+#
+# Regex fragments (one per line) for files EXCLUDED from the coverage gate.
+# These are pure-UI / bootstrap / generated files that we deliberately do not
+# measure. Everything NOT matched here counts toward the "testable core" gate.
+#
+# Consumed by:
+#   - scripts/coverage-gate.sh (xccov line filter, as an extended-regex alternation)
+#   - llvm-cov export -ignore-filename-regex (branch coverage)
+#
+# Keep this list MINIMAL and reviewed — every line is coverage we choose not to
+# measure. Lines starting with '#' and blank lines are ignored.
+#
+# Anything outside the app source (test files, SDKs, DerivedData) is also
+# excluded by the leading patterns below.
+
+# --- non-source / tooling ---
+/Tests/
+/DerivedData/
+/Build/
+\.build/
+/Applications/Xcode
+/usr/
+SourcePackages/
+
+# --- pure-UI module trees ---
+/Sources/Clipboard/Views/
+/Sources/PrefsWindow/
+/Sources/WelcomeWindow/
+/Sources/Popover/
+
+# --- UI / bootstrap / app-lifecycle files ---
+/Sources/AppDelegate\.swift
+/Sources/RawmStatusItem\.swift
+/Sources/TitleBarManager\.swift
+/Sources/GreenButtonManager\.swift
+/Sources/CrashReporter\.swift
+/Sources/LaunchOnLogin\.swift
+/Sources/ClipboardBootstrap\.swift
+
+# --- any SwiftUI/AppKit view file, wherever it lives ---
+View\.swift
