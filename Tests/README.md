@@ -12,8 +12,24 @@ make coverage-report   # print the coverage table without gating
 make coverage-baseline # ratchet the floor up to the current measurement
 ```
 
-Artifacts land in `build/` (gitignored): `build/TestResults.xcresult` and
+Build artifacts land in `build/` (gitignored): `build/TestResults.xcresult` and
 `build/DerivedData`.
+
+### Reports (CONTRIBUTING.md compliance)
+
+`make test`/`make coverage` also emit standardized reports under `./reports/`
+(gitignored generated output):
+
+- `reports/testing/junit.xml` — test results as **JUnit XML**; `index.html` summary.
+- `reports/coverage/coverage.lcov` — coverage in **lcov** format; `html/` browsable report.
+- `reports/index.html` — landing page linking both.
+
+Scope is **whole-project** (all `/Sources/`; only test/build/toolchain code is excluded
+via `scripts/coverage-ignore.txt`). CONTRIBUTING.md's **90%-incl-branches target** is the
+goal; the enforced gate is the ratchet floor in `coverage-thresholds.json` (so CI isn't
+blocked while coverage climbs). Note: Swift emits source-based *region* coverage, not LLVM
+per-branch counters, so lcov branch (`BRDA`) records are empty — region% is the
+branch-sensitive metric the gate uses.
 
 ## Layout
 

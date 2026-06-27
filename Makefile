@@ -31,17 +31,19 @@ build:
 	  | xcpretty 2>/dev/null || xcodebuild -project $(PROJECT) -scheme $(SCHEME) \
 	    -configuration Release $(SIGN_FLAGS) build
 
-## Run tests (with coverage instrumentation; output to build/)
+## Run tests; emit JUnit XML to ./reports/testing/ (fails if any test fails)
 test:
 	./scripts/run-tests.sh
 
-## Run tests then enforce the coverage floor (line + branch over the testable core)
+## Run tests; emit lcov + HTML to ./reports/coverage/; enforce the coverage gate
 coverage: test
 	./scripts/coverage-gate.sh
+	./scripts/make-report-index.sh
 
-## Show the coverage report without gating (assumes a prior `make test`)
+## Show the coverage report + write lcov/HTML without gating (assumes a prior `make test`)
 coverage-report:
 	./scripts/coverage-gate.sh || true
+	./scripts/make-report-index.sh
 
 ## Re-seed/ratchet the coverage floor from the latest run (floor only moves up)
 coverage-baseline: test
@@ -102,10 +104,11 @@ help:
 	@echo "  make install    — Release build + install to $(INSTALL_DIR)"
 	@echo "  make uninstall  — Remove from $(INSTALL_DIR)"
 	@echo "  make reinstall  — Uninstall then install"
-	@echo "  make test       — Run test suite (with coverage instrumentation)"
-	@echo "  make coverage   — Run tests + enforce coverage floor (line & branch)"
-	@echo "  make coverage-report — Show coverage table without gating"
+	@echo "  make test       — Run tests; JUnit XML → ./reports/testing/"
+	@echo "  make coverage   — Run tests; lcov+HTML → ./reports/coverage/; enforce gate"
+	@echo "  make coverage-report — Write coverage reports without gating"
 	@echo "  make coverage-baseline — Ratchet the coverage floor up to current"
+	@echo "                    (coverage target: 90% incl. branches; gate uses ratchet floor)"
 	@echo "  make clean      — Clean DerivedData"
 	@echo "  make run        — Debug build and launch from DerivedData"
 	@echo "  make open       — Open in Xcode"

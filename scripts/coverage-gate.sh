@@ -37,6 +37,7 @@ RESULT_BUNDLE="$BUILD_DIR/TestResults.xcresult"
 DERIVED_DATA="$BUILD_DIR/DerivedData"
 IGNORE_FILE="$REPO_ROOT/scripts/coverage-ignore.txt"
 THRESHOLDS="$REPO_ROOT/coverage-thresholds.json"
+REPORTS_DIR="$REPO_ROOT/reports/coverage"
 
 UPDATE_BASELINE=0
 [[ "${1:-}" == "--update-baseline" ]] && UPDATE_BASELINE=1
@@ -76,8 +77,8 @@ APP_OBJ_DIR="$(find "$DERIVED_DATA/Build/Intermediates.noindex" -type d \
   -path '*/rawm.build/Objects-normal/*' 2>/dev/null | grep -v 'rawm-tests' | head -1 || true)"
 
 REGION_COVERED=0 REGION_TOTAL=0 REGION_PCT=0
+OBJ_ARGS=()
 if [[ -n "$PROFDATA" && -n "$APP_OBJ_DIR" ]]; then
-  OBJ_ARGS=()
   while IFS= read -r o; do OBJ_ARGS+=( -object "$o" ); done < <(find "$APP_OBJ_DIR" -name '*.o')
   if [[ ${#OBJ_ARGS[@]} -gt 0 ]]; then
     REGION_JSON="$(xcrun llvm-cov export \
@@ -98,16 +99,35 @@ else
 fi
 
 # ---------------------------------------------------------------------------
+# EMIT REPORTS: lcov (required) + HTML (recommended), per CONTRIBUTING.md
+# Note: the Swift toolchain emits source-based *region* coverage, not LLVM
+# per-branch counters, so lcov BRDA/branch records will be empty/minimal.
+# ---------------------------------------------------------------------------
+if [[ -n "$PROFDATA" && ${#OBJ_ARGS[@]} -gt 0 ]]; then
+  mkdir -p "$REPORTS_DIR"
+  echo "[gate] writing lcov -> $REPORTS_DIR/coverage.lcov"
+  xcrun llvm-cov export -format=lcov \
+    -instr-profile "$PROFDATA" "${OBJ_ARGS[@]}" \
+    -ignore-filename-regex="$EXCLUDE_RE" \
+    > "$REPORTS_DIR/coverage.lcov" 2>/dev/null || echo "[gate] WARNING: lcov export failed"
+  echo "[gate] writing HTML -> $REPORTS_DIR/html/index.html"
+  xcrun llvm-cov show -format=html \
+    -instr-profile "$PROFDATA" "${OBJ_ARGS[@]}" \
+    -ignore-filename-regex="$EXCLUDE_RE" \
+    -output-dir "$REPORTS_DIR/html" >/dev/null 2>&1 || echo "[gate] WARNING: HTML report failed"
+fi
+
+# ---------------------------------------------------------------------------
 # REPORT
 # ---------------------------------------------------------------------------
 echo
-echo "  ┌─ Coverage (testable core) ────────────────────────────────"
+echo "  ┌─ Coverage (whole project)  [target: 90% incl. branches] ──"
 printf "  │  Line:   %6s%%   (%s / %s lines)\n"   "$LINE_PCT"   "$LINE_COVERED"   "$LINE_EXEC"
 printf "  │  Region: %6s%%   (%s / %s regions)\n" "$REGION_PCT" "$REGION_COVERED" "$REGION_TOTAL"
 echo "  └───────────────────────────────────────────────────────────"
 echo
 
-echo "  Lowest-covered core files (by line %):"
+echo "  Lowest-covered files (by line %):"
 echo "$LINE_JSON" | jq -r \
   --arg inc "$INCLUDE_RE" --arg exc "$EXCLUDE_RE" '
   [ .targets[].files[]
