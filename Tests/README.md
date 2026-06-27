@@ -55,6 +55,19 @@ scripts/add-test-files.py Tests/MyNewTests.swift
 
 (Idempotent; skips files already registered.) Then `make test`.
 
+## Local enforcement (pre-push hook)
+
+The versioned hooks live in `.githooks/`. Activate them once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+`pre-push` then runs the secret scans **and** `make coverage`, so a push is blocked
+if tests fail or coverage drops below the floor. It builds the app, so it takes a
+bit; bypass a single push with `git push --no-verify`, or disable entirely with
+`git config --unset core.hooksPath`. CI enforces the same gate regardless.
+
 ## Coverage gate
 
 `coverage-thresholds.json` holds the floor (`line`, `region`). The floor only moves
